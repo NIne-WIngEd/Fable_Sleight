@@ -5,7 +5,7 @@
 <p align="center">
   <a href="#why-you-need-a-personal-ai">Why you need it</a> ·
   <a href="#the-idea-behind-fable">The idea</a> ·
-  <a href="#the-personal-foundation-fable-should-build-first">The models</a> ·
+  <a href="#the-personal-foundation">The foundation</a> ·
   <a href="#the-roadmap">Roadmap</a> ·
   <a href="#who-else-is-working-on-this">Comparison</a>
 </p>
@@ -48,21 +48,29 @@ Behind that simple setup is the hard part:
 
 The amount of data does not determine whether you are allowed to begin. With little data, your Fable would begin with more unknowns and ask or learn over time. It cannot honestly claim to know a person from a nearly empty folder. And the `.exe` is a product goal: a consumer laptop cannot simply pretrain a GPT-scale model from someone's files.
 
-### The personal foundation Fable should build first
+### The personal foundation
 
-A.L.I.C.E.'s architecture names five personal capabilities. Its [Memory Formation Model plan](https://github.com/NIne-WIngEd/A.L.I.C.E/blob/research/mfm-foundation-20260923/docs/MEMORY_FORMATION_MODEL_FOUNDATION.md) says the Fable Builder Model (FBM) should construct and connect their Fable equivalents from your authorized data, with synthetic examples to teach and test what your data alone cannot cover. These are **five roles in the architecture**, not five finished models you can download today. Some need learned weights; others are evidence-linked state that grows over time.
+The five names below are **the first personal capabilities FBM is meant to form and connect**. They are not a count of every model or system a Fable needs. A.L.I.C.E.'s [identity and memory architecture](https://github.com/NIne-WIngEd/A.L.I.C.E/blob/main/docs/MEMORY_IDENTITY_FORMATION_AND_HOST_LEARNING_ARCHITECTURE.md) distinguishes these roles. Its [MFM research plan](https://github.com/NIne-WIngEd/A.L.I.C.E/blob/research/mfm-foundation-20260923/docs/MEMORY_FORMATION_MODEL_FOUNDATION.md) says the builder should construct their Fable equivalents from your authorized data and suitable synthetic training examples. They may use different weights, representations, and stores.
 
-| Personal capability | What it learns or keeps |
+| Starting capability | What it does |
 | --- | --- |
-| **Personality / identity model** | A starting character and way of judging, grounded in what your data supports. Synthetic examples can help teach behavior without pretending they are your memories. |
-| **Memory Formation Model (MFM)** | What a new experience might mean: a preference, event, correction, contradiction, or something still uncertain. It proposes memories; a separate system decides what becomes accepted. |
-| **User / host model** | Your goals, habits, constraints, preferences, and how they change, with the evidence behind them. |
-| **Relationship model** | The history and ways of working that you and your Fable actually develop together. |
-| **Fable self / continuity model** | Your Fable's own decisions, lessons, and development after it begins. It is separate from your history. |
+| **Personality / identity model** | Forms a starting character and way of judging from supported evidence. Synthetic examples teach behavior without becoming fake memories. |
+| **Memory Formation Model (MFM)** | Interprets new experiences and proposes memories, corrections, or unresolved questions. It does not decide what is true by itself. |
+| **User / host model** | Learns your goals, habits, preferences, and changes over time. |
+| **Relationship model** | Develops the shared history and ways of working between you and your Fable. |
+| **Fable self / continuity model** | Keeps your Fable's own decisions, lessons, and development separate from your life history. |
 
-At installation, FBM should form what your data can support and leave the rest open. It cannot invent a shared past or claim your Fable has already lived experiences it has not had. The **Experience Ledger** and evidence store support these capabilities; they are records and infrastructure, not two more trained models. FBM is the builder, not your Fable's personality.
+That is only the beginning of the **non-feature foundation**. The [consumer product vision](https://github.com/NIne-WIngEd/A.L.I.C.E/blob/main/docs/FRIDAY_PRODUCT_VISION.md) and [capability catalog](https://github.com/NIne-WIngEd/A.L.I.C.E/blob/main/docs/CAPABILITY_CATALOG.md) also call for:
 
-There is **no fixed total of future models** in the [A.L.I.C.E. architecture](https://github.com/NIne-WIngEd/A.L.I.C.E/blob/main/docs/MEMORY_IDENTITY_FORMATION_AND_HOST_LEARNING_ARCHITECTURE.md). It names possible specialists such as episode formation, retrieval planning, context fusion, temporal and conflict interpretation, importance and consolidation, and world modeling. Which become separate models should depend on what Fable can build, test, and run usefully for you.
+| Area | Further capabilities under research or planned |
+| --- | --- |
+| **Memory and context** | Episode formation, retrieval planning, context fusion, temporal and conflict interpretation, importance and consolidation. |
+| **Personal understanding** | Preference and choice prediction, goals and missions, social, causal and world models, source trust, uncertainty. |
+| **Judgment and growth** | Native personal judgment, reflection on outcomes, skill learning, preference rankers, and personal adapters. |
+
+The **Experience Ledger**, evidence store, Claim Fabric, Memory Gate, and retrieval indexes are also essential. They are records or infrastructure, not automatically separate trained models. FBM is the builder that should connect and develop this stack. At installation it can only form what your data supports. Relationship history and Fable's lived experience must grow through real interaction.
+
+There is **no fixed total model count** yet. Some later capabilities may become specialist learned models. Others may work better as structured state, tools, or shared model components. Coding, simulation, vision, and image editing are feature capabilities on top of this personal foundation.
 
 ## What can we build now? What comes later?
 
