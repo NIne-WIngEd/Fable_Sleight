@@ -43,7 +43,7 @@ Behind that simple setup is the hard part:
 
 1. **Understand the raw material.** Fable's builder reads authorized data, tracks where each piece came from, and separates things that happened from things it has inferred. When it does not know, it should say so. Synthetic examples can help train or test behavior; they cannot become fake memories.
 2. **Build your personal foundation.** It forms the components that remember, understand you, develop a character, and learn from experience. The builder then connects them to one entity rather than handing you several disconnected bots.
-3. **Give it useful abilities.** Fable can route a task to a coding, research, reasoning, or other capability model. Early versions may use an existing model or a service you explicitly choose. The feature engine and the personal system have different jobs.
+3. **Give it useful abilities.** In the first release, Fable will use GPT and Claude APIs for feature tasks such as coding, research, simulation, vision, and image editing. Your personal foundation is the part we build and ship with Fable. The feature engines are services Fable can call.
 4. **Let it grow with you.** When you correct Fable or a decision has a real outcome, the system should learn from it. A proposed update must be tested, versioned, and reversible. If it needs a new specialist, the builder should eventually be able to create one.
 
 The amount of data does not determine whether you are allowed to begin. With little data, your Fable would begin with more unknowns and ask or learn over time. It cannot honestly claim to know a person from a nearly empty folder. And the `.exe` is a product goal: a consumer laptop cannot simply pretrain a GPT-scale model from someone's files.
@@ -72,13 +72,15 @@ The **Experience Ledger**, evidence store, Claim Fabric, Memory Gate, and retrie
 
 There is **no fixed total model count** yet. Some later capabilities may become specialist learned models. Others may work better as structured state, tools, or shared model components. Coding, simulation, vision, and image editing are feature capabilities on top of this personal foundation.
 
-## What can we build now? What comes later?
+## What will the first version include?
 
-Right now, the work closest to building from a person's own data is the personal foundation: evidence and memory, the Experience Ledger, and the models that learn about the user and the entity. Even there, we are still researching how to form them automatically and connect them to decisions. A.L.I.C.E. is our first development case, not a consumer installation.
+**Our first release goal:** ship the builder and the full personal foundation with the desktop software. That includes memory formation, the Experience Ledger, evidence and memory architecture, user and self development, relationships, and a judgment loop that can learn from real outcomes. We want these capabilities to work at the scale the product needs. A small memory demo with disconnected models would not be the Fable we are describing.
 
-Coding, simulation, advanced research, and broad reasoning need knowledge and compute that a person's private files alone cannot supply. Early Fables may use OpenAI, Anthropic, other APIs, or local open models for those jobs. **If a task uses an API, that part of the task is not local.** The person should choose whether to enable it and see what data would leave their device.
+For feature work such as coding, simulation, research, vision, and image editing, the first version will call **GPT and Claude through their APIs**. Those calls use external services. Fable should show what information a feature request sends out and give the user control over it. The personal data store, builder, and personal learning stack are intended to run locally; an API request is not local merely because Fable initiated it.
 
-Then we want to build Fable's own strong feature models. After that comes the harder goal: shipping the infrastructure that can build and improve more of those feature models too. That is how Fable moves from building the personal foundation to becoming a general model factory for its user. We have not solved automatic frontier-model training on consumer hardware. We will test the compute, cost, and data limits before promising it as a feature.
+This is the **release target, not the current state**. A.L.I.C.E. is our development case. FBM, MFM, and the complete experience-to-judgment learning loop still need to be built and validated before we can claim a consumer release with full capability and scale.
+
+Later, we want to build our own frontier feature models. After that, we want FBM to build and improve feature specialists too. Automatic frontier-model training on consumer hardware remains a research goal. We will measure the compute, cost, and data requirements rather than promise that a laptop can train a GPT-scale model from personal files.
 
 ## What does it mean to own your Fable?
 
@@ -95,14 +97,14 @@ Here is the order we are working toward. The later stages depend on proving the 
 | Stage | What we are doing | What would show it works |
 | --- | --- | --- |
 | **Research now** | Build A.L.I.C.E.'s transferable cognitive foundations. Capture the construction process in FBM. Test N0's semantic and relational foundations. | Exact-version tests and experiments, including the failures. |
-| **Build one personal foundation** | Connect memory formation, host and self models, relationships, goals, judgment, and real outcomes. | A relevant change in learned state changes a relevant decision. An irrelevant change does not. |
-| **Consumer alpha** | Put the builder into a desktop installer. Let early users grant data access and inspect the Fable it forms. | Different users stay isolated. Corrections, export, deletion, restore, and rollback work. |
-| **Stronger abilities** | Add work tools and specialist engines. Build and evaluate our own feature models where we have an advantage. | Better results on real tasks with measured cost and clear model ownership. |
+| **Prove the personal foundation** | Build and connect memory formation, the Experience Ledger, host and self models, relationships, goals, judgment, and real outcomes. Test them at the intended operating scale. | The complete loop works for distinct users. Relevant learned changes affect decisions; irrelevant changes do not. |
+| **First consumer release** | Ship the builder and full personal stack in a desktop installer. Use GPT and Claude APIs for feature work. | Users can create and inspect their own Fable. Isolation, corrections, export, deletion, restore, rollback, and disclosed feature calls work. |
+| **Our own feature models** | Build and evaluate frontier feature models for tasks now handled by APIs. | Better results on real tasks with measured cost and clear model ownership. |
 | **Broader model factory** | Let the infrastructure construct and update more specialist models for each person. | Useful gains survive testing, model replacement, hardware limits, and rollback. |
 
 A.L.I.C.E. is the research system where transferable capabilities are developed and tested first. Fable is the consumer product that must make them work for someone else, without carrying over A.L.I.C.E.'s private identity. Some upstream records still use the old internal name Friday.
 
-We are in the first stage. A consumer alpha follows only after the personal foundation and isolation work qualify. Building frontier feature models and automating their construction are longer-term research goals. We do not have a defensible release date for them yet.
+We are in the first stage. We will test builds before release, but the first released version is meant to carry the full personal foundation at usable scale. Building our own frontier feature models and automating their construction are later research goals. We do not have a defensible release date yet.
 
 ## Who else is working on this?
 
