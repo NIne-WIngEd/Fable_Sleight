@@ -1,8 +1,8 @@
 # Fable Sleight
 
-You wanna build a personal frontier model. But you don't wanna go through years of research and manual labor. You just wanna download an `.exe` file like software and let it build automatically. **Fable is for you.**
+You wanna build a personal frontier model. But you don't wanna go through years of research and manual labor. You just wanna download an `.exe` file like a software and let it build automatically. **Fable is for you.**
 
-No, Fable is not a local open-weight model that you download and personalize. Because Fable gives you a **personal model, not a personalized model**. It comes with infrastructure that can build models. **Fable itself is not a model.**
+No, Fable is not a local open weight model that you download and personalize. Because Fable gives you a **personal model, not a personalized model**. It comes with infrastructure that can build models. **Fable itself is not a model.**
 
 Everyone deserves their own AI. We don't all think the same way, want the same things, or live the same life. Yet most of us start with the same general model and spend each conversation teaching it just enough about ourselves to answer one question. Even when an app remembers a few things, that is not the same as an intelligence that grows from your life and stays yours.
 
@@ -108,6 +108,5 @@ Our bet is on making the **builder** a consumer product. Give it authorized raw 
 Can building your own AI become as simple as installing software? And when it grows with you, can it actually be yours?
 
 That is why we are building Fable Sleight. It is also where our YC application starts.
-
 
 This repository begins with the product thesis. Code and product evidence will be added as capabilities qualify for consumer transfer.
