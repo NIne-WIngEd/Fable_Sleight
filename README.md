@@ -1,18 +1,31 @@
-# Fable Sleight
+<p align="center">
+  <img src="assets/fable-overview.svg" alt="Fable Sleight: your chosen data goes into the Fable Builder to create a continuing personal AI" width="100%">
+</p>
+
+<p align="center">
+  <a href="#why-you-need-a-personal-ai">Why you need it</a> ·
+  <a href="#how-do-you-get-one">How it works</a> ·
+  <a href="#the-five-models-we-want-to-start-with">The models</a> ·
+  <a href="#the-roadmap">Roadmap</a> ·
+  <a href="#who-else-is-working-on-this">Comparison</a>
+</p>
+
+---
 
 You wanna build a personal frontier model. But you don't wanna go through years of research and manual labor. You just wanna download an `.exe` file like a software and let it build automatically. **Fable is for you.**
 
 No, Fable is not a local open weight model that you download and personalize. Because Fable gives you a **personal model, not a personalized model**. It comes with infrastructure that can build models. **Fable itself is not a model.**
 
-Everyone deserves their own AI. We don't all think the same way, want the same things, or live the same life. Yet most of us start with the same general model and spend each conversation teaching it just enough about ourselves to answer one question. Even when an app remembers a few things, that is not the same as an intelligence that grows from your life and stays yours.
+> [!NOTE]
+> **Where we actually are — September 2026:** Fable is not a downloadable consumer app yet. A.L.I.C.E. has working research foundations in evidence, memory, conversation, information access, and cognitive state. The Fable Builder Model is an active research workstream. We have not demonstrated a complete automatic consumer build, an end-to-end learned judgment loop, or user-owned frontier feature models.
 
-You cannot ask everyone to build that from scratch. Most people do not know how to build AI models. Even if they do, deciding what to train, how the parts should work together, and whether they actually learned the right thing takes years of research and manual work.
+## Why you need a personal AI?
 
-So why don't we automate it? You install Fable and give it access to the personal data you choose. Its builder interprets that data, builds the personal parts it can support, connects them, and keeps evaluating them as you live and work. Your Fable becomes one continuing entity that you own. Its name, voice, and relationship with you are yours to choose.
+Everyone deserves their own AI. Right now, many of us have AI agents for different tasks. They can be useful, but most start with a general model and see only the part of our life we put into that task. We as humans are different. We think differently. We should not have to be treated like the same person with a different set of files.
 
-> **Where we actually are — September 2026:** This is the product we are building, not an app you can download today. A.L.I.C.E., the upstream research system, has working foundations in evidence, memory, conversation, information access, and cognitive state. The Fable Builder Model is an active research workstream. We have not demonstrated a complete automatic consumer build, an end-to-end learned judgment loop, or user-owned frontier feature models.
+You can download an open weight model and personalize it with your data. That gives you more control, but you still begin with a model somebody else trained for everyone. Fable's goal is a personal intelligence whose own components are built and revised around your life. Its memories, judgment, and relationship with you should grow with you.
 
-## Why would you want your own Fable?
+### One life. Too many versions.
 
 One person can be ten different versions of themselves to ten different people and AI agents. Your teacher knows the student. Your family knows the risks you are taking. Your coding agent knows your project. Each sees a real part of you, but you are the one who has to hold the pieces together.
 
@@ -25,6 +38,10 @@ So imagine an aspirational version of you: one that knows your life, can learn s
 Fable is an **entity, not an agent**. Agents can do jobs for it. Different models can help it code, research, see, speak, or plan. You still interact with one continuing Fable. Changing a coding model or adding another skill should not erase what it has learned about your life.
 
 ## How do you get one?
+
+You cannot ask everyone to build their personal AI from scratch. Most people do not know how to train a model. Even if they do, choosing the architecture, preparing data, checking whether it learned the right thing, and keeping it updated takes years of research and manual labor.
+
+So why don't we automate that process? Give Fable access to the raw data you choose. Let the builder create the personal pieces, link them into one entity, and keep improving them as it learns more about you. You should not need to code to get started.
 
 The experience we want is simple. Download the software. Pick the folders and accounts you want it to learn from. Review what you are granting access to. Then let the builder do the work.
 
@@ -55,13 +72,13 @@ Memory also needs an evidence store and an *Experience Ledger*: a record of impo
 
 Those five are the starting point. We have mapped 25 possible roles for a fuller Fable entity. You would not be forced to run 25 giant models on your laptop. This is a proposed capability map, not a fixed count of shipped checkpoints. A role might share weights with another, need its own model, or work better as a structured system.
 
-| Personal continuity (1–5) | Understanding and judgment (6–10) | Work and expertise (11–15) | Perception and interaction (16–20) | Learning and coordination (21–25) |
-| --- | --- | --- | --- | --- |
-| 1. Personality / identity | 6. Goals and missions | 11. Research | 16. Vision | 21. Skill learning |
-| 2. Host / user | 7. Personal judgment | 12. Coding | 17. Speech understanding | 22. Tool routing |
-| 3. Memory formation | 8. Planning | 13. Mathematics | 18. Voice generation | 23. Model evaluation |
-| 4. Relationship | 9. Source trust | 14. Simulation | 19. Document understanding | 24. Model building and repair |
-| 5. Fable self | 10. Uncertainty / calibration | 15. Creative work | 20. Multimodal context | 25. Outcome learning |
+| Part of your Fable | Proposed roles |
+| --- | --- |
+| **Personal continuity** | 1. Personality / identity · 2. Host / user · 3. Memory formation · 4. Relationship · 5. Fable self |
+| **Understanding and judgment** | 6. Goals and missions · 7. Personal judgment · 8. Planning · 9. Source trust · 10. Uncertainty / calibration |
+| **Work and expertise** | 11. Research · 12. Coding · 13. Mathematics · 14. Simulation · 15. Creative work |
+| **Perception and interaction** | 16. Vision · 17. Speech understanding · 18. Voice generation · 19. Document understanding · 20. Multimodal context |
+| **Learning and coordination** | 21. Skill learning · 22. Tool routing · 23. Model evaluation · 24. Model building and repair · 25. Outcome learning |
 
 If those roles do not cover what you need, you should eventually be able to build another specialist and make it part of the same Fable. The **Fable Builder Model (FBM)** is the infrastructure's formation capability. It builds, tests, repairs, and connects personal components; it is not your Fable's personality.
 
