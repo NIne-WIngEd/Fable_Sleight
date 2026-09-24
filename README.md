@@ -27,7 +27,7 @@ Even local models you can download and personalize usually come pretrained with 
 
 ### One life. Too many versions.
 
-Your teacher sees the student. Your mother sees her child. Your friend sees the person they know. Your coding agent sees the project. Each knows a real version of you. None sees the whole picture.
+Your teacher sees the student. Your mother sees her child. Your friends see who you are with them. Your coding agent sees the project. Each knows a real version of you. None sees the whole picture.
 
 When their advice conflicts, only you know what ties it together: the pressure, the money, what you want, and what happened last time. Fable is meant to be the companion that learns that context with you. It remembers why you made a choice and can see a blind spot you missed. You don't have to start from the beginning every time.
 
