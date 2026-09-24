@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="430" viewBox="0 0 1200 430" role="img" aria-labelledby="title desc">
+  <title id="title">Fable Sleight: from your life to your own AI</title>
+  <desc id="desc">A visual showing your chosen data entering the Fable Builder, which builds a continuing personal AI that grows with you.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#11132e"/>
+      <stop offset=".52" stop-color="#191d40"/>
+      <stop offset="1" stop-color="#102e3b"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#b695ff"/>
+      <stop offset=".55" stop-color="#8fcbff"/>
+      <stop offset="1" stop-color="#89f2d0"/>
+    </linearGradient>
+    <radialGradient id="glow">
+      <stop offset="0" stop-color="#8fcbff" stop-opacity=".28"/>
+      <stop offset="1" stop-color="#8fcbff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="430" rx="24" fill="url(#bg)"/>
+  <circle cx="1050" cy="65" r="250" fill="url(#glow)"/>
+  <path d="M0 205H1200M0 206H1200" stroke="#ffffff" stroke-opacity=".08"/>
+  <path d="M57 188H1143" stroke="url(#accent)" stroke-width="3" stroke-linecap="round" opacity=".9"/>
+  <text x="60" y="54" fill="#a3b2ce" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="700" letter-spacing="5">A PERSONAL AI YOU ACTUALLY OWN</text>
+  <text x="56" y="137" fill="#f7f6ff" font-family="Arial,Helvetica,sans-serif" font-size="70" font-weight="800" letter-spacing="4">FABLE</text>
+  <text x="328" y="137" fill="url(#accent)" font-family="Arial,Helvetica,sans-serif" font-size="70" font-weight="800" letter-spacing="4">SLEIGHT</text>
+  <text x="61" y="168" fill="#c8d6e7" font-family="Arial,Helvetica,sans-serif" font-size="18">You bring your life. Fable builds the intelligence around it.</text>
+  <g font-family="Arial,Helvetica,sans-serif">
+    <rect x="59" y="229" width="322" height="144" rx="18" fill="#ffffff" fill-opacity=".07" stroke="#cbb8ff" stroke-opacity=".5"/>
+    <circle cx="91" cy="262" r="9" fill="#b695ff"/>
+    <text x="112" y="269" fill="#f8f6ff" font-size="22" font-weight="700">Your chosen data</text>
+    <text x="91" y="312" fill="#c7d2e2" font-size="16">Your records. Your decisions.</text>
+    <text x="91" y="338" fill="#c7d2e2" font-size="16">Your permission.</text>
+
+    <path d="M392 300H425" stroke="#a8bded" stroke-width="3" stroke-linecap="round"/>
+    <path d="m416 291 10 9-10 9" fill="none" stroke="#a8bded" stroke-width="3" stroke-linejoin="round"/>
+
+    <rect x="439" y="229" width="322" height="144" rx="18" fill="#ffffff" fill-opacity=".09" stroke="#98c6ff" stroke-opacity=".65"/>
+    <circle cx="471" cy="262" r="9" fill="#8fcbff"/>
+    <text x="492" y="269" fill="#f8f6ff" font-size="22" font-weight="700">Fable Builder</text>
+    <text x="471" y="312" fill="#c7d2e2" font-size="16">Build. Connect. Test.</text>
+    <text x="471" y="338" fill="#c7d2e2" font-size="16">Learn from what happens next.</text>
+
+    <path d="M772 300H805" stroke="#a8bded" stroke-width="3" stroke-linecap="round"/>
+    <path d="m796 291 10 9-10 9" fill="none" stroke="#a8bded" stroke-width="3" stroke-linejoin="round"/>
+
+    <rect x="819" y="229" width="322" height="144" rx="18" fill="#ffffff" fill-opacity=".07" stroke="#8debd3" stroke-opacity=".65"/>
+    <circle cx="851" cy="262" r="9" fill="#89f2d0"/>
+    <text x="872" y="269" fill="#f8f6ff" font-size="22" font-weight="700">Your Fable</text>
+    <text x="851" y="312" fill="#c7d2e2" font-size="16">One continuing entity.</text>
+    <text x="851" y="338" fill="#c7d2e2" font-size="16">More capable as it grows with you.</text>
+  </g>
+  <text x="61" y="407" fill="#9eaec5" font-family="Arial,Helvetica,sans-serif" font-size="12" letter-spacing="2">THE PRODUCT VISION · RESEARCH IN PROGRESS</text>
+</svg>
