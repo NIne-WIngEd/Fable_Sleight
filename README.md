@@ -27,11 +27,9 @@ Even local models you can download and personalize usually come pretrained with 
 
 ### One life. Too many versions.
 
-Your teacher knows the student. Your mother knows her child. Your friends know the person they spend time with. Your coding agent knows the project. Each sees a real version of you. None carries the whole picture.
+Your teacher sees the student. Your mother sees her child. Your friend sees the person they know. Your coding agent sees the project. Each knows a real version of you. None sees the whole picture.
 
-So when one tells you to focus on school, another says take the safe job, and an agent says ship the project, only you know how those choices collide. You know the money, the pressure, the dream, and why you made the last decision. Having to explain all of that again is exhausting.
-
-Fable is meant to be the one companion that learns the whole picture with you. One continuing entity that remembers why a choice mattered, notices the conflict, and can challenge a blind spot. You shouldn't have to re-explain your life every time you ask for help.
+When their advice conflicts, only you know what ties it together: the pressure, the money, what you want, and what happened last time. Fable is meant to be the companion that learns that context with you. It remembers why you made a choice and can see a blind spot you missed. You don't have to start from the beginning every time.
 
 ## How do you get one?
 
