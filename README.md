@@ -27,15 +27,11 @@ Even local models you can download and personalize usually come pretrained with 
 
 ### One life. Too many versions.
 
-One person can be ten different versions of themselves to ten different people and AI agents. Your teacher knows the student. Your family knows the risks you are taking. Your coding agent knows your project. Each sees a real part of you, but you are the one who has to hold the pieces together.
+Your teacher knows the student. Your mother knows her child. Your friends know the person they spend time with. Your coding agent knows the project. Each sees a real version of you. None carries the whole picture.
 
-In our comic, Ari's professor tells him to protect his research. His father tells him to take the stable offer. His mother asks if he is eating and sleeping. Ari needs the research, the money, and a life he can sustain. The advice conflicts because nobody has the whole context. His different AI agents are no better at reconciling it.
+So when one tells you to focus on school, another says take the safe job, and an agent says ship the project, only you know how those choices collide. You know the money, the pressure, the dream, and why you made the last decision. Having to explain all of that again is exhausting.
 
-Sometimes you wish there were another you. Someone who already knew your history, what you were trying to do, and why a decision mattered. You wouldn't have to explain years of backstory each time. But a literal clone would have the same blind spots you do.
-
-So imagine an aspirational version of you: one that knows your life, can learn skills you do not have, and can disagree when it sees something you missed. That is the idea behind a Fable. It takes its starting character from you. It learns who you are through the evidence you choose to share and through your time together. It also develops its own judgment. It should be able to tell you *why* it disagrees, and change its mind when the evidence changes. We still need to prove that this judgment can be learned and measured, rather than borrowed from a generic model's prompt.
-
-Fable is an **entity, not an agent**. Agents can do jobs for it. Different models can help it code, research, see, speak, or plan. You still interact with one continuing Fable. Changing a coding model or adding another skill should not erase what it has learned about your life.
+Fable is meant to be the one companion that learns the whole picture with you. One continuing entity that remembers why a choice mattered, notices the conflict, and can challenge a blind spot. You shouldn't have to re-explain your life every time you ask for help.
 
 ## How do you get one?
 
