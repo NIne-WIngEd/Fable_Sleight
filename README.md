@@ -4,8 +4,8 @@
 
 <p align="center">
   <a href="#why-you-need-a-personal-ai">Why you need it</a> ·
-  <a href="#how-do-you-get-one">How it works</a> ·
-  <a href="#the-five-models-we-want-to-start-with">The models</a> ·
+  <a href="#the-idea-behind-fable">The idea</a> ·
+  <a href="#the-personal-foundation-fable-should-build-first">The models</a> ·
   <a href="#the-roadmap">Roadmap</a> ·
   <a href="#who-else-is-working-on-this">Comparison</a>
 </p>
@@ -31,7 +31,7 @@ Your teacher sees the student. Your mother sees her child. Your friends see who 
 
 When their advice conflicts, only you know what ties it together: the pressure, the money, what you want, and what happened last time. Fable is meant to be the companion that learns that context with you. It remembers why you made a choice and can see a blind spot you missed. You don't have to start from the beginning every time.
 
-## How do you get one?
+## The idea behind Fable
 
 You cannot ask everyone to build their personal AI from scratch. Most people do not know how to train a model. Even if they do, choosing the architecture, preparing data, checking whether it learned the right thing, and keeping it updated takes years of research and manual labor.
 
@@ -48,33 +48,21 @@ Behind that simple setup is the hard part:
 
 The amount of data does not determine whether you are allowed to begin. With little data, your Fable would begin with more unknowns and ask or learn over time. It cannot honestly claim to know a person from a nearly empty folder. And the `.exe` is a product goal: a consumer laptop cannot simply pretrain a GPT-scale model from someone's files.
 
-### The five models we want to start with
+### The personal foundation Fable should build first
 
-We suggest five starting personal roles. They come from the current A.L.I.C.E. architecture, adapted so a Fable belongs to its own user. These are **planned roles**, not five finished consumer checkpoints. Some may need trained weights. Others may also need structured state.
+A.L.I.C.E.'s architecture names five personal capabilities. Its [Memory Formation Model plan](https://github.com/NIne-WIngEd/A.L.I.C.E/blob/research/mfm-foundation-20260923/docs/MEMORY_FORMATION_MODEL_FOUNDATION.md) says the Fable Builder Model (FBM) should construct and connect their Fable equivalents from your authorized data, with synthetic examples to teach and test what your data alone cannot cover. These are **five roles in the architecture**, not five finished models you can download today. Some need learned weights; others are evidence-linked state that grows over time.
 
-| Starting role | What it should do |
+| Personal capability | What it learns or keeps |
 | --- | --- |
-| **Personality / identity model** | Give your Fable its starting character based on evidence about you, while keeping the Fable's identity distinct from yours. |
-| **Host / user model** | Understand your goals, habits, constraints, preferences, and how they change. |
-| **Memory Formation Model (MFM)** | Work out what a new experience means, what deserves to be remembered, and whether an earlier belief needs to change. |
-| **Relationship model** | Learn the shared history and ways you and your Fable work together. |
-| **Self model** | Carry your Fable's own lessons, judgments, and development after it comes into your life. |
+| **Personality / identity model** | A starting character and way of judging, grounded in what your data supports. Synthetic examples can help teach behavior without pretending they are your memories. |
+| **Memory Formation Model (MFM)** | What a new experience might mean: a preference, event, correction, contradiction, or something still uncertain. It proposes memories; a separate system decides what becomes accepted. |
+| **User / host model** | Your goals, habits, constraints, preferences, and how they change, with the evidence behind them. |
+| **Relationship model** | The history and ways of working that you and your Fable actually develop together. |
+| **Fable self / continuity model** | Your Fable's own decisions, lessons, and development after it begins. It is separate from your history. |
 
-Memory also needs an evidence store and an *Experience Ledger*: a record of important choices, actions, outcomes, and corrections. They are part of the architecture even when they are records rather than trained models. A.L.I.C.E. has an additional source-person identity that belongs to its own private research case. That person's data does not seed anybody else's Fable.
+At installation, FBM should form what your data can support and leave the rest open. It cannot invent a shared past or claim your Fable has already lived experiences it has not had. The **Experience Ledger** and evidence store support these capabilities; they are records and infrastructure, not two more trained models. FBM is the builder, not your Fable's personality.
 
-### From five to twenty-five, and beyond
-
-Those five are the starting point. We have mapped 25 possible roles for a fuller Fable entity. You would not be forced to run 25 giant models on your laptop. This is a proposed capability map, not a fixed count of shipped checkpoints. A role might share weights with another, need its own model, or work better as a structured system.
-
-| Part of your Fable | Proposed roles |
-| --- | --- |
-| **Personal continuity** | 1. Personality / identity · 2. Host / user · 3. Memory formation · 4. Relationship · 5. Fable self |
-| **Understanding and judgment** | 6. Goals and missions · 7. Personal judgment · 8. Planning · 9. Source trust · 10. Uncertainty / calibration |
-| **Work and expertise** | 11. Research · 12. Coding · 13. Mathematics · 14. Simulation · 15. Creative work |
-| **Perception and interaction** | 16. Vision · 17. Speech understanding · 18. Voice generation · 19. Document understanding · 20. Multimodal context |
-| **Learning and coordination** | 21. Skill learning · 22. Tool routing · 23. Model evaluation · 24. Model building and repair · 25. Outcome learning |
-
-If those roles do not cover what you need, you should eventually be able to build another specialist and make it part of the same Fable. The **Fable Builder Model (FBM)** is the infrastructure's formation capability. It builds, tests, repairs, and connects personal components; it is not your Fable's personality.
+There is **no fixed total of future models** in the [A.L.I.C.E. architecture](https://github.com/NIne-WIngEd/A.L.I.C.E/blob/main/docs/MEMORY_IDENTITY_FORMATION_AND_HOST_LEARNING_ARCHITECTURE.md). It names possible specialists such as episode formation, retrieval planning, context fusion, temporal and conflict interpretation, importance and consolidation, and world modeling. Which become separate models should depend on what Fable can build, test, and run usefully for you.
 
 ## What can we build now? What comes later?
 
