@@ -23,7 +23,7 @@ No, Fable is not a local open weight model that you download and personalize. Be
 
 Everyone deserves their own AI. Right now, many of us have AI agents for different tasks. They can be useful, but most start with a general model and see only the part of our life we put into that task. We as humans are different. We think differently. We should not have to be treated like the same person with a different set of files.
 
-You can download an open weight model and personalize it with your data. That gives you more control, but you still begin with a model somebody else trained for everyone. Fable's goal is a personal intelligence whose own components are built and revised around your life. Its memories, judgment, and relationship with you should grow with you.
+Even local models we have currently that you can personalize, you dont really own them. They come pretrained with their own weights, and you personalize it with your info. But you dont own the model. The model grows with its manufacturing company, not with you.
 
 ### One life. Too many versions.
 
