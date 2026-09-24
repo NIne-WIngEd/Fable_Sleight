@@ -1,49 +1,59 @@
 # Fable Sleight
 
-**Build an AI that belongs to your life, without becoming an AI researcher first.**
+You wanna build a personal frontier model. But you don't wanna go through years of research and manual labor. You just wanna download an `.exe` file like software and let it build automatically. **Fable is for you.**
 
-Imagine installing an app, choosing the files and accounts it may learn from, and letting it build the parts of a personal intelligence around you. It remembers why you made decisions. It can connect work, family, health, money, and the projects you keep starting. It learns from what happens next. As its abilities improve, you can inspect, correct, export, and keep the personal system it has built.
+No, Fable is not a local open-weight model that you download and personalize. Because Fable gives you a **personal model, not a personalized model**. It comes with infrastructure that can build models. **Fable itself is not a model.**
 
-That is the product we are building. **Fable Sleight is the builder and runtime. Your Fable is the continuing entity it builds.** Neither is one downloadable language model with a personality prompt attached.
+Everyone deserves their own AI. We don't all think the same way, want the same things, or live the same life. Yet most of us start with the same general model and spend each conversation teaching it just enough about ourselves to answer one question. Even when an app remembers a few things, that is not the same as an intelligence that grows from your life and stays yours.
 
-> **Development status — September 2026:** This is a research and product plan, not a downloadable consumer application. The upstream A.L.I.C.E. project has working foundations in evidence, memory, conversation, information access, and cognitive state. The Fable Builder Model and personal-model research are active. Automatic formation of a complete consumer Fable, locally trained feature models, and the end-to-end learning loop have not been demonstrated or shipped.
+You cannot ask everyone to build that from scratch. Most people do not know how to build AI models. Even if they do, deciding what to train, how the parts should work together, and whether they actually learned the right thing takes years of research and manual work.
 
-## Why one more AI?
+So why don't we automate it? You install Fable and give it access to the personal data you choose. Its builder interprets that data, builds the personal parts it can support, connects them, and keeps evaluating them as you live and work. Your Fable becomes one continuing entity that you own. Its name, voice, and relationship with you are yours to choose.
 
-Ari's professor tells him to protect his research time. His father tells him to take the stable offer. His mother asks if he is eating and sleeping. Each knows something real about him. None sees the entire decision: the research opportunity, the bills, the work he loves, and what he can actually sustain. His coding agent, calendar, and research assistant have the same problem in software. Each can finish a task. Ari is left to reconcile the advice.
+> **Where we actually are — September 2026:** This is the product we are building, not an app you can download today. A.L.I.C.E., the upstream research system, has working foundations in evidence, memory, conversation, information access, and cognitive state. The Fable Builder Model is an active research workstream. We have not demonstrated a complete automatic consumer build, an end-to-end learned judgment loop, or user-owned frontier feature models.
 
-Fable's goal is a second mind that can follow the whole story. It should remember the reasons behind a choice, notice when advice from one part of life conflicts with another, and change its view when the outcome proves it wrong. The user should not have to retell years of context to ask a meaningful question.
+## Why would you want your own Fable?
 
-We call that an **entity**: one continuing identity and relationship with the user, supported by several cooperating models and records. It can use agents and tools to do work. Its identity is more than any one agent, tool, provider, or chat session.
+One person can be ten different versions of themselves to ten different people and AI agents. Your teacher knows the student. Your family knows the risks you are taking. Your coding agent knows your project. Each sees a real part of you, but you are the one who has to hold the pieces together.
 
-The user and their Fable are distinct. Fable learns the person's values and aspirations from evidence and interaction; it does not ask them to declare a perfect self at setup and treat that answer as permanent truth. It develops its own point of view and should be able to explain a disagreement. We still have to prove that such judgment comes from learned personal state rather than a generic model response.
+In our comic, Ari's professor tells him to protect his research. His father tells him to take the stable offer. His mother asks if he is eating and sleeping. Ari needs the research, the money, and a life he can sustain. The advice conflicts because nobody has the whole context. His different AI agents are no better at reconciling it.
 
-## How a Fable gets built
+Sometimes you wish there were another you. Someone who already knew your history, what you were trying to do, and why a decision mattered. You wouldn't have to explain years of backstory each time. But a literal clone would have the same blind spots you do.
 
-1. **Install and grant access.** The planned desktop app asks the user which local folders and optional connected sources it may use. It previews scope before ingestion. A small corpus is enough to start, but sparse evidence must remain uncertain; no data volume guarantees a faithful model.
-2. **Form a personal foundation.** The Fable Builder Model (FBM) interprets authorized material, tracks its source, distinguishes observation from inference, and marks what is unknown. Synthetic scenarios may help test behavior; they must never become invented memories.
-3. **Build and connect components.** The builder trains or initializes the personal components that the available evidence and hardware can support. The system links them to memory, missions, experience, evaluation, and replaceable general-purpose reasoning tools.
-4. **Live, learn, and revise.** The entity records important decisions and outcomes, proposes updates, tests whether a change actually helps, and preserves a route to correction, rollback, and deletion. It may add specialist capabilities when there is a demonstrated need and a viable training path.
+So imagine an aspirational version of you: one that knows your life, can learn skills you do not have, and can disagree when it sees something you missed. That is the idea behind a Fable. It takes its starting character from you. It learns who you are through the evidence you choose to share and through your time together. It also develops its own judgment. It should be able to tell you *why* it disagrees, and change its mind when the evidence changes. We still need to prove that this judgment can be learned and measured, rather than borrowed from a generic model's prompt.
 
-This is the destination workflow. An `.exe`-simple experience is our product aim, not a current download or a claim that a laptop can pretrain a GPT-scale frontier model from a person's files.
+Fable is an **entity, not an agent**. Agents can do jobs for it. Different models can help it code, research, see, speak, or plan. You still interact with one continuing Fable. Changing a coding model or adding another skill should not erase what it has learned about your life.
 
-### Five starting personal roles
+## How do you get one?
 
-Our current design starts with five **roles**, not five already released checkpoints. Their exact packaging may change as we test whether a role needs learned weights, structured state, or both.
+The experience we want is simple. Download the software. Pick the folders and accounts you want it to learn from. Review what you are granting access to. Then let the builder do the work.
 
-| Role | What it needs to learn or preserve |
+Behind that simple setup is the hard part:
+
+1. **Understand the raw material.** Fable's builder reads authorized data, tracks where each piece came from, and separates things that happened from things it has inferred. When it does not know, it should say so. Synthetic examples can help train or test behavior; they cannot become fake memories.
+2. **Build your personal foundation.** It forms the components that remember, understand you, develop a character, and learn from experience. The builder then connects them to one entity rather than handing you several disconnected bots.
+3. **Give it useful abilities.** Fable can route a task to a coding, research, reasoning, or other capability model. Early versions may use an existing model or a service you explicitly choose. The feature engine and the personal system have different jobs.
+4. **Let it grow with you.** When you correct Fable or a decision has a real outcome, the system should learn from it. A proposed update must be tested, versioned, and reversible. If it needs a new specialist, the builder should eventually be able to create one.
+
+The amount of data does not determine whether you are allowed to begin. With little data, your Fable would begin with more unknowns and ask or learn over time. It cannot honestly claim to know a person from a nearly empty folder. And the `.exe` is a product goal: a consumer laptop cannot simply pretrain a GPT-scale model from someone's files.
+
+### The five models we want to start with
+
+We suggest five starting personal roles. They come from the current A.L.I.C.E. architecture, adapted so a Fable belongs to its own user. These are **planned roles**, not five finished consumer checkpoints. Some may need trained weights. Others may also need structured state.
+
+| Starting role | What it should do |
 | --- | --- |
-| **Personality / identity** | Fable's starting character, formed from evidence about the user's patterns and aspirations while keeping uncertainty visible. |
-| **Host / user model** | The person's goals, constraints, preferences, habits, and changes over time. |
-| **Memory Formation Model (MFM)** | What new experience means, which claims are supported, what should be remembered, and when a belief should be revised. |
-| **Relationship model** | The shared history, trust, expectations, and ways the user and Fable work together. |
-| **Fable self model** | The entity's own developing posture, judgments, lessons, and continuity after activation. |
+| **Personality / identity model** | Give your Fable its starting character based on evidence about you, while keeping the Fable's identity distinct from yours. |
+| **Host / user model** | Understand your goals, habits, constraints, preferences, and how they change. |
+| **Memory Formation Model (MFM)** | Work out what a new experience means, what deserves to be remembered, and whether an earlier belief needs to change. |
+| **Relationship model** | Learn the shared history and ways you and your Fable work together. |
+| **Self model** | Carry your Fable's own lessons, judgments, and development after it comes into your life. |
 
-The *Experience Ledger* and evidence store are essential parts of this foundation. They are records and governing infrastructure; calling every database a trained model would hide the hard problem. A.L.I.C.E., our first research case, has a separate source-person identity as well as an owner and an assistant self. A general user's Fable begins from the user/Fable distinction. Private A.L.I.C.E. identity data does not become a consumer default.
+Memory also needs an evidence store and an *Experience Ledger*: a record of important choices, actions, outcomes, and corrections. They are part of the architecture even when they are records rather than trained models. A.L.I.C.E. has an additional source-person identity that belongs to its own private research case. That person's data does not seed anybody else's Fable.
 
-### The larger model map
+### From five to twenty-five, and beyond
 
-We envision **up to 25 candidate specialist roles** inside one Fable. This is a planning map, not a claim that 25 models are built, required for everyone, or equally useful. Roles may share weights, split into multiple models, or remain structured systems after evaluation.
+Those five are the starting point. We have mapped 25 possible roles for a fuller Fable entity. You would not be forced to run 25 giant models on your laptop. This is a proposed capability map, not a fixed count of shipped checkpoints. A role might share weights with another, need its own model, or work better as a structured system.
 
 | Personal continuity (1–5) | Understanding and judgment (6–10) | Work and expertise (11–15) | Perception and interaction (16–20) | Learning and coordination (21–25) |
 | --- | --- | --- | --- | --- |
@@ -53,42 +63,51 @@ We envision **up to 25 candidate specialist roles** inside one Fable. This is a 
 | 4. Relationship | 9. Source trust | 14. Simulation | 19. Document understanding | 24. Model building and repair |
 | 5. Fable self | 10. Uncertainty / calibration | 15. Creative work | 20. Multimodal context | 25. Outcome learning |
 
-The roster is expandable by the user and governed by evidence, compute, and evaluation. A person should not need 25 installed heavyweight models to get a useful Fable. FBM is the builder that constructs and maintains the stack; it is separate from the personality it builds.
+If those roles do not cover what you need, you should eventually be able to build another specialist and make it part of the same Fable. The **Fable Builder Model (FBM)** is the infrastructure's formation capability. It builds, tests, repairs, and connects personal components; it is not your Fable's personality.
 
-## What runs the difficult tasks?
+## What can we build now? What comes later?
 
-**Now:** Upstream work focuses on evidence, relational and memory foundations, FBM process capture, and the personal stack. General coding, research, and deep reasoning can use existing models or optional services where appropriate. A remote API is not a local computation. If the product offers one, it must disclose what leaves the device and require the user's choice. Offline-only operation and feature parity are goals to qualify, not facts about a shipping product.
+Right now, the work closest to building from a person's own data is the personal foundation: evidence and memory, the Experience Ledger, and the models that learn about the user and the entity. Even there, we are still researching how to form them automatically and connect them to decisions. A.L.I.C.E. is our first development case, not a consumer installation.
 
-**Next:** Train and evaluate Fable-owned general capability models where the data, compute, and measurable advantage justify it. This is separate from learning a particular user's life.
+Coding, simulation, advanced research, and broad reasoning need knowledge and compute that a person's private files alone cannot supply. Early Fables may use OpenAI, Anthropic, other APIs, or local open models for those jobs. **If a task uses an API, that part of the task is not local.** The person should choose whether to enable it and see what data would leave their device.
 
-**Long term:** Automate the construction, adaptation, evaluation, and replacement of more specialist capabilities on hardware the user controls or explicitly chooses. Building *any* frontier feature model from scratch on a consumer PC is an open research ambition, not an established capability. Existing weights, licensed models, and APIs can be replaceable engines while the user's personal continuity remains theirs.
+Then we want to build Fable's own strong feature models. After that comes the harder goal: shipping the infrastructure that can build and improve more of those feature models too. That is how Fable moves from building the personal foundation to becoming a general model factory for its user. We have not solved automatic frontier-model training on consumer hardware. We will test the compute, cost, and data limits before promising it as a feature.
 
-## Ownership has to mean something concrete
+## What does it mean to own your Fable?
 
-We intend each Fable to have its own keys and isolated personal state. The person should be able to inspect why it believes something; correct a claim; review what trained a personal component; revoke a source; delete and rebuild affected state; export a portable identity and model package; and roll back a harmful update. Software updates should not silently overwrite learned identity.
+You should be able to see what it learned and where a belief came from. You should be able to correct it, revoke a source, delete data and its downstream influence, roll back a bad update, and take your personal state with you. If a general reasoning provider changes, your entire relationship with your Fable should not reset.
 
-The default product design is local and user controlled. A local build reduces exposure of raw personal data, but privacy still depends on permissions, encryption, backup handling, and any network features the person enables. None of those protections is certified for a released Fable app today.
+We intend to build and keep that personal state locally by default, with separate keys and storage for each person. The software will still need to earn a privacy claim through permissions, encryption, verified deletion, and honest handling of optional cloud services. Those protections have not been certified in a released Fable app.
 
-## Where we are, and what comes next
+Owning your personal intelligence does not mean claiming that you own OpenAI's or another provider's base weights because an API answered a question. We need to be exact about what is yours: your evidence, records, learned personal components, and future models that are actually built for you.
 
-| Stage | Work | Exit evidence |
+## The roadmap
+
+Here is the order we are working toward. The later stages depend on proving the earlier ones; these are milestones rather than promised launch dates.
+
+| Stage | What we are doing | What would show it works |
 | --- | --- | --- |
-| **Research now** | A.L.I.C.E. develops the transferable cognitive foundations. FBM captures repeatable formation operations. N0 tests semantic and relational foundations. | Exact-version research receipts; failures retained and understood. |
-| **Personal foundation** | Connect evidence, memory formation, host/self/relationship state, missions, judgment, and outcomes. | Changing relevant learned state changes relevant decisions; unrelated behavior stays stable. |
-| **Consumer alpha** | Package a desktop installer and consent-based local ingestion for a small cohort. | Independent hosts stay isolated; users can inspect, correct, export, restore, and delete their data. |
-| **Capability expansion** | Add usable work tools and evaluated specialist models, initially including replaceable external engines. | Real tasks improve without claiming the API's weights are personally owned. |
-| **Model factory** | Automate training and promotion of more user-specific and general specialists. | Reproducible gains, hardware budgets, portability, and rollback across model versions. |
+| **Research now** | Build A.L.I.C.E.'s transferable cognitive foundations. Capture the construction process in FBM. Test N0's semantic and relational foundations. | Exact-version tests and experiments, including the failures. |
+| **Build one personal foundation** | Connect memory formation, host and self models, relationships, goals, judgment, and real outcomes. | A relevant change in learned state changes a relevant decision. An irrelevant change does not. |
+| **Consumer alpha** | Put the builder into a desktop installer. Let early users grant data access and inspect the Fable it forms. | Different users stay isolated. Corrections, export, deletion, restore, and rollback work. |
+| **Stronger abilities** | Add work tools and specialist engines. Build and evaluate our own feature models where we have an advantage. | Better results on real tasks with measured cost and clear model ownership. |
+| **Broader model factory** | Let the infrastructure construct and update more specialist models for each person. | Useful gains survive testing, model replacement, hardware limits, and rollback. |
 
-**Planning horizon, not a release promise:** The first two stages are the present research focus. A consumer alpha is a subsequent milestone; broader specialist training and an automated feature-model factory are later, multiyear goals. We will date product releases when the dependent tests and hardware path are credible. A.L.I.C.E. is the upstream research system; transferring a capability to Fable requires evaluation and consumer isolation. The old Friday project name may still appear in upstream governance records.
+A.L.I.C.E. is the research system where transferable capabilities are developed and tested first. Fable is the consumer product that must make them work for someone else, without carrying over A.L.I.C.E.'s private identity. Some upstream records still use the old internal name Friday.
 
-## How this compares
+We are in the first stage. A consumer alpha follows only after the personal foundation and isolation work qualify. Building frontier feature models and automating their construction are longer-term research goals. We do not have a defensible release date for them yet.
 
-There are serious neighboring products. [Replika](https://replika.com/) builds an AI companion. [Personal AI](https://www.personal.ai/your-true-personal-ai) describes a personal memory stack and a personal language model trained on it. [Ollama](https://ollama.com/) makes local models accessible. We should not claim that no one offers memory, a companion, a personal model, or local ownership.
+## Who else is working on this?
 
-Fable's proposed product is the **consumer model-building loop** across a continuing personal entity: source-governed formation, multiple cooperating personal components, evidence-linked change through experience, user-controlled portability, and progressively replaceable feature engines. That combination is our bet. It is still a hypothesis to prove against these existing options in user studies and working demonstrations.
+Personal AI already exists in several forms. [Replika](https://replika.com/) offers an AI companion. [Personal AI](https://www.personal.ai/your-true-personal-ai) describes a memory stack and a personal language model trained on it. [Ollama](https://ollama.com/) helps people run models locally. We take those products seriously. We cannot say that nobody else gives people AI memory, companionship, local models, or even personally trained models.
 
-## The company question
+Our bet is on making the **builder** a consumer product. Give it authorized raw material. Let it form and test several personal components. Keep them connected as one entity. Let that entity learn from your life, while the models that supply general skills can be replaced. Eventually, let the builder create more of those skills too. The combination is the hypothesis we have to prove with real users and working systems.
 
-Can we make building and maintaining a personal AI as ordinary as installing software, while preserving the user's control over the intelligence that grows from their life? That is the question behind Fable Sleight and the starting point for our YC application.
+## The question behind Fable
+
+Can building your own AI become as simple as installing software? And when it grows with you, can it actually be yours?
+
+That is why we are building Fable Sleight. It is also where our YC application starts.
+
 
 This repository begins with the product thesis. Code and product evidence will be added as capabilities qualify for consumer transfer.
