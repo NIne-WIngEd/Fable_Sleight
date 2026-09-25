@@ -16,11 +16,13 @@
 
 Let's say you use ChatGPT or Claude. OpenAI or Anthropic built the model. You just use it. But you don't want your whole life inside someone else's AI. You don't wanna feed it all your data.
 
-So you turn to a local open-weight model. You can personalize it, keep your data on your machine, and it starts to feel more like yours. But you're still not satisfied. You didn't build those starting weights. You can make that model know you, but its foundation was made by someone else.
+So for a while you turn to local open-weight models. You can personalize them, keep your data on your machine, and they feel more like yours. But you're still not really satisfied. Cause the open weights you got, You don’t own those open weights. You can’t claim those weights or that model as yours.
 
-Then you realize what you really want: the infrastructure that builds your own model from scratch. You choose the raw data it learns from. The personal pieces run locally, and the weights the builder makes for you are yours. That's what a **personal model, not just a personalized model**, means to us.
+Then you realize all you want is the infrastructure that builds you a model from scratch. So it runs locally, and the personal weights you get you can truly call yours. You finally realize what a **personal model** means.
 
-**At Fable Sleight, we're building exactly that.** Fable itself isn't a model. It's the software that builds your personal foundation. The frontier feature models it could also build are a later goal.
+Fable itself is not the model. It is the builder.
+
+**At Fable Sleight, I will give you exactly that. I will give you an automated infrastructure that makes you a personal model that is truly yours.**
 
 <p align="center">
   <img src="assets/model-ownership.svg" alt="Three stages: use a hosted model built by its provider; personalize someone else's local open weights; or have the Fable Builder build personal weights for you. Frontier feature models are a later goal." width="100%">
