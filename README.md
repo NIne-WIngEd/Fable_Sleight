@@ -25,7 +25,7 @@ Fable itself is not the model. Fable is the builder.
 **At Fable Sleight, I will give you exactly that. I will give you an automated infrastructure that makes you a personal model that is truly yours.**
 
 <p align="center">
-  <img src="assets/model-ownership.svg" alt="Three stages: use a hosted model built by its provider; personalize someone else's local open weights; or have the Fable Builder build personal weights for you. Frontier feature models are a later goal." width="100%">
+  <img src="assets/model-ownership.svg" alt="Three model paths: external ChatGPT or Claude use provider-built weights; local Qwen through Hugging Face starts with pretrained weights you can adapt; Fable Sleight aims to build personal weights for you locally. First-release feature tasks still plan to use external APIs." width="100%">
 </p>
 
 > [!NOTE]
