@@ -20,7 +20,7 @@ So for a while you turn to local open-weight models. You can personalize them, k
 
 Then you realize all you want is the infrastructure that builds you a model from scratch. So it runs locally, and the personal weights you get you can truly call yours. You finally realize what a **personal model** means.
 
-Fable itself is not the model. It is the builder.
+Fable itself is not the model. Fable is the builder.
 
 **At Fable Sleight, I will give you exactly that. I will give you an automated infrastructure that makes you a personal model that is truly yours.**
 
