@@ -6,6 +6,7 @@
   <a href="#why-you-need-a-personal-ai">Why you need it</a> ·
   <a href="#the-idea-behind-fable">The idea</a> ·
   <a href="#the-personal-foundation">The foundation</a> ·
+  <a href="docs/FIRST_RELEASE.md">First release</a> ·
   <a href="#the-roadmap">Roadmap</a> ·
   <a href="#who-else-is-working-on-this">Comparison</a>
 </p>
@@ -94,9 +95,9 @@ There is **no fixed total model count** yet. Some later capabilities may become 
 
 ## What will the first version include?
 
-**Our first release goal:** ship the builder and the full personal foundation with the desktop software. That includes memory formation, the Experience Ledger, evidence and memory architecture, user and self development, relationships, and a judgment loop that can learn from real outcomes. We want these capabilities to work at the scale the product needs. A small memory demo with disconnected models would not be the Fable we are describing.
+**Our first release goal:** ship the builder and the full personal foundation with the desktop software. The [first-release design](docs/FIRST_RELEASE.md) records the conversation boundary, source selection, privacy controls, and qualification gates. That includes memory formation, the Experience Ledger, evidence and memory architecture, user and self development, relationships, and a judgment loop that can learn from real outcomes. We want these capabilities to work at the scale the product needs. A small memory demo with disconnected models would not be the Fable we are describing.
 
-For feature work such as coding, simulation, research, vision, and image editing, the first version will call **GPT and Claude through their APIs**. Those calls use external services. Fable should show what information a feature request sends out and give the user control over it. The personal data store, builder, and personal learning stack are intended to run locally; an API request is not local merely because Fable initiated it.
+For feature work such as coding, simulation, research, vision, and image editing, the first version will call **GPT and Claude through their APIs**. Conversation is a special case: Fable's local personal foundation makes the verdict and sets how the entity should speak. The local conversation system prepares a privacy-limited request, checks the API's candidate against that verdict and voice, and asks for a bounded correction only when needed. It must usually get the right behavior on the first try. External calls still process the information they receive. Fable should show what each request sends out and give the user control over it. The personal data store, builder, and personal learning stack are intended to run locally; an API request is not local merely because Fable initiated it.
 
 This is the **release target, not the current state**. A.L.I.C.E. is our development case. FBM, MFM, and the complete experience-to-judgment learning loop still need to be built and validated before we can claim a consumer release with full capability and scale.
 
@@ -118,7 +119,7 @@ Here is the order we are working toward. The later stages depend on proving the 
 | --- | --- | --- |
 | **Research now** | Build A.L.I.C.E.'s transferable cognitive foundations. Capture the construction process in FBM. Test N0's semantic and relational foundations. | Exact-version tests and experiments, including the failures. |
 | **Prove the personal foundation** | Build and connect memory formation, the Experience Ledger, host and self models, relationships, goals, judgment, and real outcomes. Test them at the intended operating scale. | The complete loop works for distinct users. Relevant learned changes affect decisions; irrelevant changes do not. |
-| **First consumer release** | Ship the builder and full personal stack in a desktop installer. Use GPT and Claude APIs for feature work. | Users can create and inspect their own Fable. Isolation, corrections, export, deletion, restore, rollback, and disclosed feature calls work. |
+| **First consumer release** | Ship the builder, full personal stack, and local conversation system. Use GPT and Claude APIs for bounded language and feature work. | Users can create and inspect their own Fable. Its own verdict and voice govern checked API drafts. First-pass behavior, privacy, latency, corrections, export, deletion, restore, and rollback qualify. |
 | **Our own feature models** | Build and evaluate frontier feature models for tasks now handled by APIs. | Better results on real tasks with measured cost and clear model ownership. |
 | **Broader model factory** | Let the infrastructure construct and update more specialist models for each person. | Useful gains survive testing, model replacement, hardware limits, and rollback. |
 
