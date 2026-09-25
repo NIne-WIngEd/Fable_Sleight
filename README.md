@@ -37,6 +37,8 @@ You wish there were someone who already knew your whole life context. The first 
 
 So the wish changes. You want the **perfect version of you**: someone who knows your life, remembers what you forget, sees what you miss, and can solve the problems you can't. Someone who can challenge you because it understands you. **That's where Fable comes in.** It takes its starting character from you, develops its own judgment, and grows with you.
 
+> **See the idea as a story:** [Read *The Second Mind*, the interactive A.L.I.C.E. comic](https://raw.githack.com/NIne-WIngEd/Fable_Sleight/main/comic/index.html). It shows the destination we are building toward, not a finished product. [Read the complete 64-page storyboard](comic/STORYBOARD.md).
+
 ## Why Fable matters
 
 You cannot ask everyone to build their personal AI from scratch. Most people do not know how to train a model. Even if they do, choosing the architecture, preparing data, checking whether it learned the right thing, and keeping it updated takes years of research and manual labor.
@@ -108,7 +110,7 @@ Here is the order we are working toward. The later stages depend on proving the 
 | **Our own feature models** | Build and evaluate frontier feature models for tasks now handled by APIs. | Better results on real tasks with measured cost and clear model ownership. |
 | **Broader model factory** | Let the infrastructure construct and update more specialist models for each person. | Useful gains survive testing, model replacement, hardware limits, and rollback. |
 
-A.L.I.C.E. is the research system where transferable capabilities are developed and tested first. Fable is the consumer product that must make them work for someone else, without carrying over A.L.I.C.E.'s private identity. Some upstream records still use the old internal name Friday.
+[A.L.I.C.E.](https://github.com/NIne-WIngEd/A.L.I.C.E#readme) is the research system where transferable capabilities are developed and tested first. Read the [A.L.I.C.E. README](https://github.com/NIne-WIngEd/A.L.I.C.E/blob/main/README.md) for its purpose and architecture. Fable is the consumer product that must make those capabilities work for someone else, without carrying over A.L.I.C.E.'s private identity. Some upstream records still use the old internal name Friday.
 
 We are in the first stage. We will test builds before release, but the first released version is meant to carry the full personal foundation at usable scale. Building our own frontier feature models and automating their construction are later research goals. We do not have a defensible release date yet.
 
