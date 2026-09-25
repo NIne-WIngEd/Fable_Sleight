@@ -1,45 +1,91 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="352" viewBox="0 0 1200 352" role="img" aria-labelledby="title desc">
-  <title id="title">Use, personalize, build: the path to a personal model</title>
-  <desc id="desc">A comparison of hosted AI, personalized open weights, and the Fable Builder. Fable's goal is to build personal model weights for you from your chosen data; frontier feature models come later.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="568" viewBox="0 0 1200 568" role="img" aria-labelledby="title desc">
+  <title id="title">External, local personalized, and local personal models</title>
+  <desc id="desc">External: ChatGPT and Claude are provider-built models you use through their services. Local personalized: a model such as Qwen, available through Hugging Face, begins with someone else's pretrained weights that you can adapt on your device. Local personal: Fable Sleight aims to build your personal model weights from data you choose on your device. The first Fable release still plans to use external APIs for feature tasks.</desc>
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#10152b"/>
-      <stop offset="1" stop-color="#0e2934"/>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#12142d"/>
+      <stop offset=".55" stop-color="#182341"/>
+      <stop offset="1" stop-color="#10363b"/>
     </linearGradient>
-    <linearGradient id="fable" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#9ac8ff"/>
-      <stop offset="1" stop-color="#92eed5"/>
+    <linearGradient id="personal" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#a6c7ff"/>
+      <stop offset="1" stop-color="#8ce9d0"/>
     </linearGradient>
+    <radialGradient id="halo">
+      <stop offset="0" stop-color="#82e8d3" stop-opacity=".16"/>
+      <stop offset="1" stop-color="#82e8d3" stop-opacity="0"/>
+    </radialGradient>
   </defs>
-  <rect width="1200" height="352" rx="22" fill="url(#bg)"/>
-  <text x="44" y="48" fill="#a9b9d4" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="700" letter-spacing="3">THE OWNERSHIP QUESTION</text>
-  <text x="44" y="89" fill="#f7f9ff" font-family="Arial,Helvetica,sans-serif" font-size="30" font-weight="700">Where does the model come from?</text>
+
+  <rect width="1200" height="568" rx="22" fill="url(#background)"/>
+  <circle cx="1050" cy="70" r="285" fill="url(#halo)"/>
+  <text x="40" y="47" fill="#a8b8d3" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="700" letter-spacing="3.2">THE MODEL OWNERSHIP QUESTION</text>
+  <text x="38" y="96" fill="#fafbff" font-family="Arial,Helvetica,sans-serif" font-size="37" font-weight="700">Who built the weights?</text>
+  <text x="461" y="92" fill="#c0cee0" font-family="Arial,Helvetica,sans-serif" font-size="17">Three different answers to “my AI.”</text>
 
   <g font-family="Arial,Helvetica,sans-serif">
-    <rect x="43" y="114" width="344" height="191" rx="16" fill="#ffffff" fill-opacity=".045" stroke="#a0aacc" stroke-opacity=".42"/>
-    <text x="65" y="145" fill="#b4bdd2" font-size="13" font-weight="700" letter-spacing="2">01 / USE</text>
-    <text x="65" y="184" fill="#f5f7fc" font-size="26" font-weight="700">Hosted AI</text>
-    <path d="M65 202H365" stroke="#ffffff" stroke-opacity=".14"/>
-    <text x="65" y="232" fill="#d5dfed" font-size="17">The provider builds the model.</text>
-    <text x="65" y="260" fill="#aebbd0" font-size="16">You use its weights.</text>
+    <!-- External models -->
+    <rect x="40" y="124" width="352" height="391" rx="18" fill="#ffffff" fill-opacity=".055" stroke="#c4b4ef" stroke-opacity=".47"/>
+    <rect x="41" y="125" width="350" height="6" rx="3" fill="#bda8ee"/>
+    <text x="63" y="161" fill="#cbbafb" font-size="13" font-weight="700" letter-spacing="2">01   EXTERNAL</text>
+    <text x="63" y="201" fill="#ffffff" font-size="29" font-weight="700">Use their model</text>
+    <text x="63" y="230" fill="#ccd5e7" font-size="16">ChatGPT  ·  Claude</text>
 
-    <path d="M396 208H421M412 199L421 208L412 217" fill="none" stroke="#a9c9dc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="61" y="251" width="310" height="102" rx="12" fill="#070e26" fill-opacity=".54"/>
+    <rect x="75" y="279" width="111" height="43" rx="9" fill="#bda8ee" fill-opacity=".13" stroke="#bda8ee" stroke-opacity=".5"/>
+    <text x="95" y="306" fill="#e6dcff" font-size="16" font-weight="700">Provider</text>
+    <path d="M194 300H225m-9-8 9 8-9 8" stroke="#cbbafb" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="232" y="279" width="122" height="43" rx="9" fill="#bda8ee" fill-opacity=".16" stroke="#bda8ee" stroke-opacity=".58"/>
+    <text x="248" y="306" fill="#f5eeff" font-size="16" font-weight="700">Its model</text>
 
-    <rect x="429" y="114" width="344" height="191" rx="16" fill="#ffffff" fill-opacity=".055" stroke="#91b7e4" stroke-opacity=".55"/>
-    <text x="451" y="145" fill="#aed0fb" font-size="13" font-weight="700" letter-spacing="2">02 / PERSONALIZE</text>
-    <text x="451" y="184" fill="#f5f7fc" font-size="26" font-weight="700">Local open weights</text>
-    <path d="M451 202H751" stroke="#ffffff" stroke-opacity=".14"/>
-    <text x="451" y="232" fill="#d5dfed" font-size="17">Someone else built the base.</text>
-    <text x="451" y="260" fill="#aebbd0" font-size="16">You adapt it to yourself.</text>
+    <text x="63" y="390" fill="#aeb9d0" font-size="12" font-weight="700" letter-spacing="1.5">STARTING WEIGHTS</text>
+    <text x="63" y="414" fill="#f1f3fb" font-size="17">Built and controlled by provider</text>
+    <path d="M63 434H369" stroke="#ffffff" stroke-opacity=".14"/>
+    <text x="63" y="461" fill="#aeb9d0" font-size="12" font-weight="700" letter-spacing="1.5">WHAT YOU GET</text>
+    <text x="63" y="487" fill="#f1f3fb" font-size="17">Access to its service</text>
 
-    <path d="M782 208H807M798 199L807 208L798 217" fill="none" stroke="#a9c9dc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- Personalized local models -->
+    <rect x="424" y="124" width="352" height="391" rx="18" fill="#ffffff" fill-opacity=".065" stroke="#a4c9ff" stroke-opacity=".55"/>
+    <rect x="425" y="125" width="350" height="6" rx="3" fill="#97c8ff"/>
+    <text x="447" y="161" fill="#acd3ff" font-size="13" font-weight="700" letter-spacing="2">02   LOCAL PERSONALIZED</text>
+    <text x="447" y="201" fill="#ffffff" font-size="29" font-weight="700">Adapt their model</text>
+    <text x="447" y="230" fill="#ccd5e7" font-size="16">Qwen  ·  via Hugging Face</text>
 
-    <rect x="815" y="114" width="344" height="191" rx="16" fill="#a6ebdc" fill-opacity=".105" stroke="#9be6d3" stroke-opacity=".83"/>
-    <text x="837" y="145" fill="#9be6d3" font-size="13" font-weight="700" letter-spacing="2">03 / BUILD YOURS</text>
-    <text x="837" y="184" fill="url(#fable)" font-size="26" font-weight="700">Fable Builder</text>
-    <path d="M837 202H1137" stroke="#9be6d3" stroke-opacity=".3"/>
-    <text x="837" y="232" fill="#effbf8" font-size="17">It builds your personal weights.</text>
-    <text x="837" y="260" fill="#cee8e3" font-size="16">Your foundation grows with you.</text>
+    <rect x="445" y="251" width="310" height="102" rx="12" fill="#070e26" fill-opacity=".54"/>
+    <rect x="457" y="279" width="120" height="43" rx="9" fill="#97c8ff" fill-opacity=".13" stroke="#97c8ff" stroke-opacity=".55"/>
+    <text x="467" y="306" fill="#dcecff" font-size="15" font-weight="700">Base weights</text>
+    <text x="585" y="307" fill="#acd3ff" font-size="24" font-weight="700">+</text>
+    <rect x="608" y="279" width="130" height="43" rx="9" fill="#97c8ff" fill-opacity=".16" stroke="#97c8ff" stroke-opacity=".6"/>
+    <text x="623" y="306" fill="#f0f8ff" font-size="15" font-weight="700">Your data</text>
+
+    <text x="447" y="390" fill="#b3c4d9" font-size="12" font-weight="700" letter-spacing="1.5">STARTING WEIGHTS</text>
+    <text x="447" y="414" fill="#f1f3fb" font-size="17">Already trained by someone else</text>
+    <path d="M447 434H753" stroke="#ffffff" stroke-opacity=".14"/>
+    <text x="447" y="461" fill="#b3c4d9" font-size="12" font-weight="700" letter-spacing="1.5">WHAT YOU GET</text>
+    <text x="447" y="487" fill="#f1f3fb" font-size="17">A model you can adapt locally</text>
+
+    <!-- Personal local model -->
+    <rect x="808" y="124" width="352" height="391" rx="18" fill="#a3efdd" fill-opacity=".105" stroke="#91ead1" stroke-opacity=".8"/>
+    <rect x="809" y="125" width="350" height="6" rx="3" fill="url(#personal)"/>
+    <text x="831" y="161" fill="#a3f0dc" font-size="13" font-weight="700" letter-spacing="2">03   LOCAL PERSONAL</text>
+    <text x="831" y="201" fill="#ffffff" font-size="29" font-weight="700">Build your model</text>
+    <text x="831" y="230" fill="#d3efe9" font-size="16">Fable Sleight</text>
+
+    <rect x="829" y="251" width="310" height="102" rx="12" fill="#052126" fill-opacity=".67"/>
+    <rect x="838" y="279" width="76" height="43" rx="9" fill="#91ead1" fill-opacity=".14" stroke="#91ead1" stroke-opacity=".59"/>
+    <text x="849" y="305" fill="#e5fff6" font-size="14" font-weight="700">Your data</text>
+    <path d="M918 300H936m-6-7 7 7-7 7" stroke="#9beed8" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="941" y="279" width="80" height="43" rx="9" fill="#91ead1" fill-opacity=".19" stroke="#91ead1" stroke-opacity=".72"/>
+    <text x="954" y="306" fill="#e5fff6" font-size="15" font-weight="700">Builder</text>
+    <path d="M1024 300H1041m-6-7 7 7-7 7" stroke="#9beed8" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="1047" y="279" width="82" height="43" rx="9" fill="#91ead1" fill-opacity=".25" stroke="#91ead1" stroke-opacity=".9"/>
+    <text x="1055" y="305" fill="#ffffff" font-size="14" font-weight="700">Your AI</text>
+
+    <text x="831" y="390" fill="#bbe0d9" font-size="12" font-weight="700" letter-spacing="1.5">PERSONAL WEIGHTS</text>
+    <text x="831" y="414" fill="#f3fffb" font-size="17">Built for you from chosen data</text>
+    <path d="M831 434H1137" stroke="#91ead1" stroke-opacity=".28"/>
+    <text x="831" y="461" fill="#bbe0d9" font-size="12" font-weight="700" letter-spacing="1.5">WHAT YOU GET</text>
+    <text x="831" y="487" fill="#f3fffb" font-size="17">Your own personal foundation</text>
   </g>
-  <text x="45" y="332" fill="#a8b8ca" font-family="Arial,Helvetica,sans-serif" font-size="12" letter-spacing="1.5">FABLE'S PRODUCT GOAL · FRONTIER FEATURE MODELS COME LATER</text>
+  <text x="40" y="546" fill="#bacadc" font-family="Arial,Helvetica,sans-serif" font-size="14">Fable is a product goal. Its first release plans to use external GPT and Claude APIs for feature tasks.</text>
 </svg>
