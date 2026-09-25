@@ -12,7 +12,7 @@
 
 ---
 
-**I'm gonna give you the infrastructure to build a personal model you can call yours.**
+## I'm gonna give you the infrastructure to build a personal model you can call yours.
 
 Let's say you use ChatGPT or Claude. OpenAI or Anthropic built the model. You just use it. But you don't want your whole life inside someone else's AI. You don't wanna feed it all your data.
 
@@ -21,6 +21,10 @@ So you turn to a local open-weight model. You can personalize it, keep your data
 Then you realize what you really want: the infrastructure that builds your own model from scratch. You choose the raw data it learns from. The personal pieces run locally, and the weights the builder makes for you are yours. That's what a **personal model, not just a personalized model**, means to us.
 
 **At Fable Sleight, we're building exactly that.** Fable itself isn't a model. It's the software that builds your personal foundation. The frontier feature models it could also build are a later goal.
+
+<p align="center">
+  <img src="assets/model-ownership.svg" alt="Three stages: use a hosted model built by its provider; personalize someone else's local open weights; or have the Fable Builder build personal weights for you. Frontier feature models are a later goal." width="100%">
+</p>
 
 > [!NOTE]
 > **Where we actually are — September 2026:** Fable is not a downloadable consumer app yet. A.L.I.C.E. has working research foundations in evidence, memory, conversation, information access, and cognitive state. The Fable Builder Model is an active research workstream. We have not demonstrated a complete automatic consumer build, an end-to-end learned judgment loop, or user-owned frontier feature models.
