@@ -1,33 +1,7 @@
-# A.L.I.C.E. Comic Homepage v0.3
+# The Second Mind
 
-**Working title:** The Second Mind
+A 64-page interactive A.L.I.C.E. comic about why a personal intelligence needs context, continuity, and its own judgment. It illustrates the destination we are working toward; it is not a demonstration of finished product capabilities.
 
-This is a dependency-free static homepage built as a 64-page vertical-scroll graphic novel.
+[Read the interactive comic](https://raw.githack.com/NIne-WIngEd/Fable_Sleight/main/comic/index.html) · [Read the complete storyboard](STORYBOARD.md)
 
-## Run locally
-
-Windows: double-click `START_SITE.bat`.
-
-Or run:
-
-```powershell
-python -m http.server 8080
-```
-
-Then open `http://localhost:8080`.
-
-## Files
-
-- `index.html` — the comic homepage
-- `assets/comic.css` — visual system and responsive layout
-- `assets/comic.js` — progress, reveal, and chapter navigation
-- `STORYBOARD.md` — full 64-page story with dialogue and internal feature mapping
-- `STORY_MAP.md` — capability-coverage checklist
-
-## Creative boundary
-
-The site uses an original tech-comic visual language. It does not use Marvel characters, names, costumes, logos, panels, or proprietary art. The internal inspiration is only the familiar cultural idea of a persistent, capable AI companion.
-
-## Public truthfulness
-
-The homepage explicitly describes itself as a fictional illustration of the intended destination. Future-roadmap capabilities are story vision, not claims that they are already shipped.
+To read it locally, run `python -m http.server 8080` from the Fable repository root and open `http://localhost:8080/comic/`. The comic is static HTML, CSS, and JavaScript. It does not require a build or external scripts.
