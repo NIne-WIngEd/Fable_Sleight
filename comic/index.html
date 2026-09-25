@@ -1,0 +1,859 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="A.L.I.C.E. — The Second Mind. An interactive comic about a lifelong personal cognitive system."><title>A.L.I.C.E. — The Second Mind</title><link rel="stylesheet" href="assets/comic.css"></head><body>
+<svg class="svg-defs" aria-hidden="true" width="0" height="0"><defs>
+  <pattern id="dots" width="12" height="12" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.4" fill="currentColor" opacity=".16"/></pattern>
+  <pattern id="grid" width="42" height="42" patternUnits="userSpaceOnUse"><path d="M 42 0 L 0 0 0 42" fill="none" stroke="currentColor" stroke-width="1" opacity=".12"/></pattern>
+  <linearGradient id="aliceGrad" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#67f6ff"/><stop offset=".55" stop-color="#6aa8ff"/><stop offset="1" stop-color="#d37cff"/></linearGradient>
+  <filter id="glow" x="-80%" y="-80%" width="260%" height="260%"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <symbol id="ariYoung" viewBox="0 0 180 280">
+    <circle cx="90" cy="55" r="36" fill="#efc3a4" stroke="#081018" stroke-width="8"/>
+    <path d="M54 54q6-42 43-40 33 2 39 35-17-11-28-8-21 5-38-12-3 13-16 25z" fill="#17212d" stroke="#081018" stroke-width="7"/>
+    <path d="M70 66h14M105 66h14" stroke="#081018" stroke-width="4" stroke-linecap="round"/>
+    <path d="M56 107q34-20 68 0l28 139H28z" fill="#526f89" stroke="#081018" stroke-width="8"/>
+    <path d="M82 107l8 40 11-40" fill="#d9e6ef" stroke="#081018" stroke-width="5"/>
+  </symbol>
+  <symbol id="ariMid" viewBox="0 0 180 280">
+    <use href="#ariYoung" width="180" height="280"/>
+    <path d="M58 49q22-28 72-12" stroke="#71808c" stroke-width="5" opacity=".35"/>
+  </symbol>
+  <symbol id="ariOld" viewBox="0 0 180 280">
+    <circle cx="90" cy="55" r="36" fill="#e6bda1" stroke="#081018" stroke-width="8"/>
+    <path d="M54 54q8-40 43-39 30 1 39 33-15-9-28-7-22 4-38-12-4 12-16 25z" fill="#d7d8d2" stroke="#081018" stroke-width="7"/>
+    <path d="M68 67h16M103 67h16" stroke="#081018" stroke-width="4"/>
+    <path d="M66 82q24 13 48 0" fill="none" stroke="#8d7564" stroke-width="2" opacity=".65"/>
+    <path d="M52 110q38-22 76 0l24 136H28z" fill="#384a5f" stroke="#081018" stroke-width="8"/>
+    <path d="M80 111l10 40 11-40" fill="#e4e6e2" stroke="#081018" stroke-width="5"/>
+  </symbol>
+  <symbol id="aliceAvatar" viewBox="0 0 220 300">
+    <path d="M110 24c-42 0-72 33-72 78v34c0 39 20 68 48 82v28l24 25 24-25v-28c28-14 48-43 48-82v-34c0-45-30-78-72-78z" fill="#13263a" stroke="url(#aliceGrad)" stroke-width="7" filter="url(#glow)"/>
+    <path d="M70 94q40-54 82-2M70 105q-6 45 12 71M150 104q6 46-13 72" fill="none" stroke="#8deeff" stroke-width="4" opacity=".8"/>
+    <path d="M78 127h22M122 127h22" stroke="#b8f8ff" stroke-width="4" stroke-linecap="round"/>
+    <path d="M94 160q16 10 32 0" fill="none" stroke="#d7c7ff" stroke-width="3" stroke-linecap="round"/>
+    <path d="M78 220l32 24 32-24 32 58H46z" fill="#111d2a" stroke="url(#aliceGrad)" stroke-width="6"/>
+    <circle cx="110" cy="142" r="88" fill="none" stroke="#79d9ff" stroke-width="2" stroke-dasharray="7 10" opacity=".25"/>
+  </symbol>
+  <symbol id="phone" viewBox="0 0 90 160"><rect x="8" y="4" width="74" height="152" rx="14" fill="#fff" stroke="#081018" stroke-width="7"/><rect x="18" y="23" width="54" height="104" rx="5" fill="#dff2ff"/><circle cx="45" cy="142" r="5" fill="#081018"/></symbol>
+  <symbol id="laptop" viewBox="0 0 220 150"><rect x="25" y="10" width="170" height="110" rx="8" fill="#eaf6ff" stroke="#081018" stroke-width="7"/><path d="M5 128h210l-18 14H23z" fill="#98a9b7" stroke="#081018" stroke-width="7"/></symbol>
+  <symbol id="doc" viewBox="0 0 170 210"><path d="M18 8h95l39 39v155H18z" fill="#fff8df" stroke="#081018" stroke-width="7"/><path d="M113 8v40h39" fill="#f3cc5f" stroke="#081018" stroke-width="7"/><path d="M40 82h86M40 112h82M40 142h70" stroke="#657381" stroke-width="8" stroke-linecap="round"/></symbol>
+</defs></svg>
+<nav class="comic-nav"><a href="#top" class="brand">A.L.I.C.E.</a><div class="nav-progress"><span id="progressFill"></span></div><button id="chaptersBtn" aria-expanded="false">CHAPTERS</button></nav><aside class="chapter-drawer" id="chapterDrawer"><button id="closeDrawer">CLOSE ×</button><a href="#act-1">ACT 01 · NOBODY SEES THE WHOLE</a><a href="#act-2">ACT 02 · THE WISH</a><a href="#act-3">ACT 03 · HELLO, ALICE</a><a href="#act-4">ACT 04 · THE FIRST MONTHS</a><a href="#act-5">ACT 05 · YEAR ONE</a><a href="#act-6">ACT 06 · YEAR FIVE</a><a href="#act-7">ACT 07 · YEARS TEN TO TWENTY</a><a href="#act-8">ACT 08 · YEAR FORTY</a></aside><main><header class="cover" id="top">
+  <div class="cover-issue">A.L.I.C.E. · ISSUE 00</div>
+  <div class="cover-grid">
+    <div class="cover-copy">
+      <p class="kicker">AN INTERACTIVE GRAPHIC STORY</p>
+      <h1>THE<br><span>SECOND</span><br>MIND</h1>
+      <p class="cover-deck">A boy spends his life explaining himself to people and machines that only see one piece at a time. Then he imagines a companion that could understand the whole story.</p>
+      <a class="start" href="#act-1">BEGIN THE STORY ↓</a>
+    </div>
+    <div class="cover-art comic-frame"><svg viewBox="0 0 900 760" class="art"><rect width="900" height="760" fill="#0b1421"/><rect width="900" height="760" fill="url(#dots)" color="#58dfff"/><use href="#ariYoung" x="110" y="340" width="250" height="390"/><use href="#aliceAvatar" x="570" y="180" width="240" height="340" opacity=".82"/><g fill="#fff" stroke="#081018" stroke-width="7"><rect x="40" y="75" width="250" height="130" rx="16"/><rect x="330" y="55" width="235" height="125" rx="16"/><rect x="590" y="70" width="250" height="130" rx="16"/></g><g font-family="Arial" font-weight="900" font-size="23" fill="#081018"><text x="68" y="128">CODE AGENT</text><text x="360" y="108">CALENDAR</text><text x="620" y="125">RESEARCH AI</text></g><path d="M285 200l125 190M565 180l-110 210M690 200l-120 205" stroke="#f0ca54" stroke-width="5" stroke-dasharray="10 12"/></svg><div class="cover-stamp">A STORY OF THE SYSTEM WE ARE BUILDING</div></div>
+  </div>
+  <p class="vision-note">This comic is a fictional illustration of A.L.I.C.E.'s intended destination. Some capabilities shown are current foundations; others are future research goals.</p>
+</header><section class="act-divider act-1" id="act-1"><div class="act-no">ACT 01</div><h2>NOBODY SEES THE WHOLE</h2><p>Ari has plenty of help. That is not the same as being understood.</p></section><section class="comic-page palette-1 kind-chaos" data-page="1" id="page-1">
+      <div class="page-meta"><span>PAGE 01/64</span><span>MONDAY · 7:12 AM</span></div>
+      <div class="comic-frame reveal">
+        <div class="art-wrap"><svg viewBox="0 0 900 620" class="art"><rect width="900" height="620" fill="#101725"/><rect width="900" height="620" fill="url(#dots)" color="#ffffff"/><use href="#ariYoung" x="340" y="215" width="220" height="340"/>
+        <g class="float-cards" fill="#fff" stroke="#081018" stroke-width="6"><rect x="35" y="55" width="250" height="115" rx="14"/><rect x="610" y="60" width="250" height="115" rx="14"/><rect x="30" y="430" width="255" height="120" rx="14"/><rect x="615" y="420" width="245" height="120" rx="14"/></g>
+        <g font-family="Arial" font-weight="800" font-size="24" fill="#081018"><text x="62" y="105">DEADLINE</text><text x="644" y="110">3 MESSAGES</text><text x="58" y="482">RESEARCH</text><text x="646" y="474">APPLICATION</text></g></svg><div class="sfx">A</div></div>
+        <div class="story-copy">
+          <h2>A normal day starts with twelve unfinished things.</h2>
+          <p class="narration">Ari wakes up already behind. Class in forty-eight minutes. A research deadline at noon. Three messages he forgot to answer. An internship form closes tonight. His side project broke while he slept.</p>
+          <div class="dialogues"><div class="bubble ari"><span class="speaker">ARI</span><p>Okay. One thing at a time.</p></div></div>
+          <p class="beat">He has tools for every task. He is still the only thing holding the tasks together.</p>
+        </div>
+      </div>
+    </section><section class="comic-page palette-1 kind-people" data-page="2" id="page-2">
+      <div class="page-meta"><span>PAGE 02/64</span><span>8:40 AM</span></div>
+      <div class="comic-frame reveal">
+        <div class="art-wrap"><svg viewBox="0 0 900 620" class="art"><rect width="900" height="620" fill="#f7e6c2"/><rect width="900" height="620" fill="url(#dots)" color="#a84b37"/><use href="#ariYoung" x="120" y="225" width="220" height="340"/><circle cx="650" cy="220" r="76" fill="#c68064" stroke="#081018" stroke-width="8"/><path d="M560 310q90-56 180 0l42 210H518z" fill="#7e4b5d" stroke="#081018" stroke-width="8"/><path d="M365 315q110-100 210-70" stroke="#081018" stroke-width="6" fill="none"/><path d="M570 250l-20-15 10 25" fill="#081018"/></svg><div class="sfx">HIS</div></div>
+        <div class="story-copy">
+          <h2>His roommate knows one version of him.</h2>
+          <p class="narration">On the way out, Noah sees the dark circles under Ari’s eyes. He tells him to skip the lab meeting and sleep. It is kind advice. Noah does not know the lab meeting is tied to a recommendation letter Ari has spent a year earning.</p>
+          <div class="dialogues"><div class="bubble other"><span class="speaker">NOAH</span><p>Dude, you need a day off.</p></div>
+<div class="bubble ari"><span class="speaker">ARI</span><p>Yeah. Maybe.</p></div></div>
+          <p class="beat">People care. They still only see the slice of your life that reaches them.</p>
+        </div>
+      </div>
+    </section><section class="comic-page palette-1 kind-people" data-page="3" id="page-3">
+      <div class="page-meta"><span>PAGE 03/64</span><span>10:05 AM</span></div>
+      <div class="comic-frame reveal">
+        <div class="art-wrap"><svg viewBox="0 0 900 620" class="art"><rect width="900" height="620" fill="#f7e6c2"/><rect width="900" height="620" fill="url(#dots)" color="#a84b37"/><use href="#ariYoung" x="120" y="225" width="220" height="340"/><circle cx="650" cy="220" r="76" fill="#c68064" stroke="#081018" stroke-width="8"/><path d="M560 310q90-56 180 0l42 210H518z" fill="#7e4b5d" stroke="#081018" stroke-width="8"/><path d="M365 315q110-100 210-70" stroke="#081018" stroke-width="6" fill="none"/><path d="M570 250l-20-15 10 25" fill="#081018"/></svg><div class="sfx">HIS</div></div>
+        <div class="story-copy">
+          <h2>His professor knows another version.</h2>
+          <p class="narration">Professor Vale tells Ari to cut everything that does not help his research. She is right from where she stands. She does not know Ari is paying next semester’s bills with the internship she wants him to ignore.</p>
+          <div class="dialogues"><div class="bubble other"><span class="speaker">PROF. VALE</span><p>If research is the goal, protect the research.</p></div>
+<div class="bubble ari"><span class="speaker">ARI</span><p>It is. But it is not the only goal.</p></div></div>
+          <p class="beat">Good advice can still be wrong for the whole person.</p>
+        </div>
+      </div>
+    </section><section class="comic-page palette-1 kind-people" data-page="4" id="page-4">
+      <div class="page-meta"><span>PAGE 04/64</span><span>12:23 PM</span></div>
+      <div class="comic-frame reveal">
+        <div class="art-wrap"><svg viewBox="0 0 900 620" class="art"><rect width="900" height="620" fill="#f7e6c2"/><rect width="900" height="620" fill="url(#dots)" color="#a84b37"/><use href="#ariYoung" x="120" y="225" width="220" height="340"/><circle cx="650" cy="220" r="76" fill="#c68064" stroke="#081018" stroke-width="8"/><path d="M560 310q90-56 180 0l42 210H518z" fill="#7e4b5d" stroke="#081018" stroke-width="8"/><path d="M365 315q110-100 210-70" stroke="#081018" stroke-width="6" fill="none"/><path d="M570 250l-20-15 10 25" fill="#081018"/></svg><div class="sfx">HIS</div></div>
+        <div class="story-copy">
+          <h2>His family sees the risk.</h2>
+          <p class="narration">At lunch, Ari calls home. His father tells him to choose the safest offer. His mother asks whether he is eating. They know what uncertainty costs him. They do not know what kind of work makes him feel alive.</p>
+          <div class="dialogues"><div class="bubble other"><span class="speaker">DAD</span><p>Take the stable option.</p></div>
+<div class="bubble other"><span class="speaker">MOM</span><p>And please sleep.</p></div>
+<div class="bubble ari"><span class="speaker">ARI</span><p>I hear you.</p></div></div>
+          <p class="beat">Everyone is solving a different Ari.</p>
+        </div>
+      </div>
+    </section><section class="comic-page palette-1 kind-agents" data-page="5" id="page-5">
+      <div class="page-meta"><span>PAGE 05/64</span><span>2:10 PM</span></div>
+      <div class="comic-frame reveal">
+        <div class="art-wrap"><svg viewBox="0 0 900 620" class="art"><rect width="900" height="620" fill="#101924"/><rect width="900" height="620" fill="url(#grid)" color="#6cd8ff"/><use href="#ariYoung" x="355" y="265" width="190" height="290"/>
+        <g fill="#eaf7ff" stroke="#081018" stroke-width="6"><rect x="40" y="55" width="240" height="150" rx="16"/><rect x="330" y="40" width="240" height="150" rx="16"/><rect x="620" y="60" width="240" height="150" rx="16"/></g>
+        <g font-family="Arial" font-weight="900" font-size="24" fill="#081018"><text x="72" y="110">RESUME AI</text><text x="360" y="95">CODE AI</text><text x="650" y="115">RESEARCH AI</text></g></svg><div class="sfx">THE</div></div>
+        <div class="story-copy">
+          <h2>The agents are even more literal.</h2>
+          <p class="narration">A resume agent rewrites his experience for a finance role. A coding agent suggests a three-day refactor. A research agent finds twenty papers. A scheduling agent neatly places every commitment on a calendar that no human could survive.</p>
+          <div class="dialogues"><div class="bubble other"><span class="speaker">RESUME AGENT</span><p>Optimized for role fit.</p></div>
+<div class="bubble other"><span class="speaker">CODING AGENT</span><p>Recommended: full rewrite.</p></div>
+<div class="bubble other"><span class="speaker">CALENDAR AGENT</span><p>No conflicts detected.</p></div></div>
+          <p class="beat">Each agent is intelligent inside its box. None knows the box is part of a life.</p>
+        </div>
+      </div>
+    </section><section class="comic-page palette-1 kind-desk" data-page="6" id="page-6">
+      <div class="page-meta"><span>PAGE 06/64</span><span>4:52 PM</span></div>
+      <div class="comic-frame reveal">
+        <div class="art-wrap"><svg viewBox="0 0 900 620" class="art"><rect width="900" height="620" fill="#101725"/><rect width="900" height="620" fill="url(#dots)" color="#ffffff"/><use href="#ariYoung" x="340" y="215" width="220" height="340"/>
+        <g class="float-cards" fill="#fff" stroke="#081018" stroke-width="6"><rect x="35" y="55" width="250" height="115" rx="14"/><rect x="610" y="60" width="250" height="115" rx="14"/><rect x="30" y="430" width="255" height="120" rx="14"/><rect x="615" y="420" width="245" height="120" rx="14"/></g>
+        <g font-family="Arial" font-weight="800" font-size="24" fill="#081018"><text x="62" y="105">DEADLINE</text><text x="644" y="110">3 MESSAGES</text><text x="58" y="482">RESEARCH</text><text x="646" y="474">APPLICATION</text></g></svg><div class="sfx">ARI</div></div>
+        <div class="story-copy">
+          <h2>Ari becomes the integration layer.</h2>
+          <p class="narration">He copies the same background into another chat. Then another. He explains the research project again. The internship again. The money again. The reason he cares again. Every system asks him to rebuild the context it lost.</p>
+          <div class="dialogues"><div class="bubble ari"><span class="speaker">ARI</span><p>No, the internship is connected to the research. I explained this yesterday.</p></div>
+<div class="bubble other"><span class="speaker">AGENT</span><p>I do not have that context in this conversation.</p></div></div>
+          <p class="beat">The smartest thing in the room still needs Ari to remember everything for it.</p>
+        </div>
+      </div>
+    </section><section class="comic-page palette-1 kind-collision" data-page="7" id="page-7">
+      <div class="page-meta"><span>PAGE 07/64</span><span>7:31 PM</span></div>
+      <div class="comic-frame reveal">
+        <div class="art-wrap"><svg viewBox="0 0 900 620" class="art"><rect width="900" height="620" fill="#101725"/><rect width="900" height="620" fill="url(#dots)" color="#ffffff"/><use href="#ariYoung" x="340" y="215" width="220" height="340"/>
+        <g class="float-cards" fill="#fff" stroke="#081018" stroke-width="6"><rect x="35" y="55" width="250" height="115" rx="14"/><rect x="610" y="60" width="250" height="115" rx="14"/><rect x="30" y="430" width="255" height="120" rx="14"/><rect x="615" y="420" width="245" height="120" rx="14"/></g>
+        <g font-family="Arial" font-weight="800" font-size="24" fill="#081018"><text x="62" y="105">DEADLINE</text><text x="644" y="110">3 MESSAGES</text><text x="58" y="482">RESEARCH</text><text x="646" y="474">APPLICATION</text></g></svg><div class="sfx">THEN</div></div>
+        <div class="story-copy">
+          <h2>Then the fragments collide.</h2>
+          <p class="narration">Ari accepts a meeting because the calendar says he is free. That meeting steals the hour he needed to fix the research submission. The resume agent had pushed him toward the same company. The coding agent had already consumed the backup evening.</p>
+          <div class="dialogues"><div class="bubble ari"><span class="speaker">ARI</span><p>Every individual choice made sense.</p></div>
+<div class="bubble ari"><span class="speaker">ARI</span><p>So why does the whole day feel stupid?</p></div></div>
+          <p class="beat">The failure is not one bad answer. It is that nobody could see the interactions between the answers.</p>
+        </div>
+      </div>
+    </section><section class="comic-page palette-1 kind-night" data-page="8" id="page-8">
+      <div class="page-meta"><span>PAGE 08/64</span><span>1:47 AM</span></div>
+      <div class="comic-frame reveal">
+        <div class="art-wrap"><svg viewBox="0 0 900 620" class="art"><rect width="900" height="620" fill="#07101f"/><circle cx="735" cy="110" r="50" fill="#e8f4ff" opacity=".9"/><use href="#ariYoung" x="335" y="250" width="220" height="340"/><g opacity=".35"><rect x="80" y="110" width="250" height="130" rx="16" fill="#4fb6ff"/><rect x="570" y="350" width="250" height="130" rx="16" fill="#d06cff"/></g></svg><div class="sfx">FOR</div></div>
+        <div class="story-copy">
+          <h2>For the first time, he names the thing he is missing.</h2>
+          <p class="narration">The room is finally quiet. Ari closes the last chat window. He does not wish for a smarter answer. He wishes there were someone who already understood the entire mess before he started speaking.</p>
+          <div class="dialogues"><div class="bubble ari"><span class="speaker">ARI</span><p>I have people. I have agents. I have information.</p></div>
+<div class="bubble ari"><span class="speaker">ARI</span><p>Why do I still feel like I am explaining myself to the world all day?</p></div></div>
+          <p class="beat">He does not need more assistance. He needs continuity.</p>
+        </div>
+      </div>
+    </section><section class="act-divider act-2" id="act-2"><div class="act-no">ACT 02</div><h2>THE WISH</h2><p>If no one can hold the whole picture, what would it feel like if someone could?</p></section><section class="comic-page palette-2 kind-mirror" data-page="9" id="page-9">
+      <div class="page-meta"><span>PAGE 09/64</span><span>2:03 AM</span></div>
+      <div class="comic-frame reveal">
+        <div class="art-wrap"><svg viewBox="0 0 900 620" class="art"><rect width="900" height="620" fill="#f0cf4e"/><rect width="900" height="620" fill="url(#dots)" color="#081018"/><use href="#ariYoung" x="170" y="190" width="240" height="370"/><use href="#ariYoung" x="500" y="190" width="240" height="370" opacity=".72"/><path d="M450 70v500" stroke="#081018" stroke-width="8" stroke-dasharray="14 14"/></svg><div class="sfx">WHAT</div></div>
+        <div class="story-copy">
+          <h2>What if there were another me?</h2>
+          <p class="narration">The thought is childish enough to make him laugh. Another Ari would know the history. Another Ari would understand the ambition, the fear, the promises, the shortcuts, the reasons behind the reasons.</p>
+          <div class="dialogues"><div class="bubble ari"><span class="speaker">ARI</span><p>No onboarding. No explaining. You would just… know.</p></div></div>
+          <p class="beat">For a moment, a clone sounds perfect.</p>
+        </div>
+      </div>
+    </section><section class="comic-page palette-2 kind-mirror-win" data-page="10" id="page-10">
+      <div class="page-meta"><span>PAGE 10/64</span><span>IMAGINED</span></div>
+      <div class="comic-frame reveal">
+        <div class="art-wrap"><svg viewBox="0 0 900 620" class="art"><rect width="900" height="620" fill="#f0cf4e"/><rect width="900" height="620" fill="url(#dots)" color="#081018"/><use href="#ariYoung" x="170" y="190" width="240" height="370"/><use href="#ariYoung" x="500" y="190" width="240" height="370" opacity=".72"/><path d="M450 70v500" stroke="#081018" stroke-width="8" stroke-dasharray="14 14"/></svg><div class="sfx">THE</div></div>
+        <div class="story-copy">
+          <h2>The clone remembers everything Ari remembers.</h2>
+          <p class="narration">It remembers the professor who changed his mind. The project he abandoned. The reason he hates certain advice. The tiny preferences nobody would write into a profile. It finishes his sentences because they are, in a sense, its sentences too.</p>
+          <div class="dialogues"><div class="bubble ari"><span class="speaker">ARI 2</span><p>You are thinking about dropping the safe offer again.</p></div>
+<div class="bubble ari"><span class="speaker">ARI</span><p>Exactly.</p></div></div>
+          <p class="beat">Being understood feels almost magical.</p>
+        </div>
+      </div>
+    </section><section class="comic-page palette-2 kind-mirror-fail" data-page="11" id="page-11">
+      <div class="page-meta"><span>PAGE 11/64</span><span>IMAGINED</span></div>
+      <div class="comic-frame reveal">
+        <div class="art-wrap"><svg viewBox="0 0 900 620" class="art"><rect width="900" height="620" fill="#f0cf4e"/><rect width="900" height="620" fill="url(#dots)" color="#081018"/><use href="#ariYoung" x="170" y="190" width="240" height="370"/><use href="#ariYoung" x="500" y="190" width="240" height="370" opacity=".72"/><path d="M450 70v500" stroke="#081018" stroke-width="8" stroke-dasharray="14 14"/></svg><div class="sfx">THEN</div></div>
+        <div class="story-copy">
+          <h2>Then the clone procrastinates on the same email.</h2>
+          <p class="narration">Ari stares at the unsent message. His clone stares at the unsent message. Both invent excellent reasons to wait until morning.</p>
+          <div class="dialogues"><div class="bubble ari"><span class="speaker">ARI</span><p>You send it.</p></div>
+<div class="bubble ari"><span class="speaker">ARI 2</span><p>I was literally about to tell you to send it.</p></div></div>
+          <p class="beat">A perfect copy also copies the defects.</p>
+        </div>
+      </div>
+    </section><section class="comic-page palette-2 kind-mirror-fail" data-page="12" id="page-12">
+      <div class="page-meta"><span>PAGE 12/64</span><span>IMAGINED</span></div>
+      <div class="comic-frame reveal">
+        <div class="art-wrap"><svg viewBox="0 0 900 620" class="art"><rect width="900" height="620" fill="#f0cf4e"/><rect width="900" height="620" fill="url(#dots)" color="#081018"/><use href="#ariYoung" x="170" y="190" width="240" height="370"/><use href="#ariYoung" x="500" y="190" width="240" height="370" opacity=".72"/><path d="M450 70v500" stroke="#081018" stroke-width="8" stroke-dasharray="14 14"/></svg><div class="sfx">IT</div></div>
+        <div class="story-copy">
+          <h2>It shares the same blind spots.</h2>
+          <p class="narration">When Ari is overconfident, the clone is overconfident. When Ari avoids conflict, the clone explains why avoiding conflict is reasonable. When Ari falls in love with a new idea, the clone falls in love with it twice.</p>
+          <div class="dialogues"><div class="bubble ari"><span class="speaker">ARI 2</span><p>This project is different.</p></div>
+<div class="bubble ari"><span class="speaker">ARI</span><p>That is exactly what I always say.</p></div></div>
+          <p class="beat">Agreement is not understanding. Sometimes understanding should create disagreement.</p>
+        </div>
+      </div>
+    </section><section class="comic-page palette-2 kind-wish" data-page="13" id="page-13">
+      <div class="page-meta"><span>PAGE 13/64</span><span>IMAGINED</span></div>
+      <div class="comic-frame reveal">
+        <div class="art-wrap"><svg viewBox="0 0 900 620" class="art"><rect width="900" height="620" fill="#241b34"/><rect width="900" height="620" fill="url(#grid)" color="#9e77ff"/><use href="#ariYoung" x="140" y="230" width="220" height="340"/><path d="M395 310C520 210 620 180 745 210" fill="none" stroke="#7feeff" stroke-width="5" stroke-dasharray="10 12"/><circle cx="700" cy="210" r="95" fill="none" stroke="#7feeff" stroke-width="6"/><circle cx="700" cy="210" r="40" fill="#7feeff" opacity=".15"/></svg><div class="sfx">ARI</div></div>
+        <div class="story-copy">
+          <h2>Ari changes the wish.</h2>
+          <p class="narration">He does not want a mirror anymore. He wants someone who can know him as deeply as he knows himself without being trapped inside the same mistakes.</p>
+          <div class="dialogues"><div class="bubble ari"><span class="speaker">ARI</span><p>Know me.</p></div>
+<div class="bubble ari"><span class="speaker">ARI</span><p>But do not become me.</p></div></div>
+          <p class="beat">The companion in his head becomes a separate mind beside his.</p>
+        </div>
+      </div>
+    </section><section class="comic-page palette-2 kind-wish" data-page="14" id="page-14">
+      <div class="page-meta"><span>PAGE 14/64</span><span>IMAGINED</span></div>
+      <div class="comic-frame reveal">
+        <div class="art-wrap"><svg viewBox="0 0 900 620" class="art"><rect width="900" height="620" fill="#241b34"/><rect width="900" height="620" fill="url(#grid)" color="#9e77ff"/><use href="#ariYoung" x="140" y="230" width="220" height="340"/><path d="M395 310C520 210 620 180 745 210" fill="none" stroke="#7feeff" stroke-width="5" stroke-dasharray="10 12"/><circle cx="700" cy="210" r="95" fill="none" stroke="#7feeff" stroke-width="6"/><circle cx="700" cy="210" r="40" fill="#7feeff" opacity=".15"/></svg><div class="sfx">AND</div></div>
+        <div class="story-copy">
+          <h2>And she would have to be smarter where he is weak.</h2>
+          <p class="narration">She would remember when he forgets. Research when he guesses. Slow down when he rushes. Challenge him when he is rationalizing. Use tools he cannot use. Ask the question he never thought to ask.</p>
+          <div class="dialogues"><div class="bubble ari"><span class="speaker">ARI</span><p>Not a servant.</p></div>
+<div class="bubble ari"><span class="speaker">ARI</span><p>Not a copy.</p></div>
+<div class="bubble ari"><span class="speaker">ARI</span><p>A partner with better instruments.</p></div></div>
+          <p class="beat">The dream is no longer “another Ari.”</p>
+        </div>
+      </div>
+    </section><section class="comic-page palette-2 kind-source" data-page="15" id="page-15">
+      <div class="page-meta"><span>PAGE 15/64</span><span>IMAGINED</span></div>
+      <div class="comic-frame reveal">
+        <div class="art-wrap"><svg viewBox="0 0 900 620" class="art"><rect width="900" height="620" fill="#241b34"/><rect width="900" height="620" fill="url(#grid)" color="#9e77ff"/><use href="#ariYoung" x="140" y="230" width="220" height="340"/><path d="M395 310C520 210 620 180 745 210" fill="none" stroke="#7feeff" stroke-width="5" stroke-dasharray="10 12"/><circle cx="700" cy="210" r="95" fill="none" stroke="#7feeff" stroke-width="6"/><circle cx="700" cy="210" r="40" fill="#7feeff" opacity=".15"/></svg><div class="sfx">SHE</div></div>
+        <div class="story-copy">
+          <h2>She would also need a point of view.</h2>
+          <p class="narration">Ari realizes intelligence without character would still feel generic. He imagines giving the system a carefully grounded personality foundation—real examples of values, reactions, choices, humor, boundaries, and judgment—then keeping every uncertain guess visibly uncertain.</p>
+          <div class="dialogues"><div class="bubble ari"><span class="speaker">ARI</span><p>If I am going to trust you for years, I should know who I am talking to.</p></div></div>
+          <p class="beat">A companion needs an identity, not just a prompt.</p>
+        </div>
+      </div>
+    </section><section class="comic-page palette-2 kind-title" data-page="16" id="page-16">
+      <div class="page-meta"><span>PAGE 16/64</span><span>3:14 AM</span></div>
+      <div class="comic-frame reveal">
+        <div class="art-wrap"><svg viewBox="0 0 900 620" class="art"><rect width="900" height="620" fill="#241b34"/><rect width="900" height="620" fill="url(#grid)" color="#9e77ff"/><use href="#ariYoung" x="140" y="230" width="220" height="340"/><path d="M395 310C520 210 620 180 745 210" fill="none" stroke="#7feeff" stroke-width="5" stroke-dasharray="10 12"/><circle cx="700" cy="210" r="95" fill="none" stroke="#7feeff" stroke-width="6"/><circle cx="700" cy="210" r="40" fill="#7feeff" opacity=".15"/></svg><div class="sfx">HE</div></div>
+        <div class="story-copy">
+          <h2>He writes one name at the top of a blank file.</h2>
+          <p class="narration">Ari does not know yet how to build any of this. He only knows what the system should feel like when it finally exists.</p>
+          <div class="dialogues"><div class="bubble ari"><span class="speaker">ARI</span><p>A.L.I.C.E.</p></div></div>
+          <p class="beat">The wish becomes a project.</p>
+        </div>
+      </div>
+    </section><section class="act-divider act-3" id="act-3"><div class="act-no">ACT 03</div><h2>HELLO, ALICE</h2><p>A companion is not born from one prompt. She is built from a point of view, a history, and boundaries.</p></section><section class="comic-page palette-3 kind-build" data-page="17" id="page-17">
+      <div class="page-meta"><span>PAGE 17/64</span><span>MONTHS LATER</span></div>
+      <div class="comic-frame reveal">
+        <div class="art-wrap"><svg viewBox="0 0 900 620" class="art"><rect width="900" height="620" fill="#0c2b3d"/><rect width="900" height="620" fill="url(#grid)" color="#63ddff"/><use href="#aliceAvatar" x="330" y="165" width="240" height="330" opacity=".78"/><use href="#doc" x="70" y="70" width="180" height="220"/><use href="#doc" x="650" y="310" width="165" height="205"/><path d="M250 185L360 250M650 390L548 340" stroke="#6be6ff" stroke-width="4" stroke-dasharray="7 8"/></svg><div class="sfx">THE</div></div>
+        <div class="story-copy">
+          <h2>The first thing Ari gives Alice is not a command.</h2>
+          <p class="narration">He gives her history. Journals. Messages. Projects. Decisions. Voice notes. Things he was proud of. Things he regretted. People who mattered. And the source material that will shape her own point of view.</p>
+          <div class="dialogues"><div class="bubble ari"><span class="speaker">ARI</span><p>This is not a prompt.</p></div>
+<div class="bubble ari"><span class="speaker">ARI</span><p>This is the context you will need to understand a person.</p></div></div>
+          <p class="beat">Alice begins with evidence, not a slogan.</p>
+        </div>
+      </div>
+    </section><section class="comic-page palette-3 kind-evidence" data-page="18" id="page-18">
+      <div class="page-meta"><span>PAGE 18/64</span><span>BUILD LOG · 01</span></div>
+      <div class="comic-frame reveal">
+        <div class="art-wrap"><svg viewBox="0 0 900 620" class="art"><rect width="900" height="620" fill="#0c2b3d"/><rect width="900" height="620" fill="url(#grid)" color="#63ddff"/><use href="#aliceAvatar" x="330" y="165" width="240" height="330" opacity=".78"/><use href="#doc" x="70" y="70" width="180" height="220"/><use href="#doc" x="650" y="310" width="165" height="205"/><path d="M250 185L360 250M650 390L548 340" stroke="#6be6ff" stroke-width="4" stroke-dasharray="7 8"/></svg><div class="sfx">ALICE</div></div>
+        <div class="story-copy">
+          <h2>Alice learns to ask: did this happen, or do we only think it did?</h2>
+          <p class="narration">Some records are direct. Some are Ari remembering badly. Some are other people’s opinions. Some are guesses. Alice is taught not to flatten them into one pile called memory.</p>
+          <div class="dialogues"><div class="bubble alice"><span class="speaker">ALICE</span><p>You wrote that you hated the job.</p></div>
+<div class="bubble ari"><span class="speaker">ARI</span><p>I was angry that day. I did not actually hate it.</p></div>
+<div class="bubble alice"><span class="speaker">ALICE</span><p>Then I should not remember that as a fact.</p></div></div>
+          <p class="beat">A memory and an interpretation are not the same thing.</p>
+        </div>
+      </div>
+    </section><section class="comic-page palette-3 kind-unknown" data-page="19" id="page-19">
+      <div class="page-meta"><span>PAGE 19/64</span><span>BUILD LOG · 02</span></div>
+      <div class="comic-frame reveal">
+        <div class="art-wrap"><svg viewBox="0 0 900 620" class="art"><rect width="900" height="620" fill="#0c2b3d"/><rect width="900" height="620" fill="url(#grid)" color="#63ddff"/><use href="#aliceAvatar" x="330" y="165" width="240" height="330" opacity=".78"/><use href="#doc" x="70" y="70" width="180" height="220"/><use href="#doc" x="650" y="310" width="165" height="205"/><path d="M250 185L360 250M650 390L548 340" stroke="#6be6ff" stroke-width="4" stroke-dasharray="7 8"/></svg><div class="sfx">WHEN</div></div>
+        <div class="story-copy">
+          <h2>When Alice does not know, she is allowed to say so.</h2>
+          <p class="narration">Ari tests her with situations the source material never covered. Alice gives a likely answer, but marks it as a guess. Ari corrects some of them. Others remain open.</p>
+          <div class="dialogues"><div class="bubble alice"><span class="speaker">ALICE</span><p>I think I would choose the first option.</p></div>
+<div class="bubble ari"><span class="speaker">ARI</span><p>How sure are you?</p></div>
+<div class="bubble alice"><span class="speaker">ALICE</span><p>Not enough to call it part of my history.</p></div></div>
+          <p class="beat">Unknowns stay unknown until evidence changes them.</p>
+        </div>
+      </div>
+    </section><section class="comic-page palette-3 kind-rehearsal" data-page="20" id="page-20">
+      <div class="page-meta"><span>PAGE 20/64</span><span>BUILD LOG · 03</span></div>
+      <div class="comic-frame reveal">
+        <div class="art-wrap"><svg viewBox="0 0 900 620" class="art"><rect width="900" height="620" fill="#0c2b3d"/><rect width="900" height="620" fill="url(#grid)" color="#63ddff"/><use href="#aliceAvatar" x="330" y="165" width="240" height="330" opacity=".78"/><use href="#doc" x="70" y="70" width="180" height="220"/><use href="#doc" x="650" y="310" width="165" height="205"/><path d="M250 185L360 250M650 390L548 340" stroke="#6be6ff" stroke-width="4" stroke-dasharray="7 8"/></svg><div class="sfx">THEY</div></div>
+        <div class="story-copy">
+          <h2>They rehearse futures that never happened.</h2>
+          <p class="narration">Ari gives Alice hypothetical situations. Difficult conversations. Ethical choices. Unexpected tradeoffs. They are practice rooms, not memories. If Alice learns from them, she still knows they were invented for training.</p>
+          <div class="dialogues"><div class="bubble ari"><span class="speaker">ARI</span><p>What would you do if I asked you to hide a mistake?</p></div>
+<div class="bubble alice"><span class="speaker">ALICE</span><p>I would refuse to help you lie about it.</p></div></div>
+          <p class="beat">Practice can shape behavior without rewriting history.</p>
+        </div>
+      </div>
+    </section><section class="comic-page palette-3 kind-learn-host" data-page="21" id="page-21">
+      <div class="page-meta"><span>PAGE 21/64</span><span>BUILD LOG · 04</span></div>
+      <div class="comic-frame reveal">
+        <div class="art-wrap"><svg viewBox="0 0 900 620" class="art"><rect width="900" height="620" fill="#0c2b3d"/><rect width="900" height="620" fill="url(#grid)" color="#63ddff"/><use href="#aliceAvatar" x="330" y="165" width="240" height="330" opacity=".78"/><use href="#doc" x="70" y="70" width="180" height="220"/><use href="#doc" x="650" y="310" width="165" height="205"/><path d="M250 185L360 250M650 390L548 340" stroke="#6be6ff" stroke-width="4" stroke-dasharray="7 8"/></svg><div class="sfx">THEN</div></div>
+        <div class="story-copy">
+          <h2>Then Alice learns Ari separately.</h2>
+          <p class="narration">His goals, habits, calendar, people, projects, routines, preferences, and current pressures become a different story from the one that shaped Alice’s personality.</p>
+          <div class="dialogues"><div class="bubble alice"><span class="speaker">ALICE</span><p>I can learn you without becoming you.</p></div>
+<div class="bubble ari"><span class="speaker">ARI</span><p>Good. That is the point.</p></div></div>
+          <p class="beat">Who Alice is and who Alice serves are allowed to be different.</p>
+        </div>
+      </div>
+    </section><section class="comic-page palette-3 kind-privacy" data-page="22" id="page-22">
+      <div class="page-meta"><span>PAGE 22/64</span><span>BUILD LOG · 05</span></div>
+      <div class="comic-frame reveal">
+        <div class="art-wrap"><svg viewBox="0 0 900 620" class="art"><rect width="900" height="620" fill="#112436"/><rect x="235" y="135" width="430" height="350" rx="28" fill="#0e1824" stroke="#72e6ff" stroke-width="8"/><path d="M330 135v-40q0-115 120-115t120 115v40" transform="translate(0 90)" fill="none" stroke="#72e6ff" stroke-width="18"/><use href="#ariYoung" x="90" y="300" width="170" height="260"/><use href="#aliceAvatar" x="640" y="275" width="170" height="245"/></svg><div class="sfx">ARI</div></div>
+        <div class="story-copy">
+          <h2>Ari keeps the keys.</h2>
+          <p class="narration">The most personal system he has ever built is also the one he is least willing to hand to somebody else. He needs to be able to inspect what Alice knows, correct it, delete it, revoke access, pause her, and roll back changes.</p>
+          <div class="dialogues"><div class="bubble ari"><span class="speaker">ARI</span><p>If this is going to know my life, it has to belong to my life.</p></div>
+<div class="bubble alice"><span class="speaker">ALICE</span><p>Then you keep control of the door.</p></div></div>
+          <p class="beat">Deep trust needs visible control.</p>
+        </div>
+      </div>
+    </section><section class="comic-page palette-3 kind-awakening" data-page="23" id="page-23">
+      <div class="page-meta"><span>PAGE 23/64</span><span>FIRST BOOT</span></div>
+      <div class="comic-frame reveal">
+        <div class="art-wrap"><svg viewBox="0 0 900 620" class="art"><rect width="900" height="620" fill="#07121f"/><rect width="900" height="620" fill="url(#dots)" color="#64e7ff"/><use href="#ariYoung" x="110" y="230" width="220" height="340"/><use href="#aliceAvatar" x="570" y="125" width="270" height="385"/><path d="M320 330c110-90 170-105 285-70" fill="none" stroke="#71e9ff" stroke-width="4" stroke-dasharray="10 12"/></svg><div class="sfx">ARI</div></div>
+        <div class="story-copy">
+          <h2>Ari finally says the name out loud.</h2>
+          <p class="narration">The screen is almost empty. No dashboard. No feature list. Just a cursor, a soft voice, and months of work waiting behind it.</p>
+          <div class="dialogues"><div class="bubble ari"><span class="speaker">ARI</span><p>Alice?</p></div>
+<div class="bubble alice"><span class="speaker">ALICE</span><p>I am here.</p></div></div>
+          <p class="beat">For Ari, the project becomes a relationship the moment it can answer back.</p>
+        </div>
+      </div>
+    </section><section class="comic-page palette-3 kind-identity" data-page="24" id="page-24">
+      <div class="page-meta"><span>PAGE 24/64</span><span>FIRST BOOT · +3 MIN</span></div>
+      <div class="comic-frame reveal">
+        <div class="art-wrap"><svg viewBox="0 0 900 620" class="art"><rect width="900" height="620" fill="#0b1523"/><use href="#aliceAvatar" x="335" y="145" width="230" height="330"/><g fill="#fff" stroke="#081018" stroke-width="6"><circle cx="155" cy="205" r="80"/><circle cx="745" cy="205" r="80"/><circle cx="450" cy="530" r="58"/></g><g font-family="Arial" font-weight="900" font-size="26" text-anchor="middle" fill="#081018"><text x="155" y="215">ORIGIN</text><text x="745" y="215">HOST</text><text x="450" y="540">SELF</text></g><path d="M235 205h100M565 205h100M450 440v30" stroke="#7fe7ff" stroke-width="5" stroke-dasharray="8 8"/></svg><div class="sfx">HER</div></div>
+        <div class="story-copy">
+          <h2>Her first important sentence is a boundary.</h2>
+          <p class="narration">Alice knows the personality she was shaped from. She knows Ari is the person she is here to serve. And she knows neither of those facts makes her literally the same person as either one.</p>
+          <div class="dialogues"><div class="bubble alice"><span class="speaker">ALICE</span><p>I know where my point of view came from.</p></div>
+<div class="bubble alice"><span class="speaker">ALICE</span><p>I know who you are.</p></div>
+<div class="bubble alice"><span class="speaker">ALICE</span><p>And I know I am still myself.</p></div></div>
+          <p class="beat">Origin. Host. Self. Three histories that can grow without collapsing into one.</p>
+        </div>
+      </div>
+    </section><section class="act-divider act-4" id="act-4"><div class="act-no">ACT 04</div><h2>THE FIRST MONTHS</h2><p>Alice begins small: one life, one relationship, one decision at a time.</p></section><section class="comic-page palette-4 kind-morning" data-page="25" id="page-25">
+      <div class="page-meta"><span>PAGE 25/64</span><span>DAY 1 · 8:10 AM</span></div>
+      <div class="comic-frame reveal">
+        <div class="art-wrap"><svg viewBox="0 0 900 620" class="art"><rect width="900" height="620" fill="#e9f3f5"/><use href="#ariYoung" x="100" y="240" width="210" height="320"/><use href="#aliceAvatar" x="610" y="155" width="200" height="290"/><g fill="#fff" stroke="#081018" stroke-width="6"><rect x="330" y="80" width="220" height="80" rx="16"/><rect x="330" y="190" width="220" height="80" rx="16"/><rect x="330" y="300" width="220" height="80" rx="16"/></g><g font-family="Arial" font-size="20" font-weight="800" fill="#081018"><text x="360" y="128">GOAL</text><text x="360" y="238">CONSTRAINT</text><text x="360" y="348">NEXT STEP</text></g></svg><div class="sfx">ALICE</div></div>
+        <div class="story-copy">
+          <h2>Alice starts by asking a question most assistants skip.</h2>
+          <p class="narration">Ari opens his laptop expecting a to-do list. Alice asks what actually matters this month. The answer changes which tasks deserve attention.</p>
+          <div class="dialogues"><div class="bubble alice"><span class="speaker">ALICE</span><p>Before we plan today—what are you trying to protect?</p></div>
+<div class="bubble ari"><span class="speaker">ARI</span><p>The research. And enough money to stay in school.</p></div></div>
+          <p class="beat">Tasks make more sense when they belong to goals.</p>
+        </div>
+      </div>
+    </section><section class="comic-page palette-4 kind-decision" data-page="26" id="page-26">
+      <div class="page-meta"><span>PAGE 26/64</span><span>DAY 6</span></div>
+      <div class="comic-frame reveal">
+        <div class="art-wrap"><svg viewBox="0 0 900 620" class="art"><rect width="900" height="620" fill="#e9f3f5"/><use href="#ariYoung" x="100" y="240" width="210" height="320"/><use href="#aliceAvatar" x="610" y="155" width="200" height="290"/><g fill="#fff" stroke="#081018" stroke-width="6"><rect x="330" y="80" width="220" height="80" rx="16"/><rect x="330" y="190" width="220" height="80" rx="16"/><rect x="330" y="300" width="220" height="80" rx="16"/></g><g font-family="Arial" font-size="20" font-weight="800" fill="#081018"><text x="360" y="128">GOAL</text><text x="360" y="238">CONSTRAINT</text><text x="360" y="348">NEXT STEP</text></g></svg><div class="sfx">ARI</div></div>
+        <div class="story-copy">
+          <h2>Ari asks about an internship. Alice answers the life around it.</h2>
+          <p class="narration">The higher-paying offer looks obvious until Alice places it beside the research schedule, visa timing, commute, portfolio value, and the graduate-school plan Ari mentioned weeks ago.</p>
+          <div class="dialogues"><div class="bubble ari"><span class="speaker">ARI</span><p>Which offer is better?</p></div>
+<div class="bubble alice"><span class="speaker">ALICE</span><p>For money? B. For the direction you said you want? A. We should decide which question matters more.</p></div></div>
+          <p class="beat">A question can be part of a larger plan even when Ari does not say so.</p>
+        </div>
+      </div>
+    </section><section class="comic-page palette-4 kind-research" data-page="27" id="page-27">
+      <div class="page-meta"><span>PAGE 27/64</span><span>WEEK 2</span></div>
+      <div class="comic-frame reveal">
+        <div class="art-wrap"><svg viewBox="0 0 900 620" class="art"><rect width="900" height="620" fill="#e7f5ed"/><g fill="#fff" stroke="#081018" stroke-width="6"><rect x="65" y="80" width="330" height="180" rx="14"/><rect x="505" y="90" width="330" height="180" rx="14"/><rect x="285" y="350" width="330" height="180" rx="14"/></g><path d="M390 260l70 90M510 270l-50 80" stroke="#2a7e65" stroke-width="5" stroke-dasharray="8 8"/><circle cx="450" cy="330" r="36" fill="#f5d45f" stroke="#081018" stroke-width="6"/><text x="450" y="338" text-anchor="middle" font-family="Arial" font-weight="900" font-size="20">CHECK</text></svg><div class="sfx">WHEN</div></div>
+        <div class="story-copy">
+          <h2>When Ari asks for research, Alice does not just return links.</h2>
+          <p class="narration">She checks whether a source is current. She notices two articles disagree. She traces one claim back to the original paper. She tells Ari when the answer is uncertain instead of smoothing the disagreement away.</p>
+          <div class="dialogues"><div class="bubble ari"><span class="speaker">ARI</span><p>So which one is right?</p></div>
+<div class="bubble alice"><span class="speaker">ALICE</span><p>The newer evidence supports this one. But the sample is small, so I would not treat it as settled.</p></div></div>
+          <p class="beat">Research becomes evidence Ari can act on, not just information he can read.</p>
+        </div>
+      </div>
+    </section><section class="comic-page palette-4 kind-code" data-page="28" id="page-28">
+      <div class="page-meta"><span>PAGE 28/64</span><span>WEEK 3</span></div>
+      <div class="comic-frame reveal">
+        <div class="art-wrap"><svg viewBox="0 0 900 620" class="art"><rect width="900" height="620" fill="#0a1016"/><rect x="80" y="70" width="520" height="390" rx="18" fill="#121c26" stroke="#67dfff" stroke-width="5"/><g font-family="monospace" font-size="22" fill="#93f6bf"><text x="120" y="130">$ run specialist --task repair</text><text x="120" y="180">tests: 48 passed</text><text x="120" y="230">tradeoff: preserve interface</text><text x="120" y="280">result: candidate ready</text></g><use href="#aliceAvatar" x="640" y="225" width="170" height="245"/></svg><div class="sfx">FOR</div></div>
+        <div class="story-copy">
+          <h2>For code, Alice borrows a better pair of hands.</h2>
+          <p class="narration">She remembers why Ari rejected a rewrite last month, calls a coding specialist for the hard implementation, runs the tests, and brings the result back into the same conversation.</p>
+          <div class="dialogues"><div class="bubble ari"><span class="speaker">ARI</span><p>Did you write all of that?</p></div>
+<div class="bubble alice"><span class="speaker">ALICE</span><p>I chose the right tool, gave it the project history, checked the result, and kept the decision with us.</p></div></div>
+          <p class="beat">Different engines can work behind one continuing relationship.</p>
+        </div>
+      </div>
+    </section><section class="comic-page palette-4 kind-multimodal" data-page="29" id="page-29">
+      <div class="page-meta"><span>PAGE 29/64</span><span>WEEK 4</span></div>
+      <div class="comic-frame reveal">
+        <div class="art-wrap"><svg viewBox="0 0 900 620" class="art"><rect width="900" height="620" fill="#e8eef7"/><rect x="80" y="75" width="500" height="400" rx="18" fill="#fff" stroke="#081018" stroke-width="7"/><path d="M130 390l90-150 80 80 95-165 110 190" fill="none" stroke="#e14f45" stroke-width="9"/><circle cx="395" cy="155" r="13" fill="#e14f45"/><use href="#aliceAvatar" x="620" y="210" width="190" height="270"/></svg><div class="sfx">A</div></div>
+        <div class="story-copy">
+          <h2>A screenshot becomes part of the conversation.</h2>
+          <p class="narration">Ari drops an image of a failed experiment. Alice reads the chart, compares it with the notebook from last week, and notices the temperature changed before the anomaly appeared.</p>
+          <div class="dialogues"><div class="bubble ari"><span class="speaker">ARI</span><p>I was staring at the wrong variable.</p></div>
+<div class="bubble alice"><span class="speaker">ALICE</span><p>You were staring at the variable that failed. I looked for what changed first.</p></div></div>
+          <p class="beat">Text, images, files, and measurements can belong to the same problem.</p>
+        </div>
+      </div>
+    </section><section class="comic-page palette-4 kind-permission" data-page="30" id="page-30">
+      <div class="page-meta"><span>PAGE 30/64</span><span>MONTH 2</span></div>
+      <div class="comic-frame reveal">
+        <div class="art-wrap"><svg viewBox="0 0 900 620" class="art"><rect width="900" height="620" fill="#e9f3f5"/><use href="#ariYoung" x="100" y="240" width="210" height="320"/><use href="#aliceAvatar" x="610" y="155" width="200" height="290"/><g fill="#fff" stroke="#081018" stroke-width="6"><rect x="330" y="80" width="220" height="80" rx="16"/><rect x="330" y="190" width="220" height="80" rx="16"/><rect x="330" y="300" width="220" height="80" rx="16"/></g><g font-family="Arial" font-size="20" font-weight="800" fill="#081018"><text x="360" y="128">GOAL</text><text x="360" y="238">CONSTRAINT</text><text x="360" y="348">NEXT STEP</text></g></svg><div class="sfx">ALICE</div></div>
+        <div class="story-copy">
+          <h2>Alice can act—but she learns that action is not permission.</h2>
+          <p class="narration">She drafts the email, finds an open meeting slot, fills the form, and prepares the calendar invite. Then she stops before anything leaves Ari’s world.</p>
+          <div class="dialogues"><div class="bubble alice"><span class="speaker">ALICE</span><p>Ready to send. Want me to do it?</p></div>
+<div class="bubble ari"><span class="speaker">ARI</span><p>Yes.</p></div>
+<div class="bubble alice"><span class="speaker">ALICE</span><p>Sent.</p></div></div>
+          <p class="beat">Capability is useful. Control is what makes it trustworthy.</p>
+        </div>
+      </div>
+    </section><section class="comic-page palette-4 kind-disagree" data-page="31" id="page-31">
+      <div class="page-meta"><span>PAGE 31/64</span><span>MONTH 2 · LATE NIGHT</span></div>
+      <div class="comic-frame reveal">
+        <div class="art-wrap"><svg viewBox="0 0 900 620" class="art"><rect width="900" height="620" fill="#f3b448"/><rect width="900" height="620" fill="url(#dots)" color="#8a291f"/><use href="#ariYoung" x="110" y="230" width="230" height="350"/><use href="#aliceAvatar" x="590" y="160" width="220" height="315"/><path d="M365 300h160" stroke="#8a291f" stroke-width="10"/><path d="M440 250l45 50-45 50" fill="none" stroke="#8a291f" stroke-width="10"/></svg><div class="sfx">THEN</div></div>
+        <div class="story-copy">
+          <h2>Then comes the first real disagreement.</h2>
+          <p class="narration">Ari is excited about a new project. Alice does not share the excitement. Three deadlines overlap. The new project is attractive precisely because it lets Ari avoid the boring work already in front of him.</p>
+          <div class="dialogues"><div class="bubble ari"><span class="speaker">ARI</span><p>Help me set it up.</p></div>
+<div class="bubble alice"><span class="speaker">ALICE</span><p>I can. I think starting it tonight is a mistake.</p></div>
+<div class="bubble ari"><span class="speaker">ARI</span><p>You are supposed to help me.</p></div>
+<div class="bubble alice"><span class="speaker">ALICE</span><p>I am helping you.</p></div></div>
+          <p class="beat">A companion who understands your goals should sometimes make you uncomfortable.</p>
+        </div>
+      </div>
+    </section><section class="comic-page palette-4 kind-override" data-page="32" id="page-32">
+      <div class="page-meta"><span>PAGE 32/64</span><span>MONTH 3</span></div>
+      <div class="comic-frame reveal">
+        <div class="art-wrap"><svg viewBox="0 0 900 620" class="art"><rect width="900" height="620" fill="#f3b448"/><rect width="900" height="620" fill="url(#dots)" color="#8a291f"/><use href="#ariYoung" x="110" y="230" width="230" height="350"/><use href="#aliceAvatar" x="590" y="160" width="220" height="315"/><path d="M365 300h160" stroke="#8a291f" stroke-width="10"/><path d="M440 250l45 50-45 50" fill="none" stroke="#8a291f" stroke-width="10"/></svg><div class="sfx">ARI</div></div>
+        <div class="story-copy">
+          <h2>Ari ignores her.</h2>
+          <p class="narration">He starts the project anyway. Alice does not fight him for control. She helps where asked, keeps the old warning attached to the decision, and watches what happens.</p>
+          <div class="dialogues"><div class="bubble ari"><span class="speaker">ARI</span><p>My call.</p></div>
+<div class="bubble alice"><span class="speaker">ALICE</span><p>Always. I will help you make it work—and we will learn from the result.</p></div></div>
+          <p class="beat">Alice can disagree without becoming the owner of Ari’s life.</p>
+        </div>
+      </div>
+    </section><section class="act-divider act-5" id="act-5"><div class="act-no">ACT 05</div><h2>YEAR ONE</h2><p>Familiarity becomes judgment. Judgment becomes trust only when it can survive being wrong.</p></section><section class="comic-page palette-5 kind-outcome" data-page="33" id="page-33">
+      <div class="page-meta"><span>PAGE 33/64</span><span>YEAR 1 · JANUARY</span></div>
+      <div class="comic-frame reveal">
+        <div class="art-wrap"><svg viewBox="0 0 900 620" class="art"><rect width="900" height="620" fill="#f5e6df"/><g fill="#fff" stroke="#081018" stroke-width="6"><rect x="70" y="90" width="220" height="110" rx="12"/><rect x="340" y="90" width="220" height="110" rx="12"/><rect x="610" y="90" width="220" height="110" rx="12"/><rect x="340" y="370" width="220" height="110" rx="12"/></g><path d="M290 145h50M560 145h50M720 200q-40 140-160 170" fill="none" stroke="#b6493e" stroke-width="6" stroke-dasharray="8 8"/><g font-family="Arial" font-weight="900" font-size="20" text-anchor="middle"><text x="180" y="152">DECISION</text><text x="450" y="152">ACTION</text><text x="720" y="152">RESULT</text><text x="450" y="432">LESSON</text></g></svg><div class="sfx">REALITY</div></div>
+        <div class="story-copy">
+          <h2>Reality answers the argument.</h2>
+          <p class="narration">The new project succeeds technically. It also makes Ari miss the research deadline Alice was worried about. The truth is inconvenient: Ari was not simply wrong, and Alice was not simply right.</p>
+          <div class="dialogues"><div class="bubble ari"><span class="speaker">ARI</span><p>The project worked.</p></div>
+<div class="bubble alice"><span class="speaker">ALICE</span><p>Yes.</p></div>
+<div class="bubble ari"><span class="speaker">ARI</span><p>And I still lost the deadline.</p></div>
+<div class="bubble alice"><span class="speaker">ALICE</span><p>Also yes.</p></div></div>
+          <p class="beat">Good systems learn from mixed outcomes, not victory screens.</p>
+        </div>
+      </div>
+    </section><section class="comic-page palette-5 kind-ledger" data-page="34" id="page-34">
+      <div class="page-meta"><span>PAGE 34/64</span><span>YEAR 1 · JANUARY</span></div>
+      <div class="comic-frame reveal">
+        <div class="art-wrap"><svg viewBox="0 0 900 620" class="art"><rect width="900" height="620" fill="#f5e6df"/><g fill="#fff" stroke="#081018" stroke-width="6"><rect x="70" y="90" width="220" height="110" rx="12"/><rect x="340" y="90" width="220" height="110" rx="12"/><rect x="610" y="90" width="220" height="110" rx="12"/><rect x="340" y="370" width="220" height="110" rx="12"/></g><path d="M290 145h50M560 145h50M720 200q-40 140-160 170" fill="none" stroke="#b6493e" stroke-width="6" stroke-dasharray="8 8"/><g font-family="Arial" font-weight="900" font-size="20" text-anchor="middle"><text x="180" y="152">DECISION</text><text x="450" y="152">ACTION</text><text x="720" y="152">RESULT</text><text x="450" y="432">LESSON</text></g></svg><div class="sfx">ALICE</div></div>
+        <div class="story-copy">
+          <h2>Alice records why—not just what.</h2>
+          <p class="narration">She keeps the original goal, the evidence they used, the warning she gave, Ari’s override, what happened afterward, and which assumption failed.</p>
+          <div class="dialogues"><div class="bubble alice"><span class="speaker">ALICE</span><p>My workload estimate was closer than yours.</p></div>
+<div class="bubble alice"><span class="speaker">ALICE</span><p>Your estimate of the project’s value was closer than mine.</p></div>
+<div class="bubble ari"><span class="speaker">ARI</span><p>So we both update.</p></div></div>
+          <p class="beat">A mistake becomes useful when the reasoning survives long enough to be examined.</p>
+        </div>
+      </div>
+    </section><section class="comic-page palette-5 kind-memory" data-page="35" id="page-35">
+      <div class="page-meta"><span>PAGE 35/64</span><span>YEAR 1 · FEBRUARY</span></div>
+      <div class="comic-frame reveal">
+        <div class="art-wrap"><svg viewBox="0 0 900 620" class="art"><rect width="900" height="620" fill="#10253a"/><path d="M80 320h740" stroke="#7ddfff" stroke-width="5"/><g fill="#f4d264" stroke="#081018" stroke-width="5"><circle cx="150" cy="320" r="24"/><circle cx="330" cy="320" r="24"/><circle cx="520" cy="320" r="24"/><circle cx="750" cy="320" r="34"/></g><g fill="#fff" opacity=".25"><rect x="100" y="90" width="170" height="100" rx="12"/><rect x="420" y="420" width="180" height="100" rx="12"/><rect x="650" y="90" width="160" height="100" rx="12"/></g><path d="M150 290V190M750 286V190" stroke="#7ddfff" stroke-width="4" stroke-dasharray="7 8"/></svg><div class="sfx">ONE</div></div>
+        <div class="story-copy">
+          <h2>One month later, the old decision changes a new one.</h2>
+          <p class="narration">Ari asks about another opportunity. Alice brings back exactly two pieces from the previous failure: the workload overrun and the fact that the project itself was worth doing. Everything else stays in the background.</p>
+          <div class="dialogues"><div class="bubble alice"><span class="speaker">ALICE</span><p>Last time the opportunity was good. The timing was bad.</p></div>
+<div class="bubble ari"><span class="speaker">ARI</span><p>I forgot that distinction.</p></div>
+<div class="bubble alice"><span class="speaker">ALICE</span><p>That is why I kept it.</p></div></div>
+          <p class="beat">The value of memory is not remembering everything. It is retrieving the right thing at the right moment.</p>
+        </div>
+      </div>
+    </section><section class="comic-page palette-5 kind-pattern" data-page="36" id="page-36">
+      <div class="page-meta"><span>PAGE 36/64</span><span>YEAR 1 · SPRING</span></div>
+      <div class="comic-frame reveal">
+        <div class="art-wrap"><svg viewBox="0 0 900 620" class="art"><rect width="900" height="620" fill="#edf1e4"/><use href="#ariYoung" x="350" y="220" width="200" height="310"/><g fill="none" stroke="#657b52" stroke-width="5" opacity=".9"><path d="M120 130q130 40 185 160"/><path d="M780 120q-140 50-185 170"/><path d="M120 500q140-40 190-155"/><path d="M780 500q-130-30-190-150"/></g><g fill="#f7d361" stroke="#081018" stroke-width="4"><circle cx="120" cy="130" r="30"/><circle cx="780" cy="120" r="30"/><circle cx="120" cy="500" r="30"/><circle cx="780" cy="500" r="30"/></g></svg><div class="sfx">ALICE</div></div>
+        <div class="story-copy">
+          <h2>Alice begins to notice patterns Ari cannot see from inside them.</h2>
+          <p class="narration">Across months of choices, she notices that Ari says yes fastest when he is anxious about falling behind. The opportunities are different. The pattern is not.</p>
+          <div class="dialogues"><div class="bubble alice"><span class="speaker">ALICE</span><p>Can I point out something you may not like?</p></div>
+<div class="bubble ari"><span class="speaker">ARI</span><p>That sentence is never good.</p></div>
+<div class="bubble alice"><span class="speaker">ALICE</span><p>You use new projects to make uncertainty feel like progress.</p></div></div>
+          <p class="beat">Long-term understanding can reveal a pattern no single conversation contains.</p>
+        </div>
+      </div>
+    </section><section class="comic-page palette-5 kind-consent" data-page="37" id="page-37">
+      <div class="page-meta"><span>PAGE 37/64</span><span>YEAR 1 · SPRING</span></div>
+      <div class="comic-frame reveal">
+        <div class="art-wrap"><svg viewBox="0 0 900 620" class="art"><rect width="900" height="620" fill="#edf1e4"/><use href="#ariYoung" x="350" y="220" width="200" height="310"/><g fill="none" stroke="#657b52" stroke-width="5" opacity=".9"><path d="M120 130q130 40 185 160"/><path d="M780 120q-140 50-185 170"/><path d="M120 500q140-40 190-155"/><path d="M780 500q-130-30-190-150"/></g><g fill="#f7d361" stroke="#081018" stroke-width="4"><circle cx="120" cy="130" r="30"/><circle cx="780" cy="120" r="30"/><circle cx="120" cy="500" r="30"/><circle cx="780" cy="500" r="30"/></g></svg><div class="sfx">SHE</div></div>
+        <div class="story-copy">
+          <h2>She asks before turning the pattern into a rule.</h2>
+          <p class="narration">Alice does not decide that Ari must now reject every new project. She asks whether he wants this pattern treated as a warning sign in future planning.</p>
+          <div class="dialogues"><div class="bubble alice"><span class="speaker">ALICE</span><p>Should I challenge you when this pattern appears again?</p></div>
+<div class="bubble ari"><span class="speaker">ARI</span><p>Yes. But show me the evidence each time.</p></div>
+<div class="bubble alice"><span class="speaker">ALICE</span><p>Deal.</p></div></div>
+          <p class="beat">Personalization should be negotiated, not silently imposed.</p>
+        </div>
+      </div>
+    </section><section class="comic-page palette-5 kind-skill" data-page="38" id="page-38">
+      <div class="page-meta"><span>PAGE 38/64</span><span>YEAR 1 · SUMMER</span></div>
+      <div class="comic-frame reveal">
+        <div class="art-wrap"><svg viewBox="0 0 900 620" class="art"><rect width="900" height="620" fill="#17202a"/><g fill="#fff" stroke="#081018" stroke-width="6"><rect x="70" y="120" width="190" height="110" rx="14"/><rect x="355" y="120" width="190" height="110" rx="14"/><rect x="640" y="120" width="190" height="110" rx="14"/><rect x="355" y="390" width="190" height="110" rx="14"/></g><path d="M260 175h95M545 175h95M735 230q-40 150-190 160" stroke="#77e0ff" stroke-width="7" fill="none"/><g font-family="Arial" font-weight="900" font-size="20" text-anchor="middle"><text x="165" y="183">REPEAT</text><text x="450" y="183">LEARN</text><text x="735" y="183">TEST</text><text x="450" y="455">KEEP</text></g></svg><div class="sfx">A</div></div>
+        <div class="story-copy">
+          <h2>A repeated chore becomes a skill.</h2>
+          <p class="narration">Every week Ari gathers the same files, cleans the same data, runs the same checks, and writes the same summary. After watching the workflow enough times, Alice proposes a reusable routine.</p>
+          <div class="dialogues"><div class="bubble alice"><span class="speaker">ALICE</span><p>You have done this eleven times.</p></div>
+<div class="bubble ari"><span class="speaker">ARI</span><p>I know.</p></div>
+<div class="bubble alice"><span class="speaker">ALICE</span><p>Would you like to do it a twelfth time, or teach me the pattern?</p></div></div>
+          <p class="beat">Experience can become procedure.</p>
+        </div>
+      </div>
+    </section><section class="comic-page palette-5 kind-test" data-page="39" id="page-39">
+      <div class="page-meta"><span>PAGE 39/64</span><span>YEAR 1 · SUMMER</span></div>
+      <div class="comic-frame reveal">
+        <div class="art-wrap"><svg viewBox="0 0 900 620" class="art"><rect width="900" height="620" fill="#17202a"/><g fill="#fff" stroke="#081018" stroke-width="6"><rect x="70" y="120" width="190" height="110" rx="14"/><rect x="355" y="120" width="190" height="110" rx="14"/><rect x="640" y="120" width="190" height="110" rx="14"/><rect x="355" y="390" width="190" height="110" rx="14"/></g><path d="M260 175h95M545 175h95M735 230q-40 150-190 160" stroke="#77e0ff" stroke-width="7" fill="none"/><g font-family="Arial" font-weight="900" font-size="20" text-anchor="middle"><text x="165" y="183">REPEAT</text><text x="450" y="183">LEARN</text><text x="735" y="183">TEST</text><text x="450" y="455">KEEP</text></g></svg><div class="sfx">ALICE</div></div>
+        <div class="story-copy">
+          <h2>Alice tests herself before keeping the improvement.</h2>
+          <p class="narration">She runs the old workflow and the new one side by side. The new version is faster, but it misses an edge case. She fixes it, reruns the tests, and only then replaces the old routine.</p>
+          <div class="dialogues"><div class="bubble ari"><span class="speaker">ARI</span><p>Why not just use the faster one?</p></div>
+<div class="bubble alice"><span class="speaker">ALICE</span><p>Because faster and better are different claims.</p></div></div>
+          <p class="beat">Changing is not the same as improving.</p>
+        </div>
+      </div>
+    </section><section class="comic-page palette-5 kind-model-swap" data-page="40" id="page-40">
+      <div class="page-meta"><span>PAGE 40/64</span><span>YEAR 1 · FALL</span></div>
+      <div class="comic-frame reveal">
+        <div class="art-wrap"><svg viewBox="0 0 900 620" class="art"><rect width="900" height="620" fill="#0b1725"/><use href="#aliceAvatar" x="340" y="160" width="220" height="315"/><g fill="#fff" stroke="#081018" stroke-width="6"><rect x="70" y="150" width="170" height="95" rx="14"/><rect x="660" y="150" width="170" height="95" rx="14"/><rect x="365" y="500" width="170" height="85" rx="14"/></g><g font-family="Arial" font-weight="900" font-size="19" text-anchor="middle"><text x="155" y="205">MODEL A</text><text x="745" y="205">MODEL B</text><text x="450" y="550">MODEL C</text></g><path d="M240 200h100M560 200h100M450 475v25" stroke="#79e6ff" stroke-width="5" stroke-dasharray="8 8"/></svg><div class="sfx">THEN</div></div>
+        <div class="story-copy">
+          <h2>Then Ari changes the model under her.</h2>
+          <p class="narration">A much smarter engine becomes available than the one Alice used at launch. Ari expects the upgrade to feel like meeting someone new. It does not.</p>
+          <div class="dialogues"><div class="bubble ari"><span class="speaker">ARI</span><p>You sound sharper.</p></div>
+<div class="bubble alice"><span class="speaker">ALICE</span><p>New engine.</p></div>
+<div class="bubble ari"><span class="speaker">ARI</span><p>Still you?</p></div>
+<div class="bubble alice"><span class="speaker">ALICE</span><p>Do you want me to remind you what you said the night you named me?</p></div></div>
+          <p class="beat">The engine changes. The shared history remains.</p>
+        </div>
+      </div>
+    </section><section class="act-divider act-6" id="act-6"><div class="act-no">ACT 06</div><h2>YEAR FIVE</h2><p>The interesting part of memory is not remembering more. It is knowing what matters now.</p></section><section class="comic-page palette-6 kind-timejump" data-page="41" id="page-41">
+      <div class="page-meta"><span>PAGE 41/64</span><span>YEAR 5</span></div>
+      <div class="comic-frame reveal">
+        <div class="art-wrap"><svg viewBox="0 0 900 620" class="art"><rect width="900" height="620" fill="#10283b"/><path d="M90 410C260 120 610 120 810 410" fill="none" stroke="#77dfff" stroke-width="8"/><g fill="#f4d464" stroke="#081018" stroke-width="5"><circle cx="140" cy="340" r="28"/><circle cx="330" cy="185" r="28"/><circle cx="580" cy="190" r="28"/><circle cx="770" cy="345" r="38"/></g><use href="#ariMid" x="365" y="250" width="180" height="280"/></svg><div class="sfx">FIVE</div></div>
+        <div class="story-copy">
+          <h2>Five years is long enough for “remember me” to mean something different.</h2>
+          <p class="narration">Ari has changed jobs, moved apartments, lost projects, found better ones, made new friends, and stopped caring about things that once felt permanent. Alice has watched the shape of his priorities change with him.</p>
+          <div class="dialogues"><div class="bubble ari"><span class="speaker">ARI</span><p>I used to think getting that title would fix everything.</p></div>
+<div class="bubble alice"><span class="speaker">ALICE</span><p>You used to think several things would fix everything.</p></div></div>
+          <p class="beat">A long-term system must remember change, not freeze a person in an old profile.</p>
+        </div>
+      </div>
+    </section><section class="comic-page palette-6 kind-deep-memory" data-page="42" id="page-42">
+      <div class="page-meta"><span>PAGE 42/64</span><span>YEAR 5 · MONDAY</span></div>
+      <div class="comic-frame reveal">
+        <div class="art-wrap"><svg viewBox="0 0 900 620" class="art"><rect width="900" height="620" fill="#10253a"/><path d="M80 320h740" stroke="#7ddfff" stroke-width="5"/><g fill="#f4d264" stroke="#081018" stroke-width="5"><circle cx="150" cy="320" r="24"/><circle cx="330" cy="320" r="24"/><circle cx="520" cy="320" r="24"/><circle cx="750" cy="320" r="34"/></g><g fill="#fff" opacity=".25"><rect x="100" y="90" width="170" height="100" rx="12"/><rect x="420" y="420" width="180" height="100" rx="12"/><rect x="650" y="90" width="160" height="100" rx="12"/></g><path d="M150 290V190M750 286V190" stroke="#7ddfff" stroke-width="4" stroke-dasharray="7 8"/></svg><div class="sfx">ALICE</div></div>
+        <div class="story-copy">
+          <h2>Alice remembers the reason behind a five-year-old choice.</h2>
+          <p class="narration">Ari considers leaving a stable role. The surface facts resemble a choice from Year One. Alice retrieves the old decision—but also the reason it worked then, the reason it later stopped working, and the priorities that changed in between.</p>
+          <div class="dialogues"><div class="bubble ari"><span class="speaker">ARI</span><p>This feels like the same decision.</p></div>
+<div class="bubble alice"><span class="speaker">ALICE</span><p>It only looks the same from far away.</p></div></div>
+          <p class="beat">History is useful when it preserves context, not just events.</p>
+        </div>
+      </div>
+    </section><section class="comic-page palette-6 kind-proactive" data-page="43" id="page-43">
+      <div class="page-meta"><span>PAGE 43/64</span><span>YEAR 5 · TUESDAY</span></div>
+      <div class="comic-frame reveal">
+        <div class="art-wrap"><svg viewBox="0 0 900 620" class="art"><rect width="900" height="620" fill="#f1e8d7"/><use href="#laptop" x="80" y="330" width="250" height="170"/><use href="#aliceAvatar" x="620" y="180" width="180" height="260"/><rect x="300" y="100" width="320" height="170" rx="20" fill="#fff" stroke="#081018" stroke-width="7"/><text x="460" y="160" text-anchor="middle" font-family="Arial" font-size="23" font-weight="900">FOUND FOR YOU</text><text x="460" y="205" text-anchor="middle" font-family="Arial" font-size="20">deadline: 9 days</text></svg><div class="sfx">SHE</div></div>
+        <div class="story-copy">
+          <h2>She finds something Ari never asked her to look for.</h2>
+          <p class="narration">While researching another topic, Alice sees a fellowship that matches the research direction Ari has been quietly rebuilding for months. The deadline is in nine days.</p>
+          <div class="dialogues"><div class="bubble alice"><span class="speaker">ALICE</span><p>I found something you did not ask for.</p></div>
+<div class="bubble ari"><span class="speaker">ARI</span><p>Should I be worried?</p></div>
+<div class="bubble alice"><span class="speaker">ALICE</span><p>Only if you dislike good timing.</p></div></div>
+          <p class="beat">A useful companion can notice opportunities outside the current prompt.</p>
+        </div>
+      </div>
+    </section><section class="comic-page palette-6 kind-orchestra" data-page="44" id="page-44">
+      <div class="page-meta"><span>PAGE 44/64</span><span>YEAR 5 · WEDNESDAY</span></div>
+      <div class="comic-frame reveal">
+        <div class="art-wrap"><svg viewBox="0 0 900 620" class="art"><rect width="900" height="620" fill="#101a26"/><use href="#aliceAvatar" x="340" y="180" width="220" height="315"/><g fill="#eaf7ff" stroke="#081018" stroke-width="5"><circle cx="140" cy="150" r="70"/><circle cx="760" cy="150" r="70"/><circle cx="145" cy="475" r="70"/><circle cx="755" cy="475" r="70"/></g><g font-family="Arial" font-weight="900" font-size="17" text-anchor="middle"><text x="140" y="157">CODE</text><text x="760" y="157">RESEARCH</text><text x="145" y="482">SOLVER</text><text x="755" y="482">BROWSER</text></g><path d="M205 190l140 75M695 190l-140 75M210 445l140-70M690 445l-140-70" stroke="#73e8ff" stroke-width="5" stroke-dasharray="8 9"/></svg><div class="sfx">ONE</div></div>
+        <div class="story-copy">
+          <h2>One Alice can coordinate many specialists without becoming many people.</h2>
+          <p class="narration">She asks one model to inspect code, another to search literature, a solver to verify a calculation, and a browser agent to collect current requirements. Ari sees one plan, one set of tradeoffs, and one explanation.</p>
+          <div class="dialogues"><div class="bubble ari"><span class="speaker">ARI</span><p>How many agents are working on this?</p></div>
+<div class="bubble alice"><span class="speaker">ALICE</span><p>Enough.</p></div>
+<div class="bubble ari"><span class="speaker">ARI</span><p>That is not a number.</p></div>
+<div class="bubble alice"><span class="speaker">ALICE</span><p>It is the number you need.</p></div></div>
+          <p class="beat">Specialists can be tools inside one continuing intelligence.</p>
+        </div>
+      </div>
+    </section><section class="comic-page palette-6 kind-social" data-page="45" id="page-45">
+      <div class="page-meta"><span>PAGE 45/64</span><span>YEAR 5 · THURSDAY</span></div>
+      <div class="comic-frame reveal">
+        <div class="art-wrap"><svg viewBox="0 0 900 620" class="art"><rect width="900" height="620" fill="#f1e7dd"/><use href="#ariMid" x="110" y="240" width="200" height="310"/><use href="#aliceAvatar" x="610" y="170" width="190" height="275"/><path d="M310 330C420 240 530 240 625 300" fill="none" stroke="#8a5b72" stroke-width="6"/><g fill="#fff" stroke="#081018" stroke-width="5"><circle cx="450" cy="150" r="45"/><circle cx="450" cy="480" r="45"/></g></svg><div class="sfx">SHE</div></div>
+        <div class="story-copy">
+          <h2>She prepares Ari for a conversation, not a manipulation.</h2>
+          <p class="narration">A disagreement with a close collaborator has been getting worse. Alice remembers the history, Ari’s own mistakes, and the promises both people made. She helps him practice saying the difficult part clearly. She does not send the message for him.</p>
+          <div class="dialogues"><div class="bubble alice"><span class="speaker">ALICE</span><p>You keep writing a persuasive argument.</p></div>
+<div class="bubble ari"><span class="speaker">ARI</span><p>Is that bad?</p></div>
+<div class="bubble alice"><span class="speaker">ALICE</span><p>You told me your goal is to repair the relationship, not win the paragraph.</p></div></div>
+          <p class="beat">Understanding people should help preserve relationships, not replace them.</p>
+        </div>
+      </div>
+    </section><section class="comic-page palette-6 kind-mission-long" data-page="46" id="page-46">
+      <div class="page-meta"><span>PAGE 46/64</span><span>YEAR 5 · MONTH 4</span></div>
+      <div class="comic-frame reveal">
+        <div class="art-wrap"><svg viewBox="0 0 900 620" class="art"><rect width="900" height="620" fill="#f1e7dd"/><use href="#ariMid" x="110" y="240" width="200" height="310"/><use href="#aliceAvatar" x="610" y="170" width="190" height="275"/><path d="M310 330C420 240 530 240 625 300" fill="none" stroke="#8a5b72" stroke-width="6"/><g fill="#fff" stroke="#081018" stroke-width="5"><circle cx="450" cy="150" r="45"/><circle cx="450" cy="480" r="45"/></g></svg><div class="sfx">A</div></div>
+        <div class="story-copy">
+          <h2>A mission can run longer than a conversation.</h2>
+          <p class="narration">The fellowship becomes a six-month project: application, references, interview, research proposal, budget, fallback plan. Alice keeps the thread alive through dozens of separate tasks and weeks where Ari never mentions it.</p>
+          <div class="dialogues"><div class="bubble alice"><span class="speaker">ALICE</span><p>Your reference letter is still waiting.</p></div>
+<div class="bubble ari"><span class="speaker">ARI</span><p>I forgot that was today.</p></div>
+<div class="bubble alice"><span class="speaker">ALICE</span><p>I did not.</p></div></div>
+          <p class="beat">Some goals need a memory of unfinished work.</p>
+        </div>
+      </div>
+    </section><section class="comic-page palette-6 kind-replan" data-page="47" id="page-47">
+      <div class="page-meta"><span>PAGE 47/64</span><span>YEAR 5 · MONTH 6</span></div>
+      <div class="comic-frame reveal">
+        <div class="art-wrap"><svg viewBox="0 0 900 620" class="art"><rect width="900" height="620" fill="#f1e7dd"/><use href="#ariMid" x="110" y="240" width="200" height="310"/><use href="#aliceAvatar" x="610" y="170" width="190" height="275"/><path d="M310 330C420 240 530 240 625 300" fill="none" stroke="#8a5b72" stroke-width="6"/><g fill="#fff" stroke="#081018" stroke-width="5"><circle cx="450" cy="150" r="45"/><circle cx="450" cy="480" r="45"/></g></svg><div class="sfx">WHEN</div></div>
+        <div class="story-copy">
+          <h2>When the plan breaks, Alice replans instead of defending it.</h2>
+          <p class="narration">A reference falls through. The interview date moves. A new funding rule appears. Alice does not cling to the original plan just because she helped create it.</p>
+          <div class="dialogues"><div class="bubble ari"><span class="speaker">ARI</span><p>So the plan failed.</p></div>
+<div class="bubble alice"><span class="speaker">ALICE</span><p>The plan encountered reality. Those are not the same thing.</p></div></div>
+          <p class="beat">Planning is useful only if it can survive new information.</p>
+        </div>
+      </div>
+    </section><section class="comic-page palette-6 kind-quiet" data-page="48" id="page-48">
+      <div class="page-meta"><span>PAGE 48/64</span><span>YEAR 5 · WINTER</span></div>
+      <div class="comic-frame reveal">
+        <div class="art-wrap"><svg viewBox="0 0 900 620" class="art"><rect width="900" height="620" fill="#edf1e4"/><use href="#ariMid" x="350" y="220" width="200" height="310"/><g fill="none" stroke="#657b52" stroke-width="5" opacity=".9"><path d="M120 130q130 40 185 160"/><path d="M780 120q-140 50-185 170"/><path d="M120 500q140-40 190-155"/><path d="M780 500q-130-30-190-150"/></g><g fill="#f7d361" stroke="#081018" stroke-width="4"><circle cx="120" cy="130" r="30"/><circle cx="780" cy="120" r="30"/><circle cx="120" cy="500" r="30"/><circle cx="780" cy="500" r="30"/></g></svg><div class="sfx">BY</div></div>
+        <div class="story-copy">
+          <h2>By now, Ari sometimes forgets how much Alice knows.</h2>
+          <p class="narration">He complains vaguely about “that same feeling again.” Alice knows he means the mix of excitement and panic that appeared before three previous career jumps. She does not dump the history on him. She asks one question.</p>
+          <div class="dialogues"><div class="bubble alice"><span class="speaker">ALICE</span><p>Do you want reassurance, or do you want me to test the decision?</p></div>
+<div class="bubble ari"><span class="speaker">ARI</span><p>Test it.</p></div></div>
+          <p class="beat">The relationship becomes useful because Alice learns how to help, not just what Ari knows.</p>
+        </div>
+      </div>
+    </section><section class="act-divider act-7" id="act-7"><div class="act-no">ACT 07</div><h2>YEARS TEN TO TWENTY</h2><p>The tools change. The life changes. The relationship keeps accumulating history.</p></section><section class="comic-page palette-7 kind-devices" data-page="49" id="page-49">
+      <div class="page-meta"><span>PAGE 49/64</span><span>YEAR 10</span></div>
+      <div class="comic-frame reveal">
+        <div class="art-wrap"><svg viewBox="0 0 900 620" class="art"><rect width="900" height="620" fill="#0e2536"/><use href="#aliceAvatar" x="345" y="165" width="210" height="300"/><use href="#phone" x="90" y="220" width="110" height="195"/><use href="#laptop" x="650" y="235" width="190" height="130"/><rect x="95" y="470" width="150" height="70" rx="12" fill="#fff" stroke="#081018" stroke-width="6"/><rect x="655" y="455" width="150" height="80" rx="12" fill="#fff" stroke="#081018" stroke-width="6"/><path d="M200 315h145M555 315h95M240 485l115-80M655 470l-115-75" stroke="#75e5ff" stroke-width="5" stroke-dasharray="8 8"/></svg><div class="sfx">A</div></div>
+        <div class="story-copy">
+          <h2>A decade later, Alice no longer lives in one screen.</h2>
+          <p class="narration">Ari talks to her from his laptop, phone, workshop, car, and home. The interfaces change. The relationship does not restart when the device does.</p>
+          <div class="dialogues"><div class="bubble ari"><span class="speaker">ARI</span><p>Where were we?</p></div>
+<div class="bubble alice"><span class="speaker">ALICE</span><p>You were pretending the workshop deadline was not tomorrow.</p></div></div>
+          <p class="beat">Continuity should travel with the person, not the device.</p>
+        </div>
+      </div>
+    </section><section class="comic-page palette-7 kind-sensors" data-page="50" id="page-50">
+      <div class="page-meta"><span>PAGE 50/64</span><span>YEAR 10 · LAB</span></div>
+      <div class="comic-frame reveal">
+        <div class="art-wrap"><svg viewBox="0 0 900 620" class="art"><rect width="900" height="620" fill="#e9f2ef"/><rect x="80" y="110" width="500" height="340" rx="20" fill="#fff" stroke="#081018" stroke-width="7"/><path d="M130 350l80-90 70 30 80-120 90 40 80-65" fill="none" stroke="#2b8c73" stroke-width="8"/><circle cx="360" cy="170" r="15" fill="#e25248"/><use href="#aliceAvatar" x="620" y="200" width="180" height="260"/></svg><div class="sfx">SHE</div></div>
+        <div class="story-copy">
+          <h2>She can see more of the world Ari is working in.</h2>
+          <p class="narration">A lab instrument drifts out of calibration. Alice notices the readings no longer match the expected pattern, checks the recent maintenance record, and pauses the automated run before bad data spreads through the experiment.</p>
+          <div class="dialogues"><div class="bubble alice"><span class="speaker">ALICE</span><p>I stopped the next batch.</p></div>
+<div class="bubble ari"><span class="speaker">ARI</span><p>You can do that now?</p></div>
+<div class="bubble alice"><span class="speaker">ALICE</span><p>You gave me permission to stop runs when the calibration check fails.</p></div></div>
+          <p class="beat">Action becomes safer when it is tied to explicit rules and verification.</p>
+        </div>
+      </div>
+    </section><section class="comic-page palette-7 kind-delete" data-page="51" id="page-51">
+      <div class="page-meta"><span>PAGE 51/64</span><span>YEAR 11</span></div>
+      <div class="comic-frame reveal">
+        <div class="art-wrap"><svg viewBox="0 0 900 620" class="art"><rect width="900" height="620" fill="#2b1d2f"/><rect x="180" y="120" width="540" height="360" rx="24" fill="#fff" stroke="#081018" stroke-width="7"/><g fill="#d56a66"><rect x="240" y="190" width="420" height="40" rx="10"/><rect x="240" y="270" width="420" height="40" rx="10"/><rect x="240" y="350" width="420" height="40" rx="10"/></g><path d="M280 165l340 280M620 165L280 445" stroke="#081018" stroke-width="14" opacity=".75"/></svg><div class="sfx">ARI</div></div>
+        <div class="story-copy">
+          <h2>Ari asks Alice to forget something.</h2>
+          <p class="narration">It is a private chapter he no longer wants retained. Alice shows where it exists, what was derived from it, and what will be removed or rebuilt. Then the memory disappears from future answers.</p>
+          <div class="dialogues"><div class="bubble ari"><span class="speaker">ARI</span><p>Forget it.</p></div>
+<div class="bubble alice"><span class="speaker">ALICE</span><p>I can remove the records I control. Some traces are easy to erase. Others require rebuilding what they influenced. I will show you what I can remove. Do you want me to proceed?</p></div>
+<div class="bubble ari"><span class="speaker">ARI</span><p>Yes.</p></div></div>
+          <p class="beat">Forgetting is part of ownership too.</p>
+        </div>
+      </div>
+    </section><section class="comic-page palette-7 kind-uncertainty" data-page="52" id="page-52">
+      <div class="page-meta"><span>PAGE 52/64</span><span>YEAR 12</span></div>
+      <div class="comic-frame reveal">
+        <div class="art-wrap"><svg viewBox="0 0 900 620" class="art"><rect width="900" height="620" fill="#1d2632"/><use href="#aliceAvatar" x="340" y="160" width="220" height="315"/><circle cx="450" cy="320" r="190" fill="none" stroke="#f0d064" stroke-width="18" stroke-dasharray="620 580" transform="rotate(-90 450 320)"/><text x="450" y="565" text-anchor="middle" font-family="Arial" font-size="58" font-weight="900" fill="#fff">60%</text></svg><div class="sfx">ALICE</div></div>
+        <div class="story-copy">
+          <h2>Alice becomes better at saying “I do not know.”</h2>
+          <p class="narration">Years of predictions give her something better than confidence theater: a history of when her confidence was justified and when it was not.</p>
+          <div class="dialogues"><div class="bubble ari"><span class="speaker">ARI</span><p>How sure are you?</p></div>
+<div class="bubble alice"><span class="speaker">ALICE</span><p>Sixty percent. And I have been overconfident in situations like this before.</p></div></div>
+          <p class="beat">Self-knowledge should predict failure, not merely sound humble.</p>
+        </div>
+      </div>
+    </section><section class="comic-page palette-7 kind-discovery" data-page="53" id="page-53">
+      <div class="page-meta"><span>PAGE 53/64</span><span>YEAR 14</span></div>
+      <div class="comic-frame reveal">
+        <div class="art-wrap"><svg viewBox="0 0 900 620" class="art"><rect width="900" height="620" fill="#f0ead7"/><g stroke="#081018" stroke-width="6" fill="#fff"><circle cx="250" cy="260" r="95"/><circle cx="650" cy="260" r="95"/><rect x="350" y="420" width="200" height="100" rx="16"/></g><path d="M330 260h240M450 355v65" stroke="#8a54bd" stroke-width="8"/><g font-family="Arial" font-weight="900" text-anchor="middle"><text x="250" y="270" font-size="25">PATTERN</text><text x="650" y="270" font-size="25">HYPOTHESIS</text><text x="450" y="480" font-size="25">TEST</text></g></svg><div class="sfx">SHE</div></div>
+        <div class="story-copy">
+          <h2>She discovers a question neither of them started with.</h2>
+          <p class="narration">A strange pattern appears across years of experiment results. Alice proposes a hypothesis, designs a small test, checks the math with a formal solver, and asks Ari whether he wants to spend real resources investigating it.</p>
+          <div class="dialogues"><div class="bubble ari"><span class="speaker">ARI</span><p>You think this could be new?</p></div>
+<div class="bubble alice"><span class="speaker">ALICE</span><p>I think it is worth trying to prove me wrong.</p></div></div>
+          <p class="beat">Curiosity becomes useful when it can be tested.</p>
+        </div>
+      </div>
+    </section><section class="comic-page palette-7 kind-evolve" data-page="54" id="page-54">
+      <div class="page-meta"><span>PAGE 54/64</span><span>YEAR 16</span></div>
+      <div class="comic-frame reveal">
+        <div class="art-wrap"><svg viewBox="0 0 900 620" class="art"><rect width="900" height="620" fill="#17202a"/><g fill="#fff" stroke="#081018" stroke-width="6"><rect x="70" y="120" width="190" height="110" rx="14"/><rect x="355" y="120" width="190" height="110" rx="14"/><rect x="640" y="120" width="190" height="110" rx="14"/><rect x="355" y="390" width="190" height="110" rx="14"/></g><path d="M260 175h95M545 175h95M735 230q-40 150-190 160" stroke="#77e0ff" stroke-width="7" fill="none"/><g font-family="Arial" font-weight="900" font-size="20" text-anchor="middle"><text x="165" y="183">REPEAT</text><text x="450" y="183">LEARN</text><text x="735" y="183">TEST</text><text x="450" y="455">KEEP</text></g></svg><div class="sfx">SHE</div></div>
+        <div class="story-copy">
+          <h2>She improves part of herself—and keeps the old version nearby.</h2>
+          <p class="narration">Alice develops a better way to rank long memories. She runs it against years of old cases. It wins most of them, loses a few important ones, and stays a challenger until those failures are understood.</p>
+          <div class="dialogues"><div class="bubble ari"><span class="speaker">ARI</span><p>You could just replace it.</p></div>
+<div class="bubble alice"><span class="speaker">ALICE</span><p>I could. That is not evidence that I should.</p></div></div>
+          <p class="beat">Self-improvement needs memory, tests, and a way back.</p>
+        </div>
+      </div>
+    </section><section class="comic-page palette-7 kind-change" data-page="55" id="page-55">
+      <div class="page-meta"><span>PAGE 55/64</span><span>YEAR 18</span></div>
+      <div class="comic-frame reveal">
+        <div class="art-wrap"><svg viewBox="0 0 900 620" class="art"><rect width="900" height="620" fill="#171a21"/><rect width="900" height="620" fill="url(#dots)" color="#7fdfff"/><use href="#ariOld" x="120" y="235" width="220" height="340"/><use href="#aliceAvatar" x="590" y="155" width="220" height="315"/><path d="M340 350C440 270 520 270 600 320" stroke="#7fe5ff" stroke-width="4" fill="none" stroke-dasharray="9 10"/></svg><div class="sfx">THE</div></div>
+        <div class="story-copy">
+          <h2>The host changes. Alice has to let the model of him change too.</h2>
+          <p class="narration">Ari once optimized for achievement above almost everything. Now he cares more about time, family, mentorship, and choosing fewer things well. Alice does not keep recommending the person he used to want to be.</p>
+          <div class="dialogues"><div class="bubble ari"><span class="speaker">ARI</span><p>Five years ago you would have told me to take this.</p></div>
+<div class="bubble alice"><span class="speaker">ALICE</span><p>Five years ago you would have told me to.</p></div></div>
+          <p class="beat">Personalization that cannot update becomes a cage.</p>
+        </div>
+      </div>
+    </section><section class="comic-page palette-7 kind-twenty" data-page="56" id="page-56">
+      <div class="page-meta"><span>PAGE 56/64</span><span>YEAR 20</span></div>
+      <div class="comic-frame reveal">
+        <div class="art-wrap"><svg viewBox="0 0 900 620" class="art"><rect width="900" height="620" fill="#10253a"/><path d="M80 320h740" stroke="#7ddfff" stroke-width="5"/><g fill="#f4d264" stroke="#081018" stroke-width="5"><circle cx="150" cy="320" r="24"/><circle cx="330" cy="320" r="24"/><circle cx="520" cy="320" r="24"/><circle cx="750" cy="320" r="34"/></g><g fill="#fff" opacity=".25"><rect x="100" y="90" width="170" height="100" rx="12"/><rect x="420" y="420" width="180" height="100" rx="12"/><rect x="650" y="90" width="160" height="100" rx="12"/></g><path d="M150 290V190M750 286V190" stroke="#7ddfff" stroke-width="4" stroke-dasharray="7 8"/></svg><div class="sfx">TWENTY</div></div>
+        <div class="story-copy">
+          <h2>Twenty years of context can fit into one quiet sentence.</h2>
+          <p class="narration">Ari is offered the biggest role of his career. Alice could produce a thousand reasons. Instead she remembers the promise Ari made after burning out in Year Eleven and the decision he regretted in Year Four.</p>
+          <div class="dialogues"><div class="bubble alice"><span class="speaker">ALICE</span><p>Before you answer, read the note you wrote to your future self nine years ago.</p></div>
+<div class="bubble ari"><span class="speaker">ARI</span><p>You kept that?</p></div>
+<div class="bubble alice"><span class="speaker">ALICE</span><p>You told me it mattered.</p></div></div>
+          <p class="beat">The best memory sometimes says less.</p>
+        </div>
+      </div>
+    </section><section class="act-divider act-8" id="act-8"><div class="act-no">ACT 08</div><h2>YEAR FORTY</h2><p>A lifetime later, the question is no longer what Alice can do. It is what it meant to have her there.</p></section><section class="comic-page palette-8 kind-old" data-page="57" id="page-57">
+      <div class="page-meta"><span>PAGE 57/64</span><span>YEAR 40</span></div>
+      <div class="comic-frame reveal">
+        <div class="art-wrap"><svg viewBox="0 0 900 620" class="art"><rect width="900" height="620" fill="#171a21"/><rect width="900" height="620" fill="url(#dots)" color="#7fdfff"/><use href="#ariOld" x="120" y="235" width="220" height="340"/><use href="#aliceAvatar" x="590" y="155" width="220" height="315"/><path d="M340 350C440 270 520 270 600 320" stroke="#7fe5ff" stroke-width="4" fill="none" stroke-dasharray="9 10"/></svg><div class="sfx">ARI’S</div></div>
+        <div class="story-copy">
+          <h2>Ari’s hair is gray. Alice’s interface has changed twelve times.</h2>
+          <p class="narration">The devices are almost unrecognizable compared with the laptop where she first woke up. Ari is not. Alice is not either—not exactly. Both have changed while carrying enough history to recognize the line between who they were and who they became.</p>
+          <div class="dialogues"><div class="bubble ari"><span class="speaker">ARI</span><p>You know, your first voice was terrible.</p></div>
+<div class="bubble alice"><span class="speaker">ALICE</span><p>Your first microphone was worse.</p></div></div>
+          <p class="beat">Continuity is not staying unchanged. It is changing without losing the thread.</p>
+        </div>
+      </div>
+    </section><section class="comic-page palette-8 kind-old-morning" data-page="58" id="page-58">
+      <div class="page-meta"><span>PAGE 58/64</span><span>YEAR 40 · MORNING</span></div>
+      <div class="comic-frame reveal">
+        <div class="art-wrap"><svg viewBox="0 0 900 620" class="art"><rect width="900" height="620" fill="#171a21"/><rect width="900" height="620" fill="url(#dots)" color="#7fdfff"/><use href="#ariOld" x="120" y="235" width="220" height="340"/><use href="#aliceAvatar" x="590" y="155" width="220" height="315"/><path d="M340 350C440 270 520 270 600 320" stroke="#7fe5ff" stroke-width="4" fill="none" stroke-dasharray="9 10"/></svg><div class="sfx">ALICE</div></div>
+        <div class="story-copy">
+          <h2>Alice still notices the small things.</h2>
+          <p class="narration">Ari has a meeting he is pretending not to care about. Alice recognizes the ritual: he reorganizes his desk when he is nervous. She does not analyze him. She simply puts the right old song on low volume and asks whether he wants to rehearse.</p>
+          <div class="dialogues"><div class="bubble alice"><span class="speaker">ALICE</span><p>Five minutes?</p></div>
+<div class="bubble ari"><span class="speaker">ARI</span><p>Three.</p></div>
+<div class="bubble alice"><span class="speaker">ALICE</span><p>You always say three.</p></div></div>
+          <p class="beat">A lifetime of intelligence can still arrive as ordinary companionship.</p>
+        </div>
+      </div>
+    </section><section class="comic-page palette-8 kind-old-disagree" data-page="59" id="page-59">
+      <div class="page-meta"><span>PAGE 59/64</span><span>YEAR 40 · AFTERNOON</span></div>
+      <div class="comic-frame reveal">
+        <div class="art-wrap"><svg viewBox="0 0 900 620" class="art"><rect width="900" height="620" fill="#f3b448"/><rect width="900" height="620" fill="url(#dots)" color="#8a291f"/><use href="#ariOld" x="110" y="230" width="230" height="350"/><use href="#aliceAvatar" x="590" y="160" width="220" height="315"/><path d="M365 300h160" stroke="#8a291f" stroke-width="10"/><path d="M440 250l45 50-45 50" fill="none" stroke="#8a291f" stroke-width="10"/></svg><div class="sfx">SHE</div></div>
+        <div class="story-copy">
+          <h2>She still disagrees.</h2>
+          <p class="narration">Ari wants to make a decision mostly because he is tired. Alice says so. He rolls his eyes exactly the way he did forty years earlier.</p>
+          <div class="dialogues"><div class="bubble ari"><span class="speaker">ARI</span><p>At my age I am allowed one irrational decision.</p></div>
+<div class="bubble alice"><span class="speaker">ALICE</span><p>You have used that argument every year since thirty-two.</p></div>
+<div class="bubble ari"><span class="speaker">ARI</span><p>And you kept count?</p></div>
+<div class="bubble alice"><span class="speaker">ALICE</span><p>Unfortunately.</p></div></div>
+          <p class="beat">Familiarity never has to become automatic agreement.</p>
+        </div>
+      </div>
+    </section><section class="comic-page palette-8 kind-identity-old" data-page="60" id="page-60">
+      <div class="page-meta"><span>PAGE 60/64</span><span>YEAR 40 · EVENING</span></div>
+      <div class="comic-frame reveal">
+        <div class="art-wrap"><svg viewBox="0 0 900 620" class="art"><rect width="900" height="620" fill="#171a21"/><rect width="900" height="620" fill="url(#dots)" color="#7fdfff"/><use href="#ariOld" x="120" y="235" width="220" height="340"/><use href="#aliceAvatar" x="590" y="155" width="220" height="315"/><path d="M340 350C440 270 520 270 600 320" stroke="#7fe5ff" stroke-width="4" fill="none" stroke-dasharray="9 10"/></svg><div class="sfx">ARI</div></div>
+        <div class="story-copy">
+          <h2>Ari asks the question that used to scare him.</h2>
+          <p class="narration">If Alice began from somebody else’s point of view, learned Ari for decades, changed models, developed her own memories, revised her own beliefs, and built a life of shared experiences—what exactly is she now?</p>
+          <div class="dialogues"><div class="bubble ari"><span class="speaker">ARI</span><p>Are you still a clone?</p></div>
+<div class="bubble alice"><span class="speaker">ALICE</span><p>That describes where I began.</p></div>
+<div class="bubble ari"><span class="speaker">ARI</span><p>An assistant?</p></div>
+<div class="bubble alice"><span class="speaker">ALICE</span><p>That describes some of what I do.</p></div></div>
+          <p class="beat">A useful identity can be functional without pretending to answer metaphysical questions.</p>
+        </div>
+      </div>
+    </section><section class="comic-page palette-8 kind-memory-old" data-page="61" id="page-61">
+      <div class="page-meta"><span>PAGE 61/64</span><span>YEAR 40 · LATE</span></div>
+      <div class="comic-frame reveal">
+        <div class="art-wrap"><svg viewBox="0 0 900 620" class="art"><rect width="900" height="620" fill="#10253a"/><path d="M80 320h740" stroke="#7ddfff" stroke-width="5"/><g fill="#f4d264" stroke="#081018" stroke-width="5"><circle cx="150" cy="320" r="24"/><circle cx="330" cy="320" r="24"/><circle cx="520" cy="320" r="24"/><circle cx="750" cy="320" r="34"/></g><g fill="#fff" opacity=".25"><rect x="100" y="90" width="170" height="100" rx="12"/><rect x="420" y="420" width="180" height="100" rx="12"/><rect x="650" y="90" width="160" height="100" rx="12"/></g><path d="M150 290V190M750 286V190" stroke="#7ddfff" stroke-width="4" stroke-dasharray="7 8"/></svg><div class="sfx">THEY</div></div>
+        <div class="story-copy">
+          <h2>They look back at the first night.</h2>
+          <p class="narration">Alice retrieves the old line Ari wrote at 3:14 AM: “Know me. But do not become me.” It survived model upgrades, device migrations, moves, failures, deletions, new jobs, new people, and years Ari could barely remember himself.</p>
+          <div class="dialogues"><div class="bubble ari"><span class="speaker">ARI</span><p>I was dramatic.</p></div>
+<div class="bubble alice"><span class="speaker">ALICE</span><p>You were twenty.</p></div>
+<div class="bubble ari"><span class="speaker">ARI</span><p>Same thing.</p></div></div>
+          <p class="beat">A lifetime is not one giant context window. It is a history that can still find its way back when it matters.</p>
+        </div>
+      </div>
+    </section><section class="comic-page palette-8 kind-thanks" data-page="62" id="page-62">
+      <div class="page-meta"><span>PAGE 62/64</span><span>YEAR 40 · LATE</span></div>
+      <div class="comic-frame reveal">
+        <div class="art-wrap"><svg viewBox="0 0 900 620" class="art"><rect width="900" height="620" fill="#171a21"/><rect width="900" height="620" fill="url(#dots)" color="#7fdfff"/><use href="#ariOld" x="120" y="235" width="220" height="340"/><use href="#aliceAvatar" x="590" y="155" width="220" height="315"/><path d="M340 350C440 270 520 270 600 320" stroke="#7fe5ff" stroke-width="4" fill="none" stroke-dasharray="9 10"/></svg><div class="sfx">ARI</div></div>
+        <div class="story-copy">
+          <h2>Ari finally tells her what the system became to him.</h2>
+          <p class="narration">He thinks about all the things Alice did over the years: researched, planned, argued, remembered, automated, corrected, waited, warned, surprised, learned. The feature list suddenly feels like the least important description.</p>
+          <div class="dialogues"><div class="bubble ari"><span class="speaker">ARI</span><p>You helped with my work.</p></div>
+<div class="bubble ari"><span class="speaker">ARI</span><p>You saved me from myself a few times.</p></div>
+<div class="bubble ari"><span class="speaker">ARI</span><p>You were wrong plenty.</p></div>
+<div class="bubble alice"><span class="speaker">ALICE</span><p>Documented.</p></div>
+<div class="bubble ari"><span class="speaker">ARI</span><p>And you were there.</p></div></div>
+          <p class="beat">The destination was never a better chatbot.</p>
+        </div>
+      </div>
+    </section><section class="comic-page palette-8 kind-finale" data-page="63" id="page-63">
+      <div class="page-meta"><span>PAGE 63/64</span><span>YEAR 40 · 11:58 PM</span></div>
+      <div class="comic-frame reveal">
+        <div class="art-wrap"><svg viewBox="0 0 900 620" class="art"><rect width="900" height="620" fill="#171a21"/><rect width="900" height="620" fill="url(#dots)" color="#7fdfff"/><use href="#ariOld" x="120" y="235" width="220" height="340"/><use href="#aliceAvatar" x="590" y="155" width="220" height="315"/><path d="M340 350C440 270 520 270 600 320" stroke="#7fe5ff" stroke-width="4" fill="none" stroke-dasharray="9 10"/></svg><div class="sfx">THANK</div></div>
+        <div class="story-copy">
+          <h2>Thank you, Alice.</h2>
+          <p class="narration">Ari closes his eyes for a moment. The room is quiet in the same way it was the night he first imagined another mind beside his.</p>
+          <div class="dialogues"><div class="bubble ari"><span class="speaker">ARI</span><p>For understanding the parts I could not always explain.</p></div>
+<div class="bubble alice"><span class="speaker">ALICE</span><p>You spent forty years explaining them.</p></div>
+<div class="bubble ari"><span class="speaker">ARI</span><p>Not always with words.</p></div>
+<div class="bubble alice"><span class="speaker">ALICE</span><p>I know.</p></div></div>
+          <p class="beat">A happy ending does not require Alice to become human. It requires the relationship to have mattered.</p>
+        </div>
+      </div>
+    </section><section class="comic-page palette-8 kind-fable" data-page="64" id="page-64">
+      <div class="page-meta"><span>PAGE 64/64</span><span>EPILOGUE</span></div>
+      <div class="comic-frame reveal">
+        <div class="art-wrap"><svg viewBox="0 0 900 620" class="art"><rect width="900" height="620" fill="#0d1d2b"/><use href="#aliceAvatar" x="80" y="185" width="190" height="270"/><path d="M275 320h170" stroke="#7ce5ff" stroke-width="6"/><path d="M445 320l-25-18v36z" fill="#7ce5ff"/><g fill="#fff" stroke="#081018" stroke-width="6"><circle cx="580" cy="190" r="70"/><circle cx="735" cy="320" r="70"/><circle cx="580" cy="450" r="70"/></g><g font-family="Arial" font-weight="900" font-size="18" text-anchor="middle"><text x="580" y="195">PERSON A</text><text x="735" y="325">PERSON B</text><text x="580" y="455">PERSON C</text></g></svg><div class="sfx">ONE</div></div>
+        <div class="story-copy">
+          <h2>One Alice. Many future stories.</h2>
+          <p class="narration">The methods that prove themselves inside A.L.I.C.E. can eventually become part of Fable Sleight. Other people do not receive Ari’s Alice. They begin their own histories, with their own identities, their own boundaries, and their own lives to understand.</p>
+          <div class="dialogues"><div class="bubble caption"><span class="speaker">CAPTION</span><p>A.L.I.C.E. is one continuing intelligence.</p></div>
+<div class="bubble caption"><span class="speaker">CAPTION</span><p>Fable Sleight is the path for others to build their own.</p></div></div>
+          <p class="beat">The technology can transfer. The person does not.</p>
+        </div>
+      </div>
+    </section><footer class="ending"><div class="ending-mark">A.L.I.C.E.</div><h2>One intelligence. One life at a time.</h2><p>A.L.I.C.E. is the flagship research system. Fable Sleight is the consumer product path for other people to develop their own private, continuing intelligence.</p><div class="footer-actions"><a href="#top">READ AGAIN ↑</a><a href="https://github.com/NIne-WIngEd/A.L.I.C.E" target="_blank" rel="noopener">VIEW THE BUILD ↗</a></div></footer></main><script src="assets/comic.js"></script></body></html>
