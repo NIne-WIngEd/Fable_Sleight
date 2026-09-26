@@ -65,6 +65,12 @@ Coding, simulation, research, vision, image editing, and other general feature t
 
 Later stages are (1) first-party frontier feature models that can replace external feature calls where they qualify and (2) FBM or successor infrastructure that can build more feature specialists for an individual. Neither stage is a first-release capability or a promise that consumer hardware can train a frontier generator from a small personal corpus.
 
+## Builder data and seed program
+
+The first-release promise depends on a reusable host-neutral FBM that can build and test the *whole* connected personal foundation. Its initial software, model competence, outside source packs, synthetic fictional cases, and training recipes need explicit lineage and rights. The owner supplies authorized personal evidence, not hand-labeled gold tasks or a required ideal-self questionnaire. Sparse evidence leaves some capabilities uncertain or unqualified; it does not license invented history. Relationship and Fable-self experience can develop only after real interactions.
+
+A.L.I.C.E.'s compact build traces are seeds for builder operations, but they are not by themselves a multi-user training and evaluation corpus. The [FBM data and seed program](https://github.com/NIne-WIngEd/A.L.I.C.E/blob/fable-builder-model/docs/fable-builder/FBM_DATA_AND_SEED_PROGRAM_2026-09-26.md) defines the source classes, independent holdouts, subject/provenance separation, assembled-instance tests, and no-deployment-teacher requirement. These are build and qualification targets, not implemented release features.
+
 ## What qualifies the first release
 
 This release is blocked until tests and real usage establish all of the following:
