@@ -75,6 +75,18 @@ The first-release promise depends on a reusable host-neutral FBM that can build 
 
 A.L.I.C.E.'s compact build traces are seeds for builder operations, but they are not by themselves a multi-user training and evaluation corpus. The [FBM data and seed program](https://github.com/NIne-WIngEd/A.L.I.C.E/blob/fable-builder-model/docs/fable-builder/FBM_DATA_AND_SEED_PROGRAM_2026-09-26.md) defines the source classes, independent holdouts, subject/provenance separation, assembled-instance tests, and no-deployment-teacher requirement. These are build and qualification targets, not implemented release features.
 
+## One consumer release gate
+
+The upstream A.L.I.C.E. product roadmap uses F4 through F11 as internal qualification milestones. They are not progressive Fable editions.
+
+The first consumer release predicate is:
+
+`full_personal_cognitive_foundation_after_f11`
+
+A controlled build may still be distributed through internal/canary/alpha/beta test channels. Channel maturity does not change the cognitive capability requirement.
+
+F12 platform/SDK/ecosystem work is post-v1. First-party frontier feature models are also later work. Neither exception allows the personal cognitive foundation itself to be partial.
+
 ## What qualifies the first release
 
 This release is blocked until tests and real usage establish all of the following:
