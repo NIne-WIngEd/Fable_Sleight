@@ -141,8 +141,8 @@ Owning your personal intelligence does not mean claiming that you own OpenAI's o
 ### What we must prove next
 
 - **Qualify the personal foundation.** Finish native model, memory, and outcome-to-judgment tests. Show that its verdict controls both a decision and the words a language service proposes.
-- **Make the builder transferable.** With YC capital, fund engineering time, measured compute, privacy work, and independent tests with consenting people. Build from distinct owners' data and test whether correction changes later judgment. Measure quality, speed, cost, and data leaving the device. Talk to prospective users while we build.
-- **Ship the first Fable.** Release only when that complete personal system and builder work together. General conversation and feature skills may use external APIs; the owner's memory and judgment stay local. [First-release gate](docs/FIRST_RELEASE.md)
+- **Make the builder transferable.** With capital, fund engineering time, measured compute, privacy work, and independent tests with consenting people. Build from distinct owners' data and test whether correction changes later judgment. Measure quality, speed, cost, and data leaving the device. Talk to prospective users while we build.
+- **Ship the first Fable.** Release only when that complete personal system and builder work together. General feature skills (coding, simulation, editing, etc) may use external APIs for the first release; the owner's memory and judgment stay local. [First-release gate](docs/FIRST_RELEASE.md)
 - **Go beyond the first release.** Make builds reliable and affordable for more people. Measure whether Fable improves decisions over time. Then replace external feature services with our own models where they meet the bar. The five-year direction is a builder that can create more kinds of specialist models for each owner.
 
 ## Who else is working on this?
