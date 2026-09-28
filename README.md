@@ -111,13 +111,17 @@ There is **no fixed total model count** yet. Some later capabilities may become 
 
 “Full personal foundation” is an architectural commitment, not shorthand for a smaller desktop edition. Fable v1 keeps the complete transferable cognitive/memory system even when one installation places it across a workstation, multiple local devices, a NAS, or owner-authorized private compute. The installer may adapt placement and execution to hardware. It does not delete graph, episodic, vector/multimodal, source-native, procedural, self/relationship, mission, working-memory, or deletion/unlearning capability because a simpler stack would be easier to package. The [full v1 execution profile](docs/FABLE_V1_EXECUTION_PROFILE_2026-09-27.md) records that boundary.
 
-For feature work such as coding, simulation, research, vision, and image editing, the first version will call **GPT and Claude through their APIs**. Conversation is a special case: Fable's local personal foundation makes the verdict and sets how the entity should speak. The local conversation system prepares a privacy-limited request, checks the API's candidate against that verdict and voice, and asks for a bounded correction only when needed. It must usually get the right behavior on the first try. External calls still process the information they receive. Fable should show what each request sends out and give the user control over it. The personal data store, builder, and personal learning stack are intended to run locally; an API request is not local merely because Fable initiated it.
+> [!NOTE]
+> **Why the first release uses outside models for feature work.** Fable's main bet is its memory architecture and its ability to build a personal foundation automatically. We are not claiming that v1 codes better than frontier models or solves millennium problems. Training our own general language, coding, simulation, vision, and other specialist models takes time and compute we do not yet have as a startup. For those feature tasks, the first release will use external frontier-model APIs.
+>
+> **The API does not become Fable.** Fable's local foundation decides what to say and how to behave. Its conversation system sends a limited, encoded task request over an encrypted connection, then checks the API's candidate against Fable's own verdict and voice. It restores private references and forms the final response locally. It does not simply forward a raw user query and display the API's reply. Encryption protects the connection; the provider can still process and infer from whatever Fable sends. Requests must be minimized, inspectable, and under the owner's control.
+>
+> **Where we want to go.** Once Fable is proven and funded, we want to replace those calls with our own qualified feature models. Beyond that, the ambition is for the builder to create specialist models for an owner too. Building frontier-scale models on a consumer PC is a research goal, not a v1 promise.
+
 
 This is the **release target, not the current state**. A.L.I.C.E. is our development case. FBM, MFM, and the complete experience-to-judgment learning loop still need to be built and validated before we can claim a consumer release with full capability and scale.
 
 Upstream F4–F11 milestones are internal qualification steps, not smaller product editions. The first consumer release uses one predicate: `full_personal_cognitive_foundation_after_f11`. Alpha/beta labels can still describe controlled test distribution, but they do not relax that capability boundary.
-
-Later, we want to build our own frontier feature models. After that, we want FBM to build and improve feature specialists too. Automatic frontier-model training on consumer hardware remains a research goal. We will measure the compute, cost, and data requirements rather than promise that a laptop can train a GPT-scale model from personal files.
 
 ## What does it mean to own your Fable?
 
