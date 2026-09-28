@@ -311,7 +311,30 @@ It may **not** remove cognitive planes because the machine is small.
 
 When the full qualified build cannot fit current hardware, Fable reports the requirement or uses owner-authorized compute. It does not silently become a smaller intelligence tier.
 
-## 9. First-release critical path
+## 9. Upstream qualification milestones are not product tiers
+
+A.L.I.C.E. product-family governance names F4 through F11 as internal qualification milestones:
+
+- F4 — ingestion/runtime;
+- F5 — selective memory/learning;
+- F6 — personal intelligence;
+- F7 — mission/proactive agency;
+- F8 — action/skill/self-evolution;
+- F9 — expert feature integration;
+- F10 — host-specific model adaptation;
+- F11 — persistent environment/multi-device.
+
+These are construction and qualification checkpoints. None is a smaller consumer Fable release.
+
+The machine-readable first-consumer release predicate is:
+
+`full_personal_cognitive_foundation_after_f11`
+
+Historical `closed_alpha`, `alpha`, `beta`, or preview labels may describe controlled distribution/testing. They do not define a cognitive capability tier.
+
+F12 is post-v1 platform/ecosystem expansion. Fable v1 does not wait for an SDK/marketplace, but it does wait for the complete personal cognitive foundation.
+
+## 10. First-release critical path
 
 1. FBM ingests authorized user sources and outside foundation material.
 2. FBM builds the connected personal model set and memory substrate.
@@ -326,7 +349,7 @@ When the full qualified build cannot fit current hardware, Fable reports the req
 11. Host, relationship, self, procedural, retrieval, and personal-model state can evolve through governed promotion.
 12. Identity and continuity survive model/provider/device replacement.
 
-## 10. Release gate
+## 11. Release gate
 
 Fable v1 is not ready until a fresh host corpus can produce an entity that:
 
@@ -347,7 +370,7 @@ Fable v1 is not ready until a fresh host corpus can produce an entity that:
 
 A small memory demo, a limited model count, or a simplified desktop-only cognitive profile cannot satisfy this gate.
 
-## 11. Validation rule
+## 12. Validation rule
 
 Do not run backend tournaments.
 
