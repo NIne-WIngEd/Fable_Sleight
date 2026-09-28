@@ -6,6 +6,8 @@ Fable is downloadable software that builds a personal AI from the material its o
 
 The first release is designed to give the owner a personal foundation built for them. For general feature capability, including fluent language generation, it can call GPT or Claude APIs through a controlled interface. Those providers do not become Fable's identity or the authority that decides how it behaves.
 
+**Full means full.** This first-release target is not a compact consumer subset of the A.L.I.C.E./Fable destination. It includes the complete transferable personal-cognitive fabric: Experience/Event history, bitemporal claims, episodes, graph/relational memory, associative retrieval, vector/multimodal memory, source-native retrieval, personal cognitive models, working/activation memory, missions, procedural learning, governed personal-model evolution, multi-device continuity, and cross-layer correction/deletion/unlearning. Hardware may change where those planes run. It must not silently remove a plane or impose a permanent size/capability ceiling.
+
 ## What the installation builds and ships
 
 The desktop package supplies the Fable Builder Model (FBM), local training and evaluation machinery, memory and evidence infrastructure, and the conversation architecture. It builds or forms five starting personal capabilities for the host:
@@ -19,6 +21,8 @@ The desktop package supplies the Fable Builder Model (FBM), local training and e
 | Fable self model | Track the entity's own post-activation decisions, lessons, and continuity, separate from the host's history. |
 
 These are capability roles, not a promise that every installation contains exactly five neural weight files. The Experience Ledger, evidence and claim stores, memory gate, retrieval and context assembly, provenance, correction, deletion, and rollback mechanisms ship as infrastructure. Additional non-feature learned components may be needed; the total model count is not fixed.
+
+The physical memory system is intentionally polyglot when different memory semantics justify it. The current selected path uses a replayable event fabric, native bitemporal Claim Authority, episodic memory, a Cognitive Multi-Graph plus associative graph compute, Qdrant-class dense/sparse/multivector multimodal retrieval, direct source-native/live retrieval, a Memory Resource Manager, durable workflows, and model/data lineage. The exact engine can change without shrinking the logical architecture. See [the full v1 execution profile](FABLE_V1_EXECUTION_PROFILE_2026-09-27.md).
 
 FBM must distinguish direct evidence, supported inference, historical unknowns, synthetic behavioral teaching material, and lived experience. Synthetic material cannot turn into a fabricated life history. With little personal material, a user may start with uncertainty; Fable must not claim to know what the evidence cannot establish. The product goal is for this whole personal foundation to work together at consumer scale, rather than offer a small isolated memory demo.
 
