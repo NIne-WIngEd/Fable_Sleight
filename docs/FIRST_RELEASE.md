@@ -59,9 +59,15 @@ This comparison is a function of Fable's conversation architecture and existing 
 
 ### The privacy boundary
 
-An encoder and decoder can remove identifiers, reduce context, keep a private mapping locally, and prevent unauthorized raw records from crossing the boundary. They cannot make a standard text API reason over information it never receives. An abstract situation can still disclose something about the user, especially when repeated calls are combined. Encryption or placeholders must not be described as a guarantee of zero disclosure.
+The encoder/decoder is a **local egress gate**, not encryption that hides meaning from an API provider. Its first-release design has three paths:
 
-Every outbound request must be governed by source permissions, data class, destination, purpose, and a visible user-controlled egress policy. If the useful task cannot be expressed without disclosing sensitive personal meaning, Fable should use a local limited path or obtain the user's specific authorization for that disclosure. Offline operation prevents API calls; it does not magically provide the same first-release general language or feature capability. Provider data handling and retention controls do not make remote processing local.
+- **Default external task:** Fable forms its verdict locally. The gate sends only an abstract task, public context, temporary placeholders, and other fields allowed by the owner's policy. Raw user turns, vault records, memory packets, and identity history do not go out by default. The provider returns candidate words or feature output; local checks and decoding construct the final response.
+- **Specific private disclosure:** An exact private codebase, image, document, or life detail may be necessary for a remote feature. Before sending it, show the destination, purpose, and exact selected payload and require the owner's authorization for that disclosure. Do not imply that placeholders let a remote model edit code or reason about facts it cannot see.
+- **No disclosure:** If the owner declines or the request cannot be safely reduced, use an honest limited local response or defer the task. Offline mode cannot provide the same remote feature capability.
+
+Every proposed request must pass source permission, data-class, destination, purpose, and payload checks. Keep temporary placeholder mappings local. Allow the owner to inspect what will leave the device and review outbound activity. Test for direct identifiers, sensitive meaning in apparently abstract prompts, and information revealed across repeated calls. Test whether the final response follows the local verdict and voice within a bounded latency budget. These are release gates, not capabilities already demonstrated.
+
+Requests travel over an encrypted connection, but the API provider processes the approved payload and may infer personal meaning from it. Provider retention controls do not change that fact. Fable must describe its actual disclosure and cannot claim zero leakage merely because it encodes or redacts a prompt.
 
 ## Feature capabilities and later stages
 
