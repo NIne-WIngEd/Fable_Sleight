@@ -23,13 +23,14 @@ Then you realize all you want is the infrastructure that builds you a model from
 
 Fable itself is not the model. Fable is the builder.
 
-<p align="center">
-  <img src="assets/model-ownership.svg" alt="Three model paths: external ChatGPT or Claude use provider-built weights; local Qwen through Hugging Face starts with pretrained weights you can adapt; Fable Sleight aims to build personal weights for you locally. First-release feature tasks still plan to use external APIs." width="100%">
-</p>
-
 **At Fable Sleight, I will give you exactly that. I will give you an automated infrastructure that makes you a personal model that is truly yours.**
 
 But that's only half the story. Owning the model is the start. What it remembers, how it judges, and how it grows with you is the other half.
+
+
+<p align="center">
+  <img src="assets/model-ownership.svg" alt="Three model paths: external ChatGPT or Claude use provider-built weights; local Qwen through Hugging Face starts with pretrained weights you can adapt; Fable Sleight aims to build personal weights for you locally. First-release feature tasks still plan to use external APIs." width="100%">
+</p>
 
 ## The idea behind Fable
 
