@@ -5,9 +5,9 @@
 <p align="center">
   <a href="#why-you-need-a-personal-ai">Why you need it</a> ·
   <a href="#the-idea-behind-fable">The idea</a> ·
-  <a href="#the-personal-foundation">The foundation</a> ·
-  <a href="docs/FIRST_RELEASE.md">First release</a> ·
+  <a href="#what-will-the-first-version-include">First release</a> ·
   <a href="#the-roadmap">Roadmap</a> ·
+  <a href="#the-personal-foundation">The foundation</a> ·
   <a href="#who-else-is-working-on-this">Comparison</a>
 </p>
 
@@ -74,14 +74,49 @@ The experience we want is simple. Download the software. Pick the folders and ac
 
 Behind that simple setup is the hard part:
 
-1. **Understand the raw material.** Fable's builder reads authorized data, tracks where each piece came from, and separates things that happened from things it has inferred. When it does not know, it should say so. Synthetic examples can help train or test behavior; they cannot become fake memories.
-2. **Build your personal foundation.** It forms the components that remember, understand you, develop a character, and learn from experience. The builder then connects them to one entity rather than handing you several disconnected bots.
-3. **Give it useful abilities.** In the first release, Fable will use GPT and Claude APIs for feature tasks such as coding, research, simulation, vision, and image editing. Your personal foundation is the part we build and ship with Fable. The feature engines are services Fable can call.
-4. **Let it grow with you.** When you correct Fable or a decision has a real outcome, the system should learn from it. A proposed update must be tested, versioned, and reversible. If it needs a new specialist, the builder should eventually be able to create one.
+1. **Understand the raw material.** Fable reads the data you choose and remembers where it came from. It keeps real events, guesses, and synthetic training examples separate.
+2. **Build your personal foundation.** The builder creates the parts that remember, understand you, and make judgments. Then it joins them into one Fable.
+3. **Give it useful abilities.** GPT and Claude handle things like coding, research, simulation, and vision in v1. Fable's personal foundation decides how to use those skills.
+4. **Let it grow with you.** Your corrections and the outcomes of Fable's choices should change what it learns. Bad updates must be reversible.
 
-The amount of data does not determine whether you are allowed to begin. With little data, your Fable would begin with more unknowns and ask or learn over time. It cannot honestly claim to know a person from a nearly empty folder. And the `.exe` is a product goal: a consumer laptop cannot simply pretrain a GPT-scale model from someone's files.
+You don't need a huge archive to begin. With less data, Fable knows less at first and learns over time. The easy `.exe` download is the goal; a laptop cannot train a GPT-scale model from a few personal files.
 
-### The personal foundation
+## What will the first version include?
+
+**Our first release goal:** ship the builder and the full personal foundation with the desktop software. The [first-release design](docs/FIRST_RELEASE.md) records the conversation boundary, source selection, privacy controls, and qualification gates. That includes memory formation, the Experience Ledger, evidence and memory architecture, user and self development, relationships, and a judgment loop that can learn from real outcomes. We want these capabilities to work at the scale the product needs. A small memory demo with disconnected models would not be the Fable we are describing.
+
+“Full personal foundation” is an architectural commitment, not shorthand for a smaller desktop edition. Fable v1 keeps the complete transferable cognitive/memory system even when one installation places it across a workstation, multiple local devices, a NAS, or owner-authorized private compute. The installer may adapt placement and execution to hardware. It does not delete graph, episodic, vector/multimodal, source-native, procedural, self/relationship, mission, working-memory, or deletion/unlearning capability because a simpler stack would be easier to package. The [full v1 execution profile](docs/FABLE_V1_EXECUTION_PROFILE_2026-09-27.md) records that boundary.
+
+> [!NOTE]
+> In the first release, Fable will use external frontier-model APIs **for feature work** such as coding, simulation, vision, image editing, and language. Making those NLP and specialist models ourselves takes a lot of time and resources we don't have yet as a startup. The main selling point of Fable is its memory architecture and autonomous building capability. We're not making a product that claims it can code better than GPT or solve Millennium Problems.
+>
+> But Fable won't directly send your query to an API and show you whatever comes back. That would disrupt the whole personal model idea. Fable's own memory and judgment decide how it should respond. It sends limited, encoded signals over an encrypted connection to get candidate words or feature work. Then it checks the result and crafts its response around its own verdict and voice. The provider can still see what those signals contain. If a task needs your exact private code, image, or other data, Fable must ask before sending it or offer a limited local path.
+>
+> Once Fable is working and funded, we want to replace those API calls with our own feature models. Further along, we want the builder to make specialist models for you too, on your own hardware, just like it is meant to build the personal foundation in v1. That last step needs much more research into compute and cost.
+
+This is the **release target, not the current state**. A.L.I.C.E. is our development case. FBM, MFM, and the complete experience-to-judgment learning loop still need to be built and validated before we can claim a consumer release with full capability and scale.
+
+Upstream F4–F11 milestones are internal qualification steps, not smaller product editions. The first consumer release uses one predicate: `full_personal_cognitive_foundation_after_f11`. Alpha/beta labels can still describe controlled test distribution, but they do not relax that capability boundary.
+
+## The roadmap
+
+### How we got here
+
+- **I started with one personal AI.** In July, A.L.I.C.E. was a question: could an AI remember a life without confusing guesses with facts? I wrote rules for evidence and correction, then built the vault and memory foundations. The bounded memory release passed 532 tests on synthetic data. [Evidence](https://github.com/NIne-WIngEd/A.L.I.C.E/commit/514edd98) · [Memory report](https://github.com/NIne-WIngEd/A.L.I.C.E/blob/main/docs/PHASE_2_FINAL_RELEASE_REPORT.md)
+- **Then I learned that remembering is not growing.** Conversation and public research started working, but a good answer could still come from a replaceable language model. I added the Experience Ledger and Mission Graph so choices and outcomes have a history. Memory v4 began connecting that history to beliefs and goals. The loop that *learns* from an outcome is still unfinished. [Ledger](https://github.com/NIne-WIngEd/A.L.I.C.E/commit/e165b53f) · [Memory v4](https://github.com/NIne-WIngEd/A.L.I.C.E/commit/15e2713a)
+- **That exposed the real product.** A.L.I.C.E. was built for one person. Copying her would give everyone someone else's AI. So I separated the consumer project, now Fable, and started the Fable Builder Model: the machinery that should construct a new personal foundation from each owner's chosen data. [Separation](https://github.com/NIne-WIngEd/A.L.I.C.E/commit/6b3a2ade) · [Builder](https://github.com/NIne-WIngEd/A.L.I.C.E/blob/fable-builder-model/docs/fable-builder/README.md)
+- **The first tests made the plan sharper.** An audit found bias in the builder's first 60 seed examples. A review found the personal learning loop missing. The N0 two-GPU test hit a memory limit before qualification. I recorded those results and split out Memory Formation research. None of them is a completed builder or trained personal mind. [Builder audit](https://github.com/NIne-WIngEd/A.L.I.C.E/blob/fable-builder-model/docs/fable-builder/FBM_EXISTING_DATA_AUDIT_2026-09-26.md) · [Learning audit](https://github.com/NIne-WIngEd/A.L.I.C.E/blob/main/docs/research/PERSONAL_DEVELOPMENT_AUDIT_2026-09-22.md) · [Compute test](https://github.com/NIne-WIngEd/A.L.I.C.E/blob/alice-context/docs/chat-context/2026-09-28/N0_MEASURED_JOINT_P43_576237_FAILURE.md)
+
+**Eleven weeks in:** the research foundations are real. Fable has no released app, customers, or revenue. The automatic build and learned judgment loop are still the tests that matter.
+
+### What we must prove next
+
+- **Qualify the personal foundation.** Finish native model, memory, and outcome-to-judgment tests. Show that its verdict controls both a decision and the words a language service proposes.
+- **Make the builder transferable.** With capital, fund engineering time, measured compute, privacy work, and independent tests with consenting people. Build from distinct owners' data and test whether correction changes later judgment. Measure quality, speed, cost, and data leaving the device. Talk to prospective users while we build.
+- **Ship the first Fable.** Release only when that complete personal system and builder work together. General feature skills (coding, simulation, editing, etc) may use external APIs for the first release; the owner's memory and judgment stay local. [First-release gate](docs/FIRST_RELEASE.md)
+- **Go beyond the first release.** Make builds reliable and affordable for more people. Measure whether Fable improves decisions over time. Then replace external feature services with our own models where they meet the bar. The five-year direction is a builder that can create more kinds of specialist models for each owner.
+
+## The personal foundation
 
 The five names below are **the first personal capabilities FBM is meant to form and connect**. They are not a count of every model or system a Fable needs. A.L.I.C.E.'s [identity and memory architecture](https://github.com/NIne-WIngEd/A.L.I.C.E/blob/main/docs/MEMORY_IDENTITY_FORMATION_AND_HOST_LEARNING_ARCHITECTURE.md) distinguishes these roles. Its [MFM research plan](https://github.com/NIne-WIngEd/A.L.I.C.E/blob/research/mfm-foundation-20260923/docs/MEMORY_FORMATION_MODEL_FOUNDATION.md) says the builder should construct their Fable equivalents from your authorized data and suitable synthetic training examples. They may use different weights, representations, and stores.
 
@@ -105,24 +140,6 @@ The **Experience Ledger**, evidence store, Claim Fabric, Memory Gate, and retrie
 
 There is **no fixed total model count** yet. Some later capabilities may become specialist learned models. Others may work better as structured state, tools, or shared model components. Coding, simulation, vision, and image editing are feature capabilities on top of this personal foundation. There is likewise no fixed parameter, graph, context, data, memory, device, or deployment-topology ceiling for the personal foundation.
 
-## What will the first version include?
-
-**Our first release goal:** ship the builder and the full personal foundation with the desktop software. The [first-release design](docs/FIRST_RELEASE.md) records the conversation boundary, source selection, privacy controls, and qualification gates. That includes memory formation, the Experience Ledger, evidence and memory architecture, user and self development, relationships, and a judgment loop that can learn from real outcomes. We want these capabilities to work at the scale the product needs. A small memory demo with disconnected models would not be the Fable we are describing.
-
-“Full personal foundation” is an architectural commitment, not shorthand for a smaller desktop edition. Fable v1 keeps the complete transferable cognitive/memory system even when one installation places it across a workstation, multiple local devices, a NAS, or owner-authorized private compute. The installer may adapt placement and execution to hardware. It does not delete graph, episodic, vector/multimodal, source-native, procedural, self/relationship, mission, working-memory, or deletion/unlearning capability because a simpler stack would be easier to package. The [full v1 execution profile](docs/FABLE_V1_EXECUTION_PROFILE_2026-09-27.md) records that boundary.
-
-> [!NOTE]
-> **Why the first release uses outside models for feature work.** Fable's main bet is its memory architecture and its ability to build a personal foundation automatically. We are not claiming that v1 codes better than frontier models or solves millennium problems. Training our own general language, coding, simulation, vision, and other specialist models takes time and compute we do not yet have as a startup. For those feature tasks, the first release will use external frontier-model APIs.
->
-> **The API does not become Fable.** Local memory and judgment decide what Fable wants to say. An egress gate turns that into an abstract task with placeholders and the minimum approved detail; it does not forward the raw user query or personal memory by default. The API returns candidate language or feature work. Fable checks it against its own verdict and voice, fills private references locally, and forms the final response. If a task needs exact private material, such as a codebase or image, Fable must ask before sending it or offer a limited local path. The encrypted connection protects transit; the provider still sees the approved request. This boundary must pass leakage, behavior, and latency tests before release.
->
-> **Where we want to go.** Once Fable is proven and funded, we want to replace those calls with our own qualified feature models. Beyond that, the ambition is for the builder to create specialist models for an owner too. Building frontier-scale models on a consumer PC is a research goal, not a v1 promise.
-
-
-This is the **release target, not the current state**. A.L.I.C.E. is our development case. FBM, MFM, and the complete experience-to-judgment learning loop still need to be built and validated before we can claim a consumer release with full capability and scale.
-
-Upstream F4–F11 milestones are internal qualification steps, not smaller product editions. The first consumer release uses one predicate: `full_personal_cognitive_foundation_after_f11`. Alpha/beta labels can still describe controlled test distribution, but they do not relax that capability boundary.
-
 ## What does it mean to own your Fable?
 
 You should be able to see what it learned and where a belief came from. You should be able to correct it, revoke a source, delete data and its downstream influence, roll back a bad update, and take your personal state with you. If a general reasoning provider changes, your entire relationship with your Fable should not reset.
@@ -130,24 +147,6 @@ You should be able to see what it learned and where a belief came from. You shou
 We intend to build and keep that personal state locally by default, with separate keys and storage for each person. The software will still need to earn a privacy claim through permissions, encryption, verified deletion, and honest handling of optional cloud services. Those protections have not been certified in a released Fable app.
 
 Owning your personal intelligence does not mean claiming that you own OpenAI's or another provider's base weights because an API answered a question. We need to be exact about what is yours: your evidence, records, learned personal components, and future models that are actually built for you.
-
-## The roadmap
-
-### How we got here
-
-- **I started with one personal AI.** In July, A.L.I.C.E. was a question: could an AI remember a life without confusing guesses with facts? I wrote rules for evidence and correction, then built the vault and memory foundations. The bounded memory release passed 532 tests on synthetic data. [Evidence](https://github.com/NIne-WIngEd/A.L.I.C.E/commit/514edd98) · [Memory report](https://github.com/NIne-WIngEd/A.L.I.C.E/blob/main/docs/PHASE_2_FINAL_RELEASE_REPORT.md)
-- **Then I learned that remembering is not growing.** Conversation and public research started working, but a good answer could still come from a replaceable language model. I added the Experience Ledger and Mission Graph so choices and outcomes have a history. Memory v4 began connecting that history to beliefs and goals. The loop that *learns* from an outcome is still unfinished. [Ledger](https://github.com/NIne-WIngEd/A.L.I.C.E/commit/e165b53f) · [Memory v4](https://github.com/NIne-WIngEd/A.L.I.C.E/commit/15e2713a)
-- **That exposed the real product.** A.L.I.C.E. was built for one person. Copying her would give everyone someone else's AI. So I separated the consumer project, now Fable, and started the Fable Builder Model: the machinery that should construct a new personal foundation from each owner's chosen data. [Separation](https://github.com/NIne-WIngEd/A.L.I.C.E/commit/6b3a2ade) · [Builder](https://github.com/NIne-WIngEd/A.L.I.C.E/blob/fable-builder-model/docs/fable-builder/README.md)
-- **The first tests made the plan sharper.** An audit found bias in the builder's first 60 seed examples. A review found the personal learning loop missing. The N0 two-GPU test hit a memory limit before qualification. I recorded those results and split out Memory Formation research. None of them is a completed builder or trained personal mind. [Builder audit](https://github.com/NIne-WIngEd/A.L.I.C.E/blob/fable-builder-model/docs/fable-builder/FBM_EXISTING_DATA_AUDIT_2026-09-26.md) · [Learning audit](https://github.com/NIne-WIngEd/A.L.I.C.E/blob/main/docs/research/PERSONAL_DEVELOPMENT_AUDIT_2026-09-22.md) · [Compute test](https://github.com/NIne-WIngEd/A.L.I.C.E/blob/alice-context/docs/chat-context/2026-09-28/N0_MEASURED_JOINT_P43_576237_FAILURE.md)
-
-**Eleven weeks in:** the research foundations are real. Fable has no released app, customers, or revenue. The automatic build and learned judgment loop are still the tests that matter.
-
-### What we must prove next
-
-- **Qualify the personal foundation.** Finish native model, memory, and outcome-to-judgment tests. Show that its verdict controls both a decision and the words a language service proposes.
-- **Make the builder transferable.** With capital, fund engineering time, measured compute, privacy work, and independent tests with consenting people. Build from distinct owners' data and test whether correction changes later judgment. Measure quality, speed, cost, and data leaving the device. Talk to prospective users while we build.
-- **Ship the first Fable.** Release only when that complete personal system and builder work together. General feature skills (coding, simulation, editing, etc) may use external APIs for the first release; the owner's memory and judgment stay local. [First-release gate](docs/FIRST_RELEASE.md)
-- **Go beyond the first release.** Make builds reliable and affordable for more people. Measure whether Fable improves decisions over time. Then replace external feature services with our own models where they meet the bar. The five-year direction is a builder that can create more kinds of specialist models for each owner.
 
 ## Who else is working on this?
 
