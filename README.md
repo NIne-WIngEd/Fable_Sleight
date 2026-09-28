@@ -33,19 +33,23 @@ But that's only half the story. Owning the model is the start. What it remembers
 
 ## The idea behind Fable
 
+### One life. Too many versions.
+
+Your teacher sees the student. Your mother sees her child. Your friends see who you are with them. Your coding agent sees the project. Each knows a real version of you. None sees the whole picture.
+
 The advice starts to conflict. Your teacher tells you to protect your research. Your family wants you to take the safe job. One AI agent fills your calendar while another tells you to rewrite the project. You're the only one who knows why each thing matters. But now you're out of ideas too.
 
 You wish there were someone who already knew your whole life context. The first thought is a clone of you. It would know every choice you made and why you made it. No years of backstory every time you ask for help. But a clone would have your blind spots too. If you can't see a way forward, it might be just as stuck. If you're avoiding a hard decision, it might help you justify it.
 
 So the wish changes. You want the **perfect version of you**: someone who knows your life, remembers what you forget, sees what you miss, and can solve the problems you can't. Someone who can challenge you because it understands you. **That's where Fable comes in.** It takes its starting character from you, develops its own judgment, and grows with you.
 
-That takes more than a model that can recall a few facts. Fable is designed to build a connected memory of your life. Its **Experience Ledger** keeps the trail of what happened, what Fable did, and what happened next. Its memory architecture links the people, goals, decisions, and experiences that shaped a moment. It keeps track of where a belief came from, what was only a guess, and what has changed since.
+The other half is Fable's personal foundation. It is meant to:
 
-Say you once wanted the safe job, but now you want to finish the research. Fable should understand *when* that changed and *why*. It should not keep giving advice to an old version of you. And if its advice failed last time, that outcome should matter the next time you face a similar choice.
-
-Fable also has to keep three stories distinct: **who you are, what the two of you have been through, and who Fable is becoming through those experiences**. Together, they shape its judgment before it speaks. Sometimes that means remembering. Sometimes it means asking because it does not know. Sometimes it means disagreeing with you in a way only someone who understands your history could.
-
-That is the second half of Fable: an AI built for you that can develop *with* you.
+- **Remember what happened.** The Experience Ledger keeps a history of experiences, Fable's decisions, and their outcomes.
+- **Know where a belief came from.** Fable tracks its sources. It keeps facts, guesses, and corrections distinct.
+- **Understand both of you.** It learns about you, its own developing self, and the relationship between you without confusing one for another.
+- **Bring the right context to a decision.** It draws on relevant memories, goals, and changes when you need help.
+- **Learn from what follows.** Outcomes should change its future judgment when warranted, including when it should disagree with you.
 
 > **See the idea as a story:** [Read *The Second Mind*, the interactive A.L.I.C.E. comic](https://raw.githack.com/NIne-WIngEd/Fable_Sleight/main/comic/index.html). It shows the destination we are building toward, not a finished product. [Read the complete 64-page storyboard](comic/STORYBOARD.md).
 
@@ -57,10 +61,6 @@ That is the second half of Fable: an AI built for you that can develop *with* yo
 Everyone deserves their own AI. Right now, we have AI agents for different tasks, but not an AI companion that knows us. We keep asking the same general models to reason about different people's lives. But we as humans are different. We reason differently. We want different things. So why should we all be treated by the same standard?
 
 Even local models you can download and personalize usually come pretrained with someone else's weights. You can give them your files and teach them your preferences, but you are still working on top of a model built for everyone. The model grows with its manufacturing company, not with you.
-
-### One life. Too many versions.
-
-Your teacher sees the student. Your mother sees her child. Your friends see who you are with them. Your coding agent sees the project. Each knows a real version of you. None sees the whole picture.
 
 ## Why Fable matters
 
