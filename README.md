@@ -129,77 +129,25 @@ Owning your personal intelligence does not mean claiming that you own OpenAI's o
 
 ## The roadmap
 
-*Build diary, July 13–September 28, 2026. The dates below describe work and decisions, not promised launch dates.*
+*Milestones reached since July 2026. Each one changed what I built next.*
 
-I started with [A.L.I.C.E.](https://github.com/NIne-WIngEd/A.L.I.C.E), a research system for one life. Fable came later: the question of how to give other people a personal intelligence of their own. Here is the path so far, including the parts that did not work.
+### What we have done
 
-### July 13 — I wrote down what A.L.I.C.E. had to be
+- **Set the ground rules.** I began A.L.I.C.E.'s phase-based build with a Constitution for evidence, privacy, correction, and rollback. A personal AI cannot turn a guess into a fact about its owner. [Phase 0](https://github.com/NIne-WIngEd/A.L.I.C.E/commit/b73a342f)
+- **Built evidence and memory.** I added vault ingestion, provenance, retrieval, and memory that handles corrections and deletion. The memory release recorded 532 passing tests on synthetic data. It was a foundation, not a finished personal mind. [Evidence](https://github.com/NIne-WIngEd/A.L.I.C.E/commit/514edd98) · [Memory](https://github.com/NIne-WIngEd/A.L.I.C.E/blob/main/docs/PHASE_2_FINAL_RELEASE_REPORT.md)
+- **Made it converse and research.** Conversation state and checked response packets met a replaceable local-model adapter. Public information gained citations and freshness checks. I learned that fluent answers do not prove personal judgment. [Conversation](https://github.com/NIne-WIngEd/A.L.I.C.E/blob/main/docs/PHASE_3_FINAL_RELEASE_REPORT.md) · [Research](https://github.com/NIne-WIngEd/A.L.I.C.E/blob/main/docs/PHASE_4_LIVE_OPERATIONAL_RELEASE_REPORT.md)
+- **Added a history of decisions.** The Experience Ledger and Mission Graph now have places for outcomes and goals. Memory v4 and reversible migration prototypes go beyond a simple store. Learning from an outcome to change later judgment is still open. [Ledger](https://github.com/NIne-WIngEd/A.L.I.C.E/commit/e165b53f) · [Memory v4](https://github.com/NIne-WIngEd/A.L.I.C.E/commit/15e2713a)
+- **Separated Fable from A.L.I.C.E.** A.L.I.C.E. is owner-specific research. A consumer Fable must begin with *its owner's* chosen data. I also separated direct evidence, inference, and synthetic examples so training cannot invent someone's history. [Product split](https://github.com/NIne-WIngEd/A.L.I.C.E/commit/6b3a2ade) · [Identity research](https://github.com/NIne-WIngEd/A.L.I.C.E/blob/main/docs/MEMORY_IDENTITY_FORMATION_AND_HOST_LEARNING_ARCHITECTURE.md)
+- **Started the builder.** I opened the Fable Builder Model workstream. Its first 60 seed examples had an answer-position bias and did not prove the process could transfer to another person. We recorded the problem. [Builder](https://github.com/NIne-WIngEd/A.L.I.C.E/blob/fable-builder-model/docs/fable-builder/README.md) · [Audit](https://github.com/NIne-WIngEd/A.L.I.C.E/blob/fable-builder-model/docs/fable-builder/FBM_EXISTING_DATA_AUDIT_2026-09-26.md)
+- **Found the missing learning loop.** Our audit separated the user, Fable's developing self, and their relationship. Memory Formation became a distinct workstream. The local foundation must form a verdict and check proposed words against it. This is designed, not demonstrated. [Audit](https://github.com/NIne-WIngEd/A.L.I.C.E/blob/main/docs/research/PERSONAL_DEVELOPMENT_AUDIT_2026-09-22.md) · [Release design](docs/FIRST_RELEASE.md)
+- **Hit a real compute limit.** The N0 two-GPU test passed five stress cases. The sixth exceeded our memory limit. We kept the failure and prepared a higher-memory route; N0 training is not qualified yet. [Run record](https://github.com/NIne-WIngEd/A.L.I.C.E/blob/alice-context/docs/chat-context/2026-09-28/N0_MEASURED_JOINT_P43_576237_FAILURE.md)
 
-The goal was a continuing intelligence that could remember, disagree, and learn with its owner. I began with a Constitution for authority, evidence, privacy, correction, and rollback. Without those rules, a system that claims to know a person can quietly turn a guess into a fact. [The Phase 0 baseline](https://github.com/NIne-WIngEd/A.L.I.C.E/commit/b73a342f) is the first recorded step in this phase-based build.
+### What comes next
 
-### July 14–21 — First, give it evidence it can trace
-
-I built a private-vault inventory, safe extraction, provenance, and lexical and semantic retrieval. The important lesson was that retrieving a convincing sentence is not the same as knowing where it came from. Every later personal belief needs a route back to authorized material. [Phase 1's grounded-response work](https://github.com/NIne-WIngEd/A.L.I.C.E/commit/514edd98) closes this first foundation.
-
-### July 21–25 — Memory needed a way to be wrong
-
-Phase 2 added an authoritative memory store, time-aware conflicts, sensitive-data access, correction, and deletion across rebuildable indexes. Its [release report](https://github.com/NIne-WIngEd/A.L.I.C.E/blob/main/docs/PHASE_2_FINAL_RELEASE_REPORT.md) records 532 passing full-suite tests. Those tests used synthetic data. They proved a bounded memory core, not that A.L.I.C.E. already understood a whole person.
-
-### July 26 — A conversation, but not yet a personal mind
-
-Phase 3 connected conversation state, grounded response packets, validation, repair, and a local-model adapter. I could build a conversational path while keeping the chosen language model replaceable. I also learned the limit of that approach: a model producing words does not prove that personal memory made the judgment. [The Phase 3 release report](https://github.com/NIne-WIngEd/A.L.I.C.E/blob/main/docs/PHASE_3_FINAL_RELEASE_REPORT.md) states its boundaries.
-
-### July 27–August 1 — The research system became a product question
-
-I widened the architecture beyond isolated chats: goals, outcomes, public research, and a system that could outlive one model. Phase 4 added source freshness, citations, conflict handling, and protection against instructions hidden in retrieved pages. It eventually qualified one governed live-public-information path. At the same time, I separated the owner-specific A.L.I.C.E. from a consumer product, then called Friday. A customer's Fable must never inherit A.L.I.C.E.'s private identity. [Architecture decision](https://github.com/NIne-WIngEd/A.L.I.C.E/commit/6b3a2ade) · [Phase 4 live release report](https://github.com/NIne-WIngEd/A.L.I.C.E/blob/main/docs/PHASE_4_LIVE_OPERATIONAL_RELEASE_REPORT.md).
-
-### August 1–3 — I started recording what happened after an answer
-
-The [Experience Ledger](https://github.com/NIne-WIngEd/A.L.I.C.E/commit/e165b53f), [Mission Graph](https://github.com/NIne-WIngEd/A.L.I.C.E/commit/eae01944), and attention/workspace contracts gave decisions, projects, and outcomes places in the architecture. I also built raw-buffer and storage-lifecycle foundations. The ledger is real infrastructure. The full loop that learns from a result and changes later judgment is still ahead.
-
-### August 4–9 — A memory store was too small for the vision
-
-Memory v4 separated historical experience from current claims and planned linked episodes, graph and vector recollection, model state, and governed forgetting. I built M2 authority and projection prototypes and reversible shadow-migration stages around the released Phase 2 baseline. I kept that baseline as a fallback instead of declaring the new fabric production-ready. Full Stage G memory qualification remains open. [Memory v4 decision](https://github.com/NIne-WIngEd/A.L.I.C.E/commit/15e2713a) · [current A.L.I.C.E. status](https://github.com/NIne-WIngEd/A.L.I.C.E#current-state).
-
-### Late August–September 1 — Personal data alone was not a training recipe
-
-The identity research forced a distinction among direct source evidence, evidence-based inference, and synthetic examples that fill behavioral gaps. The MC10 branches record generation runs and failures with provenance. Generated candidates were not silently promoted into someone's history or counted as a qualified trained personality model. [MC10B research branch](https://github.com/NIne-WIngEd/A.L.I.C.E/tree/alice-mc10b-live) · [identity and host-learning boundary](https://github.com/NIne-WIngEd/A.L.I.C.E/blob/main/docs/MEMORY_IDENTITY_FORMATION_AND_HOST_LEARNING_ARCHITECTURE.md).
-
-### September 10–17 — The first native model work exposed real research problems
-
-N0 became the public, identity-neutral foundation for interpreting evidence and relationships before any private personality learning. In one challenge, a source was removed only after its information had already passed through another layer. The apparent failure could not tell us whether the model used the source. I kept the failed result, corrected the test, and resisted scaling the model before the measurement was valid. This is what our research process looks like when an experiment goes wrong. [The failure and correction](https://github.com/NIne-WIngEd/A.L.I.C.E/blob/alice-eipm-v1-n0-full-envelope-foundation-build-v1/docs/eipm/N0_LATENT_POOL_V01_CHALLENGE_FAILURE_AND_SCALE_ADEQUACY_AUDIT_2026-09-16.md).
-
-### September 13–26 — I stopped treating the builder as a future detail
-
-If every Fable requires a skilled person to interpret data, design training cases, and connect its personal components, the product cannot scale. I started the Fable Builder Model workstream to capture those construction decisions as a reusable process. Then I audited its early material: 60 seed examples were useful for one N0 task, but most favored the first answer position and did not prove a builder could transfer to another person. More data and independent tests are needed. [Builder workstream](https://github.com/NIne-WIngEd/A.L.I.C.E/blob/fable-builder-model/docs/fable-builder/README.md) · [seed audit](https://github.com/NIne-WIngEd/A.L.I.C.E/blob/fable-builder-model/docs/fable-builder/FBM_EXISTING_DATA_AUDIT_2026-09-26.md).
-
-### September 22–26 — I found the missing learning loop
-
-A review showed that stored user information and a fixed instruction to “disagree” would not make a developing companion. We separated the user, Fable's own developing self, and their relationship. Memory Formation became a distinct workstream. For the first release, the local foundation must decide what Fable believes and how it should behave before a replaceable language service proposes words; it must check that proposal against its own verdict. That loop is designed, not yet demonstrated. [Personal-development audit](https://github.com/NIne-WIngEd/A.L.I.C.E/blob/main/docs/research/PERSONAL_DEVELOPMENT_AUDIT_2026-09-22.md) · [MFM research](https://github.com/NIne-WIngEd/A.L.I.C.E/blob/research/mfm-foundation-20260923/docs/MEMORY_FORMATION_MODEL_FOUNDATION.md) · [Fable first-release plan](docs/FIRST_RELEASE.md).
-
-### September 24–28 — Fable got its own home, and the release promise got sharper
-
-I opened this repository for the consumer product. I first thought in terms of smaller release stages. That was too easy to mistake for a finished Fable with a reduced personal foundation. The corrected gate keeps F4–F11 as internal qualifications and calls the first consumer release complete only when the transferable cognitive system works as one entity. External APIs may supply general skills; they may not become the owner of its personal memory and judgment. [Full v1 execution plan](https://github.com/NIne-WIngEd/A.L.I.C.E/blob/main/docs/ALICE_PHASE2_REPLACEMENT_AND_FABLE_V1_EXECUTION_PLAN_2026-09-27.md) · [Fable release design](docs/FIRST_RELEASE.md).
-
-### September 28 — The full compute test failed a real limit
-
-The N0 two-GPU trial ran for about half an hour. Five stress cases passed; the sixth exceeded our reserved memory limit, leaving the rest unmeasured. I did not call that a qualified training run or weaken the test to make the result look better. The next route needs more memory and the same measurement. A separate source audit caught evaluation material in an initial transfer list; it was corrected before any transfer. Those are small but concrete examples of the discipline a personal model builder needs. [Measured compute failure](https://github.com/NIne-WIngEd/A.L.I.C.E/blob/alice-context/docs/chat-context/2026-09-28/N0_MEASURED_JOINT_P43_576237_FAILURE.md) · [corrected transfer handoff](https://github.com/NIne-WIngEd/A.L.I.C.E/blob/alice-context/docs/chat-context/2026-09-28/N0_PAID_HOST_TRANSFER_AND_QUALIFICATION_HANDOFF_V1.md).
-
-### Where we stand
-
-That is eleven weeks of phase-based construction, revisions, tests, and recorded failures. Fable itself has **no released product, users, or revenue**. The builder cannot yet turn an arbitrary person's chosen data into a qualified Fable. N0 is not complete. The full memory fabric and experience-to-judgment-to-outcome learning loop are not qualified. These are the risks we are working on, not accomplishments I want a reader to assume.
-
-### What the next capital would prove
-
-If YC funds us, I would use that capital for focused engineering time, measured training compute, independent evaluation across consenting data sources and people, privacy and local-runtime work, and direct conversations with prospective users about trust and willingness to pay. The next proof is a controlled, repeatable experiment across distinct consenting data sets: chosen sources enter a builder path; initial personal components form; a correction or observed outcome changes a later judgment; and that judgment survives a change of general-purpose provider. We would measure quality, latency, build cost, privacy egress, and failures. That experiment would not be a consumer release or proof that arbitrary data can already build a Fable. The funding is a path to hard evidence. It is not a promise that one check completes frontier-model research.
-
-### From proof to a consumer Fable
-
-We would then finish the full personal-memory, learning, mission, continuity, and owner-control qualifications before the [first consumer release](docs/FIRST_RELEASE.md). F4–F11 are internal milestones, not smaller products offered to users. The first release may call external models for general language, coding, simulation, vision, and other feature work. Its personal foundation and the decisions about what to share remain local and owner-controlled.
-
-The years after a first release would be about proving repeatability beyond the research team: more consenting owners, more kinds of chosen data, lower build cost, and reliable updates, export, and recovery in everyday use. We would measure whether Fable actually helps people make better decisions over time, not just whether they keep talking to it.
-
-As that foundation matures, we want to replace external feature services with our own language and specialist models where the quality and cost work. The longer goal is for the builder to construct more kinds of specialist models for each owner. That is a direction for the next five years, not a claim that frontier features or fully automated builds already exist. Each expansion depends on the evidence from the one before it.
+- **Current gate:** Fable has no released app, users, or revenue. We need to qualify native foundations, full memory, the learning loop, and a builder that works across people.
+- **What YC capital would prove:** Fund focused engineering, measured compute, privacy work, independent tests with consenting people, and prospective-user research. The next experiment must show a repeatable build where an outcome changes later judgment, even when we swap language providers. We will measure quality, speed, cost, and data leaving the device.
+- **First release:** Ship the full transferable personal foundation and builder after internal qualifications. External APIs may supply general language and feature skills. Owner-controlled memory and judgment stay local. [Release requirements](docs/FIRST_RELEASE.md)
+- **The following years:** Make builds reliable and affordable for more owners. Measure useful decisions over time. Then build our own language and specialist feature models where they meet the quality and cost bar. The five-year goal is a builder that can create more kinds of models for each person.
 
 ## Who else is working on this?
 
