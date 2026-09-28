@@ -79,8 +79,11 @@ A.L.I.C.E.'s compact build traces are seeds for builder operations, but they are
 
 This release is blocked until tests and real usage establish all of the following:
 
-- a complete source-to-personal-model build with provenance, inspection, correction, deletion, rollback, and portability;
+- a complete source-to-personal-model build with provenance, inspection, correction, deletion, rollback, portability, and the full cognitive-memory substrate;
 - a working experience-to-state-to-native-verdict-to-response-to-outcome loop, including relevant behavioral change after new evidence;
+- working episodic, multi-graph/associative, vector/multimodal, source-native, procedural, personal-state, mission, and live-source recollection paths under adaptive routing;
+- cross-layer deletion/unlearning that covers durable memory, derived projections, active execution state, replay/training data, and parametric personal influence;
+- scale-up or scale-out without deleting logical cognitive planes or introducing a smaller intelligence tier;
 - distinct users or controlled state interventions produce appropriately distinct verdicts and expression; switching GPT/Claude does not replace Fable's identity;
 - the conversation system detects a fluent candidate that agrees on the conclusion but violates voice, relationship context, evidence, or disagreement intent;
 - first-pass behavior, bounded corrections, privacy egress, and end-to-end latency meet defined release thresholds under realistic workload;
