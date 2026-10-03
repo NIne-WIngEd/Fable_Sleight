@@ -94,11 +94,11 @@ The experience we want is simple. Download the software. Pick the folders and ac
 
 Behind that simple setup is the hard part:
 
-1. **Understand the raw material.** Fable reads the data you choose and remembers where it came from. It keeps real events, guesses, and synthetic training examples separate.
-2. **Build your personal foundation.** The builder creates the parts that remember, understand you, and make judgments. Then it joins them into one Fable.
-3. **Give it useful abilities.** GPT and Claude handle things like coding, research, simulation, and vision in v1. Fable's personal foundation decides how to use those skills.
-4. **Let it grow with you.** Your corrections and the outcomes of Fable's choices should change what it learns. Bad updates must be reversible.
-
+1. **Understand the raw material.**
+2. **Build your personal foundation.** 
+3. **Give it useful abilities.** (In Fable version 1 using API calls and later using feature models)
+4. **Let the personal foundation expand over time and let Fable grow with you.**
+   
 You don't need a huge archive to begin. With less data, Fable knows less at first and learns over time. The easy `.exe` download is the goal; a laptop cannot train a GPT-scale model from a few personal files.
 
 ## What will the first version include?
