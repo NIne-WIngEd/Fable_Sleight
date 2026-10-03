@@ -3,6 +3,7 @@
 </p>
 
 <p align="center">
+  <a href="#main-hypothesis">Main hypothesis</a> ·
   <a href="#why-you-need-a-personal-ai">Why you need it</a> ·
   <a href="#the-idea-behind-fable">The idea</a> ·
   <a href="#what-will-the-first-version-include">First release</a> ·
@@ -31,6 +32,25 @@ But that's only half the story. Owning the model is the start. What it remembers
 <p align="center">
   <img src="assets/model-ownership.svg" alt="Three model paths: external ChatGPT or Claude use provider-built weights; local Qwen through Hugging Face starts with pretrained weights you can adapt; Fable Sleight aims to build personal weights for you locally. First-release feature tasks still plan to use external APIs." width="100%">
 </p>
+
+---
+
+## Main Hypothesis
+
+In the first paragraph, the justification behind Fable_Sleight sounds more like something out of a security concern, which is true, but not enough. So, here, we are leaving that out because that is not our main hypothesis. Our hypothesis here has 2 parts:
+
+1. **In layman's terms:** every model consists of 2 things: **memory and features**. A feature is what the model does for you: different tasks like coding, simulation, etc.
+
+   Memory is the part where the model tries to understand what feature the user really needs. And that's where the problem is. If you give a generic model to every user on the planet that is trained on common data and is equal for everyone, it is hard to assess that it will separately understand the different users using it unless the users train the model with their personal data.
+
+2. **My 2nd argument is:** even if the user neglects the security part (which most people do) and trains the model with their personal data, how do we determine how much personal data is enough?
+
+   Our answer is: no amount of personal data is enough since you are training an already instruction-tuned model with your data. So, the model may know you, but it will not behave for you.
+
+> [!IMPORTANT]
+> Our stronger hypothesis is that a separately learned personal foundation could outperform direct personalization of a general model **when personal data is limited, circumstances change, and consistent judgment matters more than imitation of someone’s writing.**
+
+---
 
 ## The idea behind Fable
 
