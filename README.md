@@ -50,6 +50,8 @@ In the first paragraph, the justification behind Fable_Sleight sounds more like 
 > [!IMPORTANT]
 > Our stronger hypothesis is that a separately learned personal foundation could outperform direct personalization of a general model **when personal data is limited, circumstances change, and consistent judgment matters more than imitation of someone’s writing.**
 
+**Want to see the proof behind our hypothesis:** [The experiment behind Fable_Sleight: FloRA](#the-experiment-behind-fable_sleight-flora)
+
 ---
 
 ## The idea behind Fable
@@ -129,13 +131,27 @@ Upstream F4–F11 milestones are internal qualification steps, not smaller produ
 
 **Eleven weeks in:** the research foundations are real. Fable has no released app, customers, or revenue. The automatic build and learned judgment loop are still the tests that matter.
 
-### What we must prove next
+## The experiment behind Fable_Sleight: FloRA.
 
-- **Qualify the personal foundation.** Finish native model, memory, and outcome-to-judgment tests. Show that its verdict controls both a decision and the words a language service proposes.
-- **Run the evidence test.** Once A.L.I.C.E.'s five personal roles and memory fabric work together, simulate years of Rayan's changing life. On unseen decisions, compare its later judgments with the same language model given the same history through basic memory and retrieval. Check whether outcomes and corrections improve relevant decisions without changing unrelated ones. This would test the integrated mechanism before Fable ships; it would not yet prove the builder can reproduce it for other people. [Stage G plan](https://github.com/NIne-WIngEd/A.L.I.C.E/blob/main/docs/MEMORY_IDENTITY_FORMATION_AND_HOST_LEARNING_ARCHITECTURE.md#11-stage-g-testing-program)
-- **Make the builder transferable.** With capital, fund engineering time, measured compute, privacy work, and independent tests with consenting people. Build from distinct owners' data and test whether correction changes later judgment. Measure quality, speed, cost, and data leaving the device. Talk to prospective users while we build.
-- **Ship the first Fable.** Release only when that complete personal system and builder work together. General feature skills (coding, simulation, editing, etc) may use external APIs for the first release; the owner's memory and judgment stay local. [First-release gate](docs/FIRST_RELEASE.md)
-- **Go beyond the first release.** Make builds reliable and affordable for more people. Measure whether Fable improves decisions over time. Then replace external feature services with our own models where they meet the bar. The five-year direction is a builder that can create more kinds of specialist models for each owner.
+FloRA is Fable_Sleight: the demo version. FloRA is to gather proof on whether pursuing and building Fable_Sleight is worth it or not.
+
+FloRA takes on the biggest claim of Fable_Sleight, The Personal Foundation, through a narrow route. We just test 1 aspect here: after a host corrects a relevant belief or preference and a decision has an outcome, does FloRA's later **native judgment** change for the right reason, while keeping its evidence trail?
+
+The result will come from a direct comparison. Like we said: we prefer a personal foundation over direct personalization. So we need to show that using a language model just as a frozen base and building a personal foundation on top of it produces better native judgment than directly personalizing the language model. Here for FloRA, we chose Gemma 4 as our language model.
+
+- We chose a pretrained, non-instruction-tuned Gemma model as a frozen base and are building a personal foundation on top of it.
+- Then we will do direct personalization by training an instruction-tuned Gemma model with personal data.
+
+Then we will run an experiment to test their native judgment.
+
+> [!NOTE]
+> The experiment is still a work in progress. See [FloRA](https://github.com/NIne-WIngEd/FloRA).
+
+A positive outcome where the Gemma-based FloRA outperforms Gemma would directly support our hypothesis.
+
+That would also mean, in future Fable_Sleight versions, if we replace the base language model with a language model far stronger than Gemma (let's say a model that is on par with current frontier language models), in theory, Fable_Sleight should outperform those frontier language models.
+
+And together with that: if FloRA's builder model can generate autonomous building capability and create different FloRAs for different users and they also outperform Gemma, then Fable_Sleight should be the next big step in Artificial Intelligence.
 
 ## The personal foundation
 
