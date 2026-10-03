@@ -4,6 +4,7 @@
 
 <p align="center">
   <a href="#main-hypothesis">Main hypothesis</a> ·
+  <a href="#the-experiment-behind-fable_sleight-flora">FloRA experiment</a> ·
   <a href="#why-you-need-a-personal-ai">Why you need it</a> ·
   <a href="#the-idea-behind-fable">The idea</a> ·
   <a href="#what-will-the-first-version-include">First release</a> ·
@@ -50,7 +51,10 @@ In the first paragraph, the justification behind Fable_Sleight sounds more like 
 > [!IMPORTANT]
 > Our stronger hypothesis is that a separately learned personal foundation could outperform direct personalization of a general model **when personal data is limited, circumstances change, and consistent judgment matters more than imitation of someone’s writing.**
 
-**Want to see the proof behind our hypothesis:** [The experiment behind Fable_Sleight: FloRA](#the-experiment-behind-fable_sleight-flora)
+> [!TIP]
+> **Want to see the proof behind our hypothesis:**
+>
+> **[The experiment behind Fable_Sleight: FloRA](#the-experiment-behind-fable_sleight-flora)**
 
 ---
 
@@ -133,25 +137,43 @@ Upstream F4–F11 milestones are internal qualification steps, not smaller produ
 
 ## The experiment behind Fable_Sleight: FloRA.
 
-FloRA is Fable_Sleight: the demo version. FloRA is to gather proof on whether pursuing and building Fable_Sleight is worth it or not.
+<p align="center">
+  <img src="assets/flora-experiment-banner.svg" alt="FloRA, Fable_Sleight's demo version: a personal foundation above frozen Gemma 4. Work in progress." width="100%">
+</p>
 
-FloRA takes on the biggest claim of Fable_Sleight, The Personal Foundation, through a narrow route. We just test 1 aspect here: after a host corrects a relevant belief or preference and a decision has an outcome, does FloRA's later **native judgment** change for the right reason, while keeping its evidence trail?
+**FloRA is Fable_Sleight: the demo version.** FloRA is to gather proof on whether pursuing and building Fable_Sleight is worth it or not.
 
-The result will come from a direct comparison. Like we said: we prefer a personal foundation over direct personalization. So we need to show that using a language model just as a frozen base and building a personal foundation on top of it produces better native judgment than directly personalizing the language model. Here for FloRA, we chose Gemma 4 as our language model.
+### 01 · The question
 
-- We chose a pretrained, non-instruction-tuned Gemma model as a frozen base and are building a personal foundation on top of it.
-- Then we will do direct personalization by training an instruction-tuned Gemma model with personal data.
+FloRA takes on the biggest claim of Fable_Sleight, **The Personal Foundation**, through a narrow route.
 
-Then we will run an experiment to test their native judgment.
+> [!IMPORTANT]
+> **We just test 1 aspect here:** after a host corrects a relevant belief or preference and a decision has an outcome, does FloRA's later **native judgment** change **for the right reason**, while keeping its **evidence trail**?
+
+### 02 · The comparison
+
+The result will come from a **direct comparison**. Like we said: **we prefer a personal foundation over direct personalization.**
+
+So we need to show that using a language model just as a **frozen base** and building a **personal foundation** on top of it produces better **native judgment** than directly personalizing the language model. Here for FloRA, we chose **Gemma 4** as our language model.
+
+| **Personal foundation** | **Direct personalization** |
+| :--- | :--- |
+| We chose a **pretrained, non-instruction-tuned Gemma model** as a **frozen base** and are building a **personal foundation** on top of it. | Then we will do direct personalization by **training an instruction-tuned Gemma model with personal data**. |
+
+Then we will run an experiment to test their **native judgment**.
 
 > [!NOTE]
-> The experiment is still a work in progress. See [FloRA](https://github.com/NIne-WIngEd/FloRA).
+> **The experiment is still a work in progress.** See [**FloRA**](https://github.com/NIne-WIngEd/FloRA).
 
-A positive outcome where the Gemma-based FloRA outperforms Gemma would directly support our hypothesis.
+### 03 · What a positive outcome would mean
 
-That would also mean, in future Fable_Sleight versions, if we replace the base language model with a language model far stronger than Gemma (let's say a model that is on par with current frontier language models), in theory, Fable_Sleight should outperform those frontier language models.
+A positive outcome where the Gemma-based FloRA outperforms Gemma **would directly support our hypothesis.**
 
-And together with that: if FloRA's builder model can generate autonomous building capability and create different FloRAs for different users and they also outperform Gemma, then Fable_Sleight should be the next big step in Artificial Intelligence.
+That would also mean, in future Fable_Sleight versions, if we replace the base language model with a language model far stronger than Gemma (let's say a model that is on par with current frontier language models), in theory, **Fable_Sleight should outperform those frontier language models.**
+
+### 04 · The builder
+
+And together with that: if FloRA's builder model can generate autonomous building capability and create **different FloRAs for different users** and they also outperform Gemma, then **Fable_Sleight should be the next big step in Artificial Intelligence.**
 
 ## The personal foundation
 
