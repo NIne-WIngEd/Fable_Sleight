@@ -1,9 +1,10 @@
 # Fable v1 execution profile — full personal cognitive fabric
 
 **Date:** 2026-09-27  
-**Version:** 2.0.0  
+**Version:** 2.1.0\
+**Updated:** 2026-10-10\
 **Status:** first-release technical execution authority  
-**Supersedes:** the earlier same-day reduced physical-profile interpretation
+**Supersedes:** v2.0.0 selected-stack wording and the earlier same-day reduced physical-profile interpretation; the full capability and release requirements remain unchanged
 
 ## 1. Principle
 
@@ -89,14 +90,17 @@ A query may use only a subset of these planes. The product still contains the ar
 
 The current implementation choices are selected from the full capability requirements. They are replaceable adapters, not the definition of Fable's cognition.
 
+This selection follows A.L.I.C.E.'s [owner-ratified Stage G machine policy](https://github.com/NIne-WIngEd/A.L.I.C.E/blob/8ea804aa25c3d1c5f46e9be5810d072ed0fadb4b/policies/stage_g_memory_fabric_candidate_qualification_policy.json) and [selected-stack qualification matrix](https://github.com/NIne-WIngEd/A.L.I.C.E/blob/8ea804aa25c3d1c5f46e9be5810d072ed0fadb4b/docs/STAGE_G_MEMORY_FABRIC_CANDIDATE_QUALIFICATION_MATRIX.md). It synchronizes this profile with the approved upstream selection; it does not claim completed integration or qualification. The [previous profile](https://github.com/NIne-WIngEd/Fable_Sleight/blob/a6eba323dd27d3c58f232b351d09b86761b15935/docs/FABLE_V1_EXECUTION_PROFILE_2026-09-27.md) remains a historical record.
+
 | Plane | Selected implementation |
 | --- | --- |
 | Raw evidence / large objects | encrypted content-addressed local/NAS/private-object storage behind an S3-compatible abstraction |
-| Experience/Event Fabric | NATS JetStream behind Fable-owned EvidenceLog/event contracts |
+| Canonical Experience/Event Fabric | KurrentDB behind Fable-owned EvidenceLog/event contracts |
+| Edge/federation event transport | NATS JetStream for ingress, buffering, and delivery/replay assistance |
 | Claim Authority | XTDB v2 bitemporal authority |
 | Episodes | governed derived episode store linked to Event/Claim identities |
 | Cognitive Multi-Graph — local | LadybugDB |
-| Cognitive Multi-Graph — scale-out | JanusGraph with qualified distributed storage |
+| Cognitive Multi-Graph — scale-out | NebulaGraph distributed graph placement; Neo4j retained as a migration/reference backend |
 | Associative graph compute | engine-independent PPR / spreading activation / temporal decay / inhibition / path compute |
 | Vector/Multimodal | Qdrant Edge, server, or cluster placement |
 | Exact/source-native | local files, SQL/FTS, metadata, code/source search, authorized connected-source reads |
@@ -110,11 +114,11 @@ The current implementation choices are selected from the full capability require
 | Training | PyTorch + Accelerate with DDP/FSDP/offload selected from measured hardware need |
 | General feature capability | replaceable GPT/Claude-class APIs where the owner permits egress |
 
-### Why NATS JetStream for events
+### Why KurrentDB for canonical events and NATS JetStream for transport
 
-Fable needs replayable ordered experience, durable consumers, local/private deployment, edge/multi-device use, and a permissive distribution model. JetStream supplies the transport/storage substrate while Fable owns event identity, expected-version semantics, causal/device clocks, correction/deletion lineage, evidence binding, and projection checkpoints.
+Fable needs replayable ordered experience, durable consumers, local/private deployment, and edge/multi-device use. KurrentDB supplies the canonical durable event log behind Fable-owned EvidenceLog/event contracts. Fable owns event identity, expected-version semantics, causal/device clocks, correction/deletion lineage, evidence binding, and projection checkpoints.
 
-KurrentDB remains a strong event-store reference/challenger. It is not the universal product dependency because the current KLv1 license boundary is less suitable for a widely distributable host-owned platform.
+NATS JetStream supplies edge/federation ingress, buffering, and delivery/replay assistance. A transport acknowledgement or replay does not itself establish canonical Experience authority; that boundary is the KurrentDB commit. Transport state and its checkpoints must retain their declared relationship to the canonical log.
 
 ### Why XTDB v2 for claims
 
@@ -142,7 +146,7 @@ A person's life is not just rows plus embeddings. Fable needs:
 - outcome and decision history;
 - model/data lineage.
 
-The host-local placement uses LadybugDB. Larger private deployments can use JanusGraph. The logical graph contract is the same.
+The host-local placement uses LadybugDB. Larger private deployments use the selected NebulaGraph scale-out adapter. Neo4j remains a migration/reference backend. The logical graph contract is the same; graph projections do not become Claim Authority.
 
 ### Why Qdrant is not optional architecture
 
