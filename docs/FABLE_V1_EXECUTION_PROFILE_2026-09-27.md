@@ -120,6 +120,8 @@ Fable needs replayable ordered experience, durable consumers, local/private depl
 
 NATS JetStream supplies edge/federation ingress, buffering, and delivery/replay assistance. A transport acknowledgement or replay does not itself establish canonical Experience authority; that boundary is the KurrentDB commit. Transport state and its checkpoints must retain their declared relationship to the canonical log.
 
+KurrentDB's licensing constraint remains tracked. The [26.1.1 KLv1 terms](https://github.com/kurrent-io/KurrentDB/blob/v26.1.1/LICENSE.md) permit use, copying, distribution and modification subject to their conditions, including preserving notices and license mechanisms. They restrict providing KurrentDB as a hosted or managed service that exposes substantial database functionality. Owner-operated self-hosted packaging therefore differs from a managed database offering; any managed Fable deployment must be assessed against those terms and obtain suitable permission where required. [Enterprise features require a valid license key](https://docs.kurrent.io/server/v26.1/). The current selection does not establish unrestricted open-source licensing, commercial redistribution rights for enterprise features, or completed deployment clearance. This preserves the upstream decision to track deployment constraints while retaining the project-owned event contract and selected event store.
+
 ### Why XTDB v2 for claims
 
 Claim authority is fundamentally bitemporal:
