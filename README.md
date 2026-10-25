@@ -134,7 +134,7 @@ Upstream F4–F11 milestones are internal qualification steps, not smaller produ
 
 - **A place to start.** A.L.I.C.E., our first personal AI research system, gave us working foundations for evidence, memory, conversation, goals, and recorded outcomes. It remains a private development case.
 - **A connected FloRA prototype.** The new research branch connects evidence, decisions, actions, observed outcomes, and later revisions. Controlled tests exercise that journey across restarts. They use test substitutes and untrained model parts; learned improvement remains unproved.
-- **Personal models in training.** Personality and memory formation have their own active builds. Early learning results also exposed real gaps in judgment and grounded memory. Both need more work before they can power the experiment.
+- **Personal models taking shape.** Personality and memory formation have their own active builds. Early learning results also exposed real gaps in judgment and grounded memory. Both need more work before they can power the experiment.
 - **Lessons for the builder.** We are recording how we build, where it fails, and what fixes it. These are reusable construction records. The builder still has to learn to build a personal AI for someone new.
 
 **Today: research in progress. Fable v1 has not shipped, and FloRA has not proved the hypothesis.**
@@ -147,7 +147,7 @@ Finish and test the personality and memory-formation models, then connect them t
 
 #### 2 · Put the idea to a fair test
 
-Compare FloRA with a directly personalized Gemma using fair access to evidence and training resources. Use unseen situations and independent scoring. Check whether relevant corrections and outcomes change judgment for the right reason, while unrelated changes leave it steady. Publish failures and uncertainty alongside any gains.
+Compare our approach with personalizing the same base AI directly. Give both the same evidence and a fair training budget. Use unseen situations and independent scoring. Check whether corrections and outcomes change judgment for the right reason, while unrelated changes leave it steady. Publish failures and uncertainty alongside any gains.
 
 #### 3 · Build it for someone else
 
@@ -159,7 +159,7 @@ Carry the validated methods into Fable's full personal foundation: rich memory, 
 
 #### 5 · Make it yours to use
 
-Turn that build into desktop software: choose your sources, review permissions, and see what it learned. Verify correction, deletion, recovery, and continuity across devices and model changes. Measure the complete system's speed and hardware needs. External services for coding or other tasks stay optional and visible.
+Turn that build into desktop software: choose your sources, review permissions, and see what it learned. Verify correction, deletion, recovery, and continuity across devices and model changes. Measure speed and hardware needs. Make outside services clear, ask before sharing data, and show what works without them.
 
 #### 6 · Earn the v1 release
 
