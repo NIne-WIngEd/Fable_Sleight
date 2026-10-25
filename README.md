@@ -147,7 +147,7 @@ Finish and test the personality and memory-formation models, then connect them t
 
 #### 2 · Put the idea to a fair test
 
-Compare our approach with personalizing the same base AI directly. Give both the same evidence and a fair training budget. Use unseen situations and independent scoring. Check whether corrections and outcomes change judgment for the right reason, while unrelated changes leave it steady. Publish failures and uncertainty alongside any gains.
+First test whether linking experiences, decisions, and outcomes improves judgment, keeping the models, evidence, and computing budget equal. Then compare full FloRA with a directly personalized AI. Use new situations and reviewers who don't know which system answered. Relevant corrections should change later judgment; unrelated changes should not. Share failures and uncertainty alongside any gains.
 
 #### 3 · Build it for someone else
 
@@ -169,6 +169,8 @@ Use controlled testing to check complete builds for new people, everyday usefuln
 
 <details>
 <summary>Follow the work behind this roadmap</summary>
+
+Some A.L.I.C.E. research notes are in a private repository.
 
 [A.L.I.C.E. foundations](https://github.com/NIne-WIngEd/A.L.I.C.E/blob/a1fe0a65df1d4143955eb1d3b35eb4ac590e7555/README.md) · [FloRA prototype and test limits](https://github.com/NIne-WIngEd/FloRA/blob/fc6d82df8e4050ed5f0f73fe43d84b1e35463830/docs/CONTINUITY_KERNEL.md) · [Personality progress](https://github.com/NIne-WIngEd/A.L.I.C.E/blob/af89ba0fa9704cd21dcfa616cfc97180d46cf7e7/docs/eipm/PERSONALITY_INTERVENTION_LEARNING_DECISION_2026-10-25.md) · [Memory-formation progress](https://github.com/NIne-WIngEd/A.L.I.C.E/blob/5653736f545c9c1c8d5d8006af0f1fa152eed9b1/docs/MFM_CHECKPOINT10_FORMATION_DIAGNOSIS_2026-10-21.md) · [FloRA builder and transfer plan](https://github.com/NIne-WIngEd/FloRA/blob/4e4b015a1002e256afb8e586ca5c5af6bf5fa8e6/docs/FBM_ROLES_AND_OBJECTIVES.md) · [Full v1 commitment](docs/FABLE_V1_EXECUTION_PROFILE_2026-09-27.md)
 
