@@ -126,14 +126,55 @@ Upstream F4–F11 milestones are internal qualification steps, not smaller produ
 
 ## The roadmap
 
-### How we got here
+**From one personal AI to one you can call yours.** Here is where we are, and what has to happen next.
 
-- **I started with one personal AI.** In July, A.L.I.C.E. was a question: could an AI remember a life without confusing guesses with facts? I wrote rules for evidence and correction, then built the vault and memory foundations. The bounded memory release passed 532 tests on synthetic data. [Evidence](https://github.com/NIne-WIngEd/A.L.I.C.E/commit/514edd98) · [Memory report](https://github.com/NIne-WIngEd/A.L.I.C.E/blob/main/docs/PHASE_2_FINAL_RELEASE_REPORT.md)
-- **Then I learned that remembering is not growing.** Conversation and public research started working, but a good answer could still come from a replaceable language model. I added the Experience Ledger and Mission Graph so choices and outcomes have a history. Memory v4 began connecting that history to beliefs and goals. The loop that *learns* from an outcome is still unfinished. [Ledger](https://github.com/NIne-WIngEd/A.L.I.C.E/commit/e165b53f) · [Memory v4](https://github.com/NIne-WIngEd/A.L.I.C.E/commit/15e2713a)
-- **That exposed the real product.** A.L.I.C.E. was built for one person. Copying her would give everyone someone else's AI. So I separated the consumer project, now Fable, and started the Fable Builder Model: the machinery that should construct a new personal foundation from each owner's chosen data. [Separation](https://github.com/NIne-WIngEd/A.L.I.C.E/commit/6b3a2ade) · [Builder](https://github.com/NIne-WIngEd/A.L.I.C.E/blob/fable-builder-model/docs/fable-builder/README.md)
-- **The first tests made the plan sharper.** An audit found bias in the builder's first 60 seed examples. A review found the personal learning loop missing. The N0 two-GPU test hit a memory limit before qualification. I recorded those results and split out Memory Formation research. None of them is a completed builder or trained personal mind. [Builder audit](https://github.com/NIne-WIngEd/A.L.I.C.E/blob/fable-builder-model/docs/fable-builder/FBM_EXISTING_DATA_AUDIT_2026-09-26.md) · [Learning audit](https://github.com/NIne-WIngEd/A.L.I.C.E/blob/main/docs/research/PERSONAL_DEVELOPMENT_AUDIT_2026-09-22.md) · [Compute test](https://github.com/NIne-WIngEd/A.L.I.C.E/blob/alice-context/docs/chat-context/2026-09-28/N0_MEASURED_JOINT_P43_576237_FAILURE.md)
+### What we have built so far
 
-**Eleven weeks in:** the research foundations are real. Fable has no released app, customers, or revenue. The automatic build and learned judgment loop are still the tests that matter.
+*Updated October 25, 2026.*
+
+- **A place to start.** A.L.I.C.E., our first personal AI research system, gave us working foundations for evidence, memory, conversation, goals, and recorded outcomes. It remains a private development case.
+- **A connected FloRA prototype.** The new research branch connects evidence, decisions, actions, observed outcomes, and later revisions. Controlled tests exercise that journey across restarts. They use test substitutes and untrained model parts; learned improvement remains unproved.
+- **Personal models taking shape.** Personality and memory formation have their own active builds. Early learning results also exposed real gaps in judgment and grounded memory. Both need more work before they can power the experiment.
+- **Lessons for the builder.** We are recording how we build, where it fails, and what fixes it. These are reusable construction records. The builder still has to learn to build a personal AI for someone new.
+
+**Today: research in progress. Fable v1 has not shipped, and FloRA has not proved the hypothesis.**
+
+### The road from here
+
+#### 1 · Give FloRA its real models
+
+Finish and test the personality and memory-formation models, then connect them to FloRA. The next check is the whole journey: an experience, a decision, its real outcome, and a later judgment using the updated history.
+
+#### 2 · Put the idea to a fair test
+
+First test whether linking experiences, decisions, and outcomes improves judgment, keeping the models, evidence, and computing budget equal. Then compare full FloRA with a directly personalized AI. Use new situations and reviewers who don't know which system answered. Relevant corrections should change later judgment; unrelated changes should not. Share failures and uncertainty alongside any gains.
+
+#### 3 · Build it for someone else
+
+If the experiment earns that next step, test whether a small builder can reproduce the tested personal foundation for another person from their chosen data. Keep their personal state separate. Run the same behavioral checks again. A second installation alone does not prove transfer.
+
+#### 4 · Bring the whole foundation together
+
+Carry the validated methods into Fable's full personal foundation: rich memory, understanding of you, its own developing self, your relationship, goals, useful actions, and learning from outcomes. Test them together. The builder must create and keep developing that connected whole.
+
+#### 5 · Make it yours to use
+
+Turn that build into desktop software: choose your sources, review permissions, and see what it learned. Verify correction, deletion, recovery, and continuity across devices and model changes. Measure speed and hardware needs. Make outside services clear, ask before sharing data, and show what works without them.
+
+#### 6 · Earn the v1 release
+
+Use controlled testing to check complete builds for new people, everyday usefulness, privacy, reliability, and continued learning. Release only when the builder and **full personal foundation** meet the [first-release requirements](docs/FIRST_RELEASE.md). A test version does not lower that bar.
+
+**The milestones set the pace. Dates come when the evidence supports them.** First-party coding and other feature models come after v1; the full personal foundation ships with v1.
+
+<details>
+<summary>Follow the work behind this roadmap</summary>
+
+Some A.L.I.C.E. research notes are in a private repository.
+
+[A.L.I.C.E. foundations](https://github.com/NIne-WIngEd/A.L.I.C.E/blob/a1fe0a65df1d4143955eb1d3b35eb4ac590e7555/README.md) · [FloRA prototype and test limits](https://github.com/NIne-WIngEd/FloRA/blob/fc6d82df8e4050ed5f0f73fe43d84b1e35463830/docs/CONTINUITY_KERNEL.md) · [Personality progress](https://github.com/NIne-WIngEd/A.L.I.C.E/blob/af89ba0fa9704cd21dcfa616cfc97180d46cf7e7/docs/eipm/PERSONALITY_INTERVENTION_LEARNING_DECISION_2026-10-25.md) · [Memory-formation progress](https://github.com/NIne-WIngEd/A.L.I.C.E/blob/5653736f545c9c1c8d5d8006af0f1fa152eed9b1/docs/MFM_CHECKPOINT10_FORMATION_DIAGNOSIS_2026-10-21.md) · [FloRA builder and transfer plan](https://github.com/NIne-WIngEd/FloRA/blob/4e4b015a1002e256afb8e586ca5c5af6bf5fa8e6/docs/FBM_ROLES_AND_OBJECTIVES.md) · [Full v1 commitment](docs/FABLE_V1_EXECUTION_PROFILE_2026-09-27.md)
+
+</details>
 
 ## The experiment behind Fable_Sleight: FloRA.
 
