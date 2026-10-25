@@ -130,12 +130,12 @@ Upstream F4–F11 milestones are internal qualification steps, not smaller produ
 
 ### What we have built so far
 
-*Updated October 25, 2026.*
+*October 25, 2026.*
 
-- **A place to start.** A.L.I.C.E., our first personal AI research system, gave us working foundations for evidence, memory, conversation, goals, and recorded outcomes. It remains a private development case.
-- **A connected FloRA prototype.** The new research branch connects evidence, decisions, actions, observed outcomes, and later revisions. Controlled tests exercise that journey across restarts. They use test substitutes and untrained model parts; learned improvement remains unproved.
-- **Personal models taking shape.** Personality and memory formation have their own active builds. Early learning results also exposed real gaps in judgment and grounded memory. Both need more work before they can power the experiment.
-- **Lessons for the builder.** We are recording how we build, where it fails, and what fixes it. These are reusable construction records. The builder still has to learn to build a personal AI for someone new.
+- **It started with A.L.I.C.E.** I built working foundations for evidence, memory, conversation, goals, and recorded outcomes there. It is still my private research case, but it gave Fable somewhere to start.
+- **FloRA's pieces are starting to connect.** On a research branch, we now link evidence to decisions, actions, observed outcomes, and later revisions. Controlled tests follow that journey even after a restart. They still use test substitutes and untrained model parts, so this does not yet show learned improvement.
+- **The models still have lessons to learn.** I'm building the personality and memory-formation models alongside this. Early learning results exposed gaps in judgment and in forming memories grounded in evidence. Those gaps still need work before the models can power the experiment.
+- **I'm keeping the build notes.** What we tried, where it failed, and what fixed it. These are becoming reusable construction records for the builder. It still has to learn to build a personal AI for someone new.
 
 **Today: research in progress. Fable v1 has not shipped, and FloRA has not proved the hypothesis.**
 
