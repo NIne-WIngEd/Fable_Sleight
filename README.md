@@ -126,53 +126,59 @@ Upstream F4–F11 milestones are internal qualification steps, not smaller produ
 
 ## The roadmap
 
-**From one personal AI to one you can call yours.** Here is where we are, and what has to happen next.
+**Flora first. Then a builder that can do it for you.** Two demo milestones lead toward Sleight v1: test the personal foundation, then test whether the builder can repeat it.
+
+*Roadmap updated November 1, 2026. Latest recorded build progress: October 28.*
 
 ### What we have built so far
 
 *October 25, 2026.*
 
-- **It started with A.L.I.C.E.** I built working foundations for evidence, memory, conversation, goals, and recorded outcomes there. It is still my private research case, but it gave Fable somewhere to start.
-- **FloRA's pieces are starting to connect.** On a research branch, we now link evidence to decisions, actions, observed outcomes, and later revisions. Controlled tests follow that journey even after a restart. They still use test substitutes and untrained model parts, so this does not yet show learned improvement.
-- **The models still have lessons to learn.** I'm building the personality and memory-formation models alongside this. Early learning results exposed gaps in judgment and in forming memories grounded in evidence. Those gaps still need work before the models can power the experiment.
-- **I'm keeping the build notes.** What we tried, where it failed, and what fixed it. These are becoming reusable construction records for the builder. It still has to learn to build a personal AI for someone new.
+- **It started with A.L.I.C.E.** I built foundations for evidence, memory, conversation, goals and recorded outcomes there. That private development case gave Sleight somewhere to start.
+- **FloRA's backbone is built.** It connects evidence, memories, goals, decisions and outcomes. It passed **63 synthetic tests**, covering corrections and restart recovery. These used test models and untrained parts. They check the connections; learned judgment still needs testing.
 
-**Today: research in progress. Fable v1 has not shipped, and FloRA has not proved the hypothesis.**
+*October 28, 2026.*
+
+- **The personality model is taking shape.** Its learned components and decision-recording connection are implemented. I estimate it is **40–50% complete**. Training is underway, with contextual judgment and retention still needing work.
+- **Memory has its first training stage.** The model completed **20 epochs on 36,597 public examples** in its initial language stage. I estimate memory formation is **30–40% complete**. Reliable memory formation from evidence still needs work.
+- **I'm keeping the builder's notebook.** Build steps, failures, diagnoses and fixes are being recorded as future training material. The autonomous builder still has to be trained and tested.
+
+*Percentages are rough model-development estimates. Both models still need behavioral testing and integration. Both FloRA milestones are ahead.*
 
 ### The road from here
 
-#### 1 · Give FloRA its real models
+#### 1 · Connect the real models
 
-Finish and test the personality and memory-formation models, then connect them to FloRA. The next check is the whole journey: an experience, a decision, its real outcome, and a later judgment using the updated history.
+Finish both models and connect them to FloRA. Check the whole journey: an experience, a decision, its outcome and a later judgment that uses what changed.
 
-#### 2 · Put the idea to a fair test
+#### 2 · FloRA milestone 1: Test the personal foundation
 
-First test whether linking experiences, decisions, and outcomes improves judgment, keeping the models, evidence, and computing budget equal. Then compare full FloRA with a directly personalized AI. Use new situations and reviewers who don't know which system answered. Relevant corrections should change later judgment; unrelated changes should not. Share failures and uncertainty alongside any gains.
+First test the experience-to-judgment link with matched models, evidence and compute. Then compare full FloRA with direct personalization using the same personal data and comparable budgets. Test new situations with blind reviewers. Report relevant improvements, unrelated changes, failures and uncertainty.
 
-#### 3 · Build it for someone else
+#### 3 · FloRA milestone 2: Let the builder repeat it
 
-If the experiment earns that next step, test whether a small builder can reproduce the tested personal foundation for another person from their chosen data. Keep their personal state separate. Run the same behavioral checks again. A second installation alone does not prove transfer.
+If milestone 1 succeeds, have the autonomous builder create independent FloRAs from new users' chosen data. Repeat the same comparison and checks. Each person's state stays separate. The builder must reproduce the capability without hand-tuning each person.
 
-#### 4 · Bring the whole foundation together
+#### 4 · Bring the full foundation together
 
-Carry the validated methods into Fable's full personal foundation: rich memory, understanding of you, its own developing self, your relationship, goals, useful actions, and learning from outcomes. Test them together. The builder must create and keep developing that connected whole.
+Expand from FloRA's focused demo to Sleight's full personal foundation: rich memory, understanding of you, its own developing self, your relationship, goals, actions and learning from outcomes. The builder must create and develop that connected whole.
 
 #### 5 · Make it yours to use
 
-Turn that build into desktop software: choose your sources, review permissions, and see what it learned. Verify correction, deletion, recovery, and continuity across devices and model changes. Measure speed and hardware needs. Make outside services clear, ask before sharing data, and show what works without them.
+Build the desktop experience: choose your sources, review permissions and inspect what it learned. Verify correction, deletion, recovery and continuity across devices and model changes. Measure speed and hardware needs. Make outside services clear and ask before sharing data.
 
 #### 6 · Earn the v1 release
 
-Use controlled testing to check complete builds for new people, everyday usefulness, privacy, reliability, and continued learning. Release only when the builder and **full personal foundation** meet the [first-release requirements](docs/FIRST_RELEASE.md). A test version does not lower that bar.
+Test complete builds for new people, everyday usefulness, privacy, reliability and continued learning. Release when the autonomous builder and **full personal foundation** meet the [first-release requirements](docs/FIRST_RELEASE.md). Early test versions keep the same capability goal.
 
-**The milestones set the pace. Dates come when the evidence supports them.** First-party coding and other feature models come after v1; the full personal foundation ships with v1.
+**The full personal foundation ships with v1.** First-party coding and other feature models come later. Dates follow demonstrated progress.
 
 <details>
 <summary>Follow the work behind this roadmap</summary>
 
 Some A.L.I.C.E. research notes are in a private repository.
 
-[A.L.I.C.E. foundations](https://github.com/NIne-WIngEd/A.L.I.C.E/blob/a1fe0a65df1d4143955eb1d3b35eb4ac590e7555/README.md) · [FloRA prototype and test limits](https://github.com/NIne-WIngEd/FloRA/blob/fc6d82df8e4050ed5f0f73fe43d84b1e35463830/docs/CONTINUITY_KERNEL.md) · [Personality progress](https://github.com/NIne-WIngEd/A.L.I.C.E/blob/af89ba0fa9704cd21dcfa616cfc97180d46cf7e7/docs/eipm/PERSONALITY_INTERVENTION_LEARNING_DECISION_2026-10-25.md) · [Memory-formation progress](https://github.com/NIne-WIngEd/A.L.I.C.E/blob/5653736f545c9c1c8d5d8006af0f1fa152eed9b1/docs/MFM_CHECKPOINT10_FORMATION_DIAGNOSIS_2026-10-21.md) · [FloRA builder and transfer plan](https://github.com/NIne-WIngEd/FloRA/blob/4e4b015a1002e256afb8e586ca5c5af6bf5fa8e6/docs/FBM_ROLES_AND_OBJECTIVES.md) · [Full v1 commitment](docs/FABLE_V1_EXECUTION_PROFILE_2026-09-27.md)
+[A.L.I.C.E. foundations](https://github.com/NIne-WIngEd/A.L.I.C.E/blob/a1fe0a65df1d4143955eb1d3b35eb4ac590e7555/README.md) · [FloRA backbone and test limits](https://github.com/NIne-WIngEd/FloRA/blob/fc6d82df8e4050ed5f0f73fe43d84b1e35463830/docs/CONTINUITY_KERNEL.md) · [Personality progress and remaining gaps](https://github.com/NIne-WIngEd/A.L.I.C.E/blob/9d17c07b34347c6ee7cbf37bef2d0ed5d7aba932/docs/eipm/PERSONALITY_CONDITIONAL_LEARNING_DIAGNOSIS_2026-10-28.md) · [Memory model's completed initial stage](https://github.com/NIne-WIngEd/A.L.I.C.E/blob/32897684dee407cdf30d522a4cc1a58ddb0912bc/docs/MFM_COMPLETED_FOUNDATION_OBSERVATION_2026-10-12.md) · [Memory-formation work still ahead](https://github.com/NIne-WIngEd/A.L.I.C.E/blob/5653736f545c9c1c8d5d8006af0f1fa152eed9b1/docs/MFM_CHECKPOINT10_FORMATION_DIAGNOSIS_2026-10-21.md) · [FloRA experiment requirements](https://github.com/NIne-WIngEd/FloRA/blob/fc6d82df8e4050ed5f0f73fe43d84b1e35463830/docs/EXPERIMENT_GOAL.md) · [Builder and transfer plan](https://github.com/NIne-WIngEd/FloRA/blob/fc6d82df8e4050ed5f0f73fe43d84b1e35463830/docs/FBM_ROLES_AND_OBJECTIVES.md) · [Full v1 commitment](docs/FABLE_V1_EXECUTION_PROFILE_2026-09-27.md)
 
 </details>
 
@@ -182,39 +188,36 @@ Some A.L.I.C.E. research notes are in a private repository.
   <img src="assets/flora-experiment-banner.svg" alt="FloRA, Fable_Sleight's demo version: a personal foundation above frozen Gemma 4. Work in progress." width="100%">
 </p>
 
-**FloRA is Fable_Sleight: the demo version.** FloRA is to gather proof on whether pursuing and building Fable_Sleight is worth it or not.
+**FloRA is Sleight's demo.** Its two milestones test our personal-foundation idea and the builder's ability to reproduce it.
 
 ### 01 · The question
 
-FloRA takes on the biggest claim of Fable_Sleight, **The Personal Foundation**, through a narrow route.
+Can FloRA use your corrections and real outcomes to make better decisions next time? It should change for the right reason, keep its evidence trail and stay steady when a change is unrelated.
 
-> [!IMPORTANT]
-> **We just test 1 aspect here:** after a host corrects a relevant belief or preference and a decision has an outcome, does FloRA's later **native judgment** change **for the right reason**, while keeping its **evidence trail**?
+### 02 · FloRA milestone 1: Test the personal foundation
 
-### 02 · The comparison
+Our hypothesis is that a separate personal foundation can work better than directly personalizing a general model, especially with limited personal data or changing circumstances.
 
-The result will come from a **direct comparison**. Like we said: **we prefer a personal foundation over direct personalization.**
+| Personal foundation | Direct personalization |
+| --- | --- |
+| A frozen Gemma base with separate personal components for memory and judgment. | A separately built, directly personalized Gemma model trained on the same authorized personal data. |
 
-So we need to show that using a language model just as a **frozen base** and building a **personal foundation** on top of it produces better **native judgment** than directly personalizing the language model. Here for FloRA, we chose **Gemma 4** as our language model.
+Include a strong general model with memory as another baseline. Match data access, feature assistance and response budgets. Test decisions kept out of development.
 
-| **Personal foundation** | **Direct personalization** |
-| :--- | :--- |
-| We chose a **pretrained, non-instruction-tuned Gemma model** as a **frozen base** and are building a **personal foundation** on top of it. | Then we will do direct personalization by **training an instruction-tuned Gemma model with personal data**. |
+Separately, test FloRA with and without its judgment updates. Keep the models, selected evidence and compute equal. This distinguishes learning from experience from simply finding better evidence.
 
-Then we will run an experiment to test their **native judgment**.
+Fix the scoring rules before the final comparison. Use blind reviewers and publish failures alongside gains. Synthetic results need follow-up with consenting real users before claiming personal benefit.
+
+### 03 · FloRA milestone 2: Let the builder repeat it
+
+If milestone 1 succeeds, use the construction records to train and test a small autonomous builder. It must build independent FloRAs from new users' chosen data, then repeat milestone 1's comparisons and controls. Each person's models and memories stay separate. Hand-tuning another personality or copying an installation does not establish builder success.
+
+### 04 · What success would mean
+
+Milestone 1 would support the personal foundation under the tested conditions. Milestone 2 would support building it for new people. Together, they would justify the next build toward Sleight v1's full personal foundation. Stronger base models and a consumer release would still need their own evidence.
 
 > [!NOTE]
-> **The experiment is still a work in progress.** See [**FloRA**](https://github.com/NIne-WIngEd/FloRA).
-
-### 03 · What a positive outcome would mean
-
-A positive outcome where the Gemma-based FloRA outperforms Gemma **would directly support our hypothesis.**
-
-That would also mean, in future Fable_Sleight versions, if we replace the base language model with a language model far stronger than Gemma (let's say a model that is on par with current frontier language models), in theory, **Fable_Sleight should outperform those frontier language models.**
-
-### 04 · The builder
-
-And together with that: if FloRA's builder model can generate autonomous building capability and create **different FloRAs for different users** and they also outperform Gemma, then **Fable_Sleight should be the next big step in Artificial Intelligence.**
+> **Both milestones are still ahead.** Follow the [FloRA work](https://github.com/NIne-WIngEd/FloRA) for the comparisons and results.
 
 ## The personal foundation
 
