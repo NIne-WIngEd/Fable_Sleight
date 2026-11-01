@@ -128,20 +128,40 @@ Upstream F4–F11 milestones are internal qualification steps, not smaller produ
 
 **Flora first. Then a builder that can do it for you.** Two demo milestones lead toward Sleight v1: test the personal foundation, then test whether the builder can repeat it.
 
-*Roadmap updated November 1, 2026. Latest recorded build progress: October 28.*
+**Building since July 2026.** Roadmap updated November 1. Latest model-progress snapshot: October 28.
 
 ### What we have built so far
 
-*October 25, 2026.*
+*July 13–21, 2026.*
 
-- **It started with A.L.I.C.E.** I built foundations for evidence, memory, conversation, goals and recorded outcomes there. That private development case gave Sleight somewhere to start.
-- **FloRA's backbone is built.** It connects evidence, memories, goals, decisions and outcomes. It passed **63 synthetic tests**, covering corrections and restart recovery. These used test models and untrained parts. They check the connections; learned judgment still needs testing.
+- **I started with one personal AI.** I built A.L.I.C.E.'s private vault, local file search and source-backed answers. The aim was to remember a life while keeping evidence, guesses and corrections distinct.
+
+*July 25–31, 2026.*
+
+- **Memory became something I could inspect and correct.** The first memory system handled conflicting facts, changes over time, permissions and deletion. Its release included a synthetic benchmark for those behaviors.
+- **Then came conversation and research.** I added local conversation, followed by controlled web search and source-linked public research.
+- **The product idea grew beyond one person.** By July 27, I had separated the owner-specific A.L.I.C.E. direction from a consumer product that would develop separately for each person. That direction eventually became Sleight.
+
+*August 1–9, 2026.*
+
+- **Remembering needed a history of doing.** I added goal and dependency contracts through the Mission Graph, and persistent event records through the Experience Ledger. They laid the groundwork for linking decisions to outcomes.
+- **The memory system grew more connected.** I built prototypes for checking beliefs, updating search views and carrying deletions through them. The larger memory redesign was still being developed.
+
+*September 13–29, 2026.*
+
+- **The builder became its own workstream.** I started the builder-model work and reusable construction records. Sleight's first-release design called for the autonomous builder and full personal foundation together.
+- **FloRA gave the idea a focused test.** I started the demo on September 28 and defined its comparisons and evidence rules. It would test personal judgment first, then whether a builder could reproduce it for someone new.
+
+*October 12–15, 2026.*
+
+- **The memory model finished its first training stage.** Its initial language stage completed **20 epochs on 36,597 public examples**. Learning to form reliable memories from evidence remained the next challenge.
+- **FloRA's backbone connected.** It linked evidence, memories, goals, decisions and outcomes. It passed **63 synthetic tests**, covering corrections and restart recovery. These used test models and untrained parts. They checked the connections, while learned judgment still needed testing.
 
 *October 28, 2026.*
 
-- **The personality model is taking shape.** Its learned components and decision-recording connection are implemented. I estimate it is **40–50% complete**. Training is underway, with contextual judgment and retention still needing work.
-- **Memory has its first training stage.** The model completed **20 epochs on 36,597 public examples** in its initial language stage. I estimate memory formation is **30–40% complete**. Reliable memory formation from evidence still needs work.
-- **I'm keeping the builder's notebook.** Build steps, failures, diagnoses and fixes are being recorded as future training material. The autonomous builder still has to be trained and tested.
+- **Personality is taking shape.** Its learned components and decision-recording connection are implemented. I estimate it is **40–50% complete**, with contextual judgment and retention still needing work.
+- **Memory formation is still being built.** Beyond the completed initial language stage, I estimate the full memory-formation model is **30–40% complete**. Reliable formation from evidence still needs work.
+- **The builder's notebook keeps growing.** Build steps, failures, diagnoses and fixes are being recorded as future training material. The autonomous builder still has to be trained and tested.
 
 *Percentages are rough model-development estimates. Both models still need behavioral testing and integration. Both FloRA milestones are ahead.*
 
@@ -177,6 +197,8 @@ Test complete builds for new people, everyday usefulness, privacy, reliability a
 <summary>Follow the work behind this roadmap</summary>
 
 Some A.L.I.C.E. research notes are in a private repository.
+
+Early build history: [July vault and evidence](https://github.com/NIne-WIngEd/A.L.I.C.E/blob/514edd98d6636906feb7f7d4e2616b6aef8398eb/docs/PHASE_1_VAULT_FOUNDATION.md) · [July memory release](https://github.com/NIne-WIngEd/A.L.I.C.E/commit/c39bfc5e390f8916e4aa53aaea1afbdc673ee845) · [July consumer-product direction](https://github.com/NIne-WIngEd/A.L.I.C.E/blob/6b3a2adec91c4ed908ec61ea77ffecfe1a4ab78a/docs/MEGA_ARCHITECTURE_MIGRATION.md) · [August Experience Ledger](https://github.com/NIne-WIngEd/A.L.I.C.E/blob/e165b53f090b0059653e30cc0e2d0e3bef820d88/docs/PHASE_5_COMPACT_EXPERIENCE_LEDGER.md) · [September builder work](https://github.com/NIne-WIngEd/A.L.I.C.E/blob/db24e3f9174223e00817271b0c1efef861e04404/docs/fable-builder/README.md) · [September FloRA start](https://github.com/NIne-WIngEd/FloRA/commit/9c488c598d5eaeea8908430415dcd550769627d0)
 
 [A.L.I.C.E. foundations](https://github.com/NIne-WIngEd/A.L.I.C.E/blob/a1fe0a65df1d4143955eb1d3b35eb4ac590e7555/README.md) · [FloRA backbone and test limits](https://github.com/NIne-WIngEd/FloRA/blob/fc6d82df8e4050ed5f0f73fe43d84b1e35463830/docs/CONTINUITY_KERNEL.md) · [Personality progress and remaining gaps](https://github.com/NIne-WIngEd/A.L.I.C.E/blob/9d17c07b34347c6ee7cbf37bef2d0ed5d7aba932/docs/eipm/PERSONALITY_CONDITIONAL_LEARNING_DIAGNOSIS_2026-10-28.md) · [Memory model's completed initial stage](https://github.com/NIne-WIngEd/A.L.I.C.E/blob/32897684dee407cdf30d522a4cc1a58ddb0912bc/docs/MFM_COMPLETED_FOUNDATION_OBSERVATION_2026-10-12.md) · [Memory-formation work still ahead](https://github.com/NIne-WIngEd/A.L.I.C.E/blob/5653736f545c9c1c8d5d8006af0f1fa152eed9b1/docs/MFM_CHECKPOINT10_FORMATION_DIAGNOSIS_2026-10-21.md) · [FloRA experiment requirements](https://github.com/NIne-WIngEd/FloRA/blob/fc6d82df8e4050ed5f0f73fe43d84b1e35463830/docs/EXPERIMENT_GOAL.md) · [Builder and transfer plan](https://github.com/NIne-WIngEd/FloRA/blob/fc6d82df8e4050ed5f0f73fe43d84b1e35463830/docs/FBM_ROLES_AND_OBJECTIVES.md) · [Full v1 commitment](docs/FABLE_V1_EXECUTION_PROFILE_2026-09-27.md)
 
