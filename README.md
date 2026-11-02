@@ -19,13 +19,15 @@
 
 Let's say you use ChatGPT or Claude. OpenAI or Anthropic built the model. You just use it. But you don't want your whole life inside someone else's AI. You don't wanna feed it all your data.
 
-So for a while you turn to local open-weight models. You can personalize them, keep your data on your machine, and they feel more like yours. But you're still not really satisfied. Cause the open weights you got, You don’t own those open weights. You can’t claim those weights or that model as yours.
+So for a while you turn to local open-weight models. You can run them on your machine and personalize them. But you're still doing the work of turning a general model into something that understands your life.
 
-Then you realize all you want is the infrastructure that builds you a model from scratch. So it runs locally, and the personal weights you get you can truly call yours. You finally realize what a **personal model** means.
+Then you realize what you want is software that does that work for you. It builds and connects the personal models and memories around your life. You get a **personal foundation** that you can inspect, correct and keep as the general models change.
 
-Fable itself is not the model. Fable is the builder.
+That does not mean training every model from scratch. Our current approach uses a frozen pretrained base and trains separate personal components. The base remains under its own license. The personal models and memories built for you are what you will own.
 
-**At Fable Sleight, I will give you exactly that. I will give you an automated infrastructure that makes you a personal model that is truly yours.**
+Fable is the builder. Your personal AI is what it creates.
+
+**At Yeviene, we're building Sleight AI to do exactly that. This repository keeps the original Fable_Sleight name.**
 
 But that's only half the story. Owning the model is the start. What it remembers, how it judges, and how it grows with you is the other half.
 
@@ -38,21 +40,17 @@ But that's only half the story. Owning the model is the start. What it remembers
 
 ## Main Hypothesis
 
-In the first paragraph, the justification behind Fable_Sleight sounds more like something out of a security concern, which is true, but not enough. So, here, we are leaving that out because that is not our main hypothesis. Our hypothesis here has 2 parts:
+Ownership is part of why we want a personal AI. But ownership alone does not tell us whether it will make better decisions. That's what we want to test. Our hypothesis has two parts:
 
-1. **In layman's terms:** every model consists of 2 things: **memory and features**. A feature is what the model does for you: different tasks like coding, simulation, etc.
+1. **General skills and personal judgment are different jobs.** A general model may be good at coding or research. Knowing which help you need also depends on your goals, past choices and current circumstances. Our approach is to develop that personal understanding separately while using existing models for general skills.
 
-   Memory is the part where the model tries to understand what feature the user really needs. And that's where the problem is. If you give a generic model to every user on the planet that is trained on common data and is equal for everyone, it is hard to assess that it will separately understand the different users using it unless the users train the model with their personal data.
-
-2. **My 2nd argument is:** even if the user neglects the security part (which most people do) and trains the model with their personal data, how do we determine how much personal data is enough?
-
-   Our answer is: no amount of personal data is enough since you are training an already instruction-tuned model with your data. So, the model may know you, but it will not behave for you.
+2. **Your records will always leave things out.** A few conversations cannot cover every choice you may face. Direct personalization and memory retrieval can already help. The question is whether a separately learned personal foundation can make better use of limited records and apply what it learns when your life changes.
 
 > [!IMPORTANT]
 > Our stronger hypothesis is that a separately learned personal foundation could outperform direct personalization of a general model **when personal data is limited, circumstances change, and consistent judgment matters more than imitation of someone’s writing.**
 
 > [!TIP]
-> **Want to see the proof behind our hypothesis:**
+> **See how we're testing our hypothesis:**
 >
 > **[The experiment behind Fable_Sleight: FloRA](#the-experiment-behind-fable_sleight-flora)**
 
@@ -86,13 +84,13 @@ The other half is Fable's personal foundation. It is meant to:
 
 ## Why you need a personal AI?
 
-Everyone deserves their own AI. Right now, we have AI agents for different tasks, but not an AI companion that knows us. We keep asking the same general models to reason about different people's lives. But we as humans are different. We reason differently. We want different things. So why should we all be treated by the same standard?
+Everyone deserves their own AI. Assistants can already remember personal context and adapt to us. What we want is a foundation that learns from your life and remains yours as the general models change. It should understand why a choice made sense then and whether it still makes sense now.
 
-Even local models you can download and personalize usually come pretrained with someone else's weights. You can give them your files and teach them your preferences, but you are still working on top of a model built for everyone. The model grows with its manufacturing company, not with you.
+You can personalize a model through memory, retrieval or training. Sleight's bet is to automate the construction and continued development of a separate personal foundation. FloRA will test whether that approach gives better personal judgment under the same conditions.
 
 ## Why Fable matters
 
-You cannot ask everyone to build their personal AI from scratch. Most people do not know how to train a model. Even if they do, choosing the architecture, preparing data, checking whether it learned the right thing, and keeping it updated takes years of research and manual labor.
+You cannot ask everyone to build and maintain their own personal AI. Most people do not know how to train a model. Even if they do, choosing the architecture, preparing data, checking whether it learned the right thing, and keeping it updated takes research and manual work.
 
 So why don't we automate that process? Give Fable access to the raw data you choose. Let the builder create the personal pieces, link them into one entity, and keep improving them as it learns more about you. You should not need to code to get started.
 
@@ -116,9 +114,11 @@ You don't need a huge archive to begin. With less data, Fable knows less at firs
 > [!NOTE]
 > The first release will use external frontier model APIs **for feature work** such as coding, simulation, etc. Making those NLP and specialist models takes a lot of time and resources that we do not possess as a startup. And also, the main selling point of Fable is its personal foundation over direct personalization claim and the autonomous building capability. We are not making a product claiming it can code better or solve Millennium Problems.
 >
-> Also, Fable is designed in such a way that, even for version 1, it won't directly send user queries through an API and show the output. That would disrupt the whole personal model claim of Fable. Instead, Fable will use API calls to gain probabilistic words by sending encrypted API signals, then craft a response on its own.
+> The personal foundation is meant to decide how to help you before asking an outside model for words or feature work. The local system will prepare an approved request with only the needed context, check the returned answer against its decision and restore private references locally where appropriate. The [first-release design](docs/FIRST_RELEASE.md#the-privacy-boundary) explains this boundary.
 >
-> Rest assured, once Fable is well-versed and funded, the long-term ambition is obviously far greater than that. Soon, we will replace the API calls with our own feature models (e.g., a coding model, a simulation model, etc.). And further along the way, we want to make Fable powerful enough that it gains the autonomous capability to build those feature models from scratch too on a user's PC based on that specific user, just like the memory models in Fable version 1.
+> Local storage is the default design. Any personal data needed for cloud training or an external feature must be shown to the owner and approved before it is sent. An encrypted connection protects the request in transit. It does not hide the approved information from the provider. Declining a disclosure may limit what that feature can do.
+>
+> Later, we want to build our own feature models for tasks like coding and simulation. Further along, we want the builder to create those specialists for each person too. Those are long-term ambitions. The first release focuses on the autonomous builder and full personal foundation.
 
 This is the **release target, not the current state**. A.L.I.C.E. is our development case. FBM, MFM, and the complete experience-to-judgment learning loop still need to be built and validated before we can claim a consumer release with full capability and scale.
 
